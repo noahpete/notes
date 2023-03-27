@@ -1,9 +1,33 @@
+\setcounter{chapter}{3}
+\setcounter{lecture}{18}
 \chapter{Introduction}
-\lecture{1}{13 Oct. 08:00}{First Lecture}
-\section{Useful Environment}
-We now see some common environment you'll need to complete your note.
+\lecture{19}{20 Mar. 10:30}{Number Theory}
+We define the set of integers, \( \mathbb{Z} = \{ \ldots, -2, -1, 0, 1, 2, \ldots \} \), 
+and natural numbers, \( \mathbb{N} = \mathbb{Z}^+ = \{ 1, 2, 3, \ldots \} \).
 
-\begin{definition}[Natural number]\label{def}
+\begin{theorem}[Product of primes]\label{ProductOfPrimes}
+	Every integer \( N > 1 \) can be written \emph{uniquely} as
+	a product of (power of) primes.
+\end{theorem}
+
+\begin{lemma}[Division with remainder]\label{DivisionWithRemainder}
+	Let \( a \in \mathbb{Z}, b \in \mathbb{Z}^+ \). $\exists$ unique
+	integers $q, r$ such that \( a = q . b + r \) where \( 0 \leq r < b \),    
+	and they can be efficiently computed in \emph{polynomial time}
+	relative to the \emph{bit length}: i.e. \( \log_2 a + \log_2 b + O(1) \) 
+\end{lemma}
+
+With the ability to perform division in polynomial time, we are able
+to find the \textbf{greatest common divisor} of two integers $a, b$:
+
+\begin{definition}[Greatest common divisor]\label{gcd}
+	Let \( a, b \in \mathbb{Z}^+ \). Then, there exists \( x, y \in 
+	\mathbb{Z} \) such that \( \text{gcd}(a, b) = a.x  + b.y \).   
+	Further, \( \text{gcd}(a, b) \) is the smallest positive integer
+	that can be written this way. 
+\end{definition}
+
+\begin{definition}[Natural numbers]\label{def}
 	We denote the set of \emph{natural numbers} as \(\mathbb{\MakeUppercase{n}} \).
 \end{definition}
 
@@ -11,7 +35,7 @@ We now see some common environment you'll need to complete your note.
 \begin{lemma}[Useful lemma]\label{lma}
 	Given the axioms of \hyperref[def]{natural numbers \(\mathbb{\MakeUppercase{n}} \)}, we have
 	\[
-		0\neq 1.
+		0\neq 1. 
 	\]
 \end{lemma}
 \begin{proof}[An obvious proof]
