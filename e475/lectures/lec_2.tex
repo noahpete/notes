@@ -1,46 +1,162 @@
-\chapter{Known Bugs}
-\lecture{2}{9 Sep. 08:00}{Second Lecture}
+\lecture{20}{22 Mar. 10:30}{Group Theory}
 
-\section{Introduction}
-Nothing is bugs-free. There are some known bugs which I don't have incentive to solve, or it is hard to solve whatsoever. Let me list some of them.
+We continue our review of modular arithmetic. Modular addition, subtraction,
+and multiplication are all closed in modular arithmetic. We have the property
+\(a = b \mod N \iff N | a - b\) and further, if \(a = a^{\prime} \mod N\) and
+\(b = b^{\prime} \mod N\), we have:   
+\begin{itemize}
+	\item \(a + b = a^{\prime} + b^{\prime} \mod N\) 
+	\item \(a - b = a^{\prime} - b^{\prime} \mod N\) 
+	\item \(a . b = a^{\prime} . b^{\prime} \mod N\) 
+\end{itemize}
 
-\subsection{Footnote Environment}
-It's easy to let you fall into a situation that you want to keep using \texttt{footnote} to add a bunch of unrelated stuffs. However, with our environment there is a known strange behavior, which is following.
-\begin{eg}
-	Footnote!\footnote{This is a footnote!}
-	\begin{remark}
-		Oops! footnote somehow shows up earlier than expect!\footnote{This is another footnote!}
-	\end{remark}
+However, division is not always possible:
+\[
+	3 \cdot 2 = 15 \cdot 2 \mod 24 \centernot\implies 3 = 15 \mod 24
+\]
 
-	Bugs caught!\footnote{The final footnote which is ok!}
-\end{eg}
+\begin{definition}[Invertability]
+	An integer \(b\) is \textbf{invertible} if \(\exists c \) where
+	\(b \cdot c = 1 \mod N\).
+\end{definition}
 
-As we saw, the footnote in the \texttt{Example} environment should show at the bottom of its own box, but it's caught by \texttt{Remark} which causes the unwanted behavior. Unfortunately, I haven't found a nice way to solve this. A potential way to solve this is by using \texttt{footnotemark} with \texttt{footnotetext} placing at the bottom of the environment, but this is tedious and needs lots of manual tweaking.
+\begin{lemma}
+	If \(b \geq 1, N > 1\), \(b\) is invertible mod \(N \iff \text{gcd}(b, N) = 1\).    
+\end{lemma}
 
-Furthermore, not sure whether you notice it or not, but the color box of \texttt{Remark} is not quite right! It extends to the right, another trick bug...
-
-\subsection{Mdframe Environment}
-Though \texttt{mdframe} package is nice and is the key theme throughout this template, but it has some kind of weird behavior. Let's see the demo.
-\begin{proof}[Proof of \autoref{thm}]
-	We need to prove the followings.
-	\begin{claim}
-		\(E = mc^{2} \).
-	\end{claim}
-	\begin{explanation}
-
-		Nonsense.
-
-		Nonsense,
-
-		Nonsense,
-
-		Nonsense,
-
-		Nonsense,
-
-		Nonsense.
-	\end{explanation}
-
+\begin{proof}
+	Let \(b \cdot c = 1 \mod N\).
+	\begin{align*}
+		\implies b . c - 1 = N . q \\
+		\implies b . c - N . q = 1 . \\
+	\end{align*}
+	Thus, \(\text{gcd}(b, N) = 1\) since gcd is the smallest positive integer                          
+	that is expressible in this way.
 \end{proof}
 
-I expect it should break much earlier, and this seems to be an \href{https://github.com/marcodaniel/mdframed/issues/9}{algorithmic issue} of \href{https://ctan.org/pkg/mdframed?lang=en}{\texttt{mdframe}}. One potential solution is to use \href{https://ctan.org/pkg/tcolorbox?lang=en}{\texttt{tcolorbox}} instead, but I haven't completely figure it out, hence I can't really say anything right now.
+Using the \hyperref[eea]{Extended Euclidean Algorithm}, we can compute inverse mod \(N\)
+efficiently.
+
+\begin{definition}[Group]
+	\((G, \circ)\), where \(\circ : G \times G \to G\) and \(\circ(g, h)\) is
+	denoted as \(g \circ h\), is a \textbf{group} if it satisfies the properties of:
+	\begin{itemize}
+		\item identity: \(\exists e \in G\) such that \(\forall g \in G \colon e \circ g = g \circ e = g\)  
+		\item invertability: \(\forall g \in G, \exists g^{-1} \text{ (or $-g$) }\) such that \(g \circ g^{-1} = e\)  
+		\item associativity: \(\forall g_1, g_2, g_3 \in G \colon (g_1 \circ g_2) \circ g_3 = g_1 \circ (g_2 \circ g_3) \) 
+		\item (abelian groups): \(\forall g, h \in G, g \circ h = h \circ g\) (i.e commutativity) 
+	\end{itemize}   
+\end{definition}
+
+\begin{eg}
+	For \((\mathbb{Z}_N, + \mod N)\) we have:
+	\begin{itemize}
+		\item identity: \(a + 0 \equiv 0 + a \equiv a \mod N \)
+		\item invertability: \(a + (-a) \equiv 0 \mod N\)
+		\item associativity: \(a + (b + c) = (a + b) + c \mod N\)  
+	\end{itemize}
+\end{eg}
+
+\begin{eg}
+	For \((\mathbb{Z}_N^*, . \mod N)\) we have:
+	\begin{itemize}
+		\item identity: \(a . 1 \equiv 1 . a \equiv a \mod N \)
+		\item invertability: \(a . (a^{-1}) \equiv 1 \mod N\)
+		\item associativity: \(a . (b . c) = (a . b) . c \mod N\)  
+	\end{itemize}
+\end{eg}
+
+The size of a group, called the \textbf{group order}, is denoted as
+\(|G|\). For example, (\(\mathbb{Z}_N, +\)) has order \(N\), and
+\(\mathbb{Z}_p^*, .\) has order \(p - 1\)
+
+\begin{theorem}
+	For a group, \(G\), where \(m = |G|\), we have that \(\forall g \in G \colon
+	g^m = 1\) (where \(g^m = (((g \circ g) \circ g) \circ g) \ldots \)).   
+\end{theorem}
+
+\begin{proof}
+	For simplicity, assume \(G\) is abelian and suppose \(G = \{g_1, g_2, \ldots, g_m\) and
+	let \(g \in G\) be arbitrary. Note that
+	\[
+		g \circ g_i = g \circ g_j \implies g_i = g_j
+	\]
+	and so the set \(\{g \circ g_i : i \in \{1, m\}\}\) covers all elements of
+	\(G\) exactly once. Therefore:
+	\[
+		g_1 \circ -g_m = g^m (g_1 \circ \ldots \circ g_m) \implies 1 = g^m.
+	\]   
+\end{proof}
+
+\begin{corollary}[Fermat's Little Theorem]\label{flt}
+	\(\forall\) prime \(p\), \(\text{gcd}(a, p) = 1 \implies a^{p - 1} \equiv 1 \mod p\)   
+\end{corollary}
+
+\begin{theorem}[Euler's Theorem]\label{EulerThm}
+	For \(\Phi(N) = \big | \{ a | 1 \leq a \leq N, \text{gcd}(a, N) = 1 \} \big |\),
+	\(| \mathbb{Z}_N^* | = \Phi(N)\) we have:
+	\[
+		\text{if gcd}(g, N) = 1 \implies g^{\Phi(N)} \equiv 1 \mod N
+	\]  
+\end{theorem}
+
+\begin{corollary}
+	For \(m = |G| > 1, e \in \mathbb{Z}, \text{gcd}(e, m) = 1\), define
+	\(d = e^{-1} \mod m\) and function \(f_e \colon G \to G\) as \(f_e(g) = g^e\).    
+	Then, \(f_e\) is a bijection whose inverse is \(f_d\).  
+\end{corollary}
+
+\begin{definition}[Cyclic Groups]
+	A group, \(G\), is considered \textbf{cyclic} if \(\exists g \in G\) such
+	that \(G = \{1 = g^0, g^1, g^2, \ldots, g^{m - 1}\}\). If this is the case,
+	we say that \(g\) generates \(G\).   
+\end{definition}
+
+\begin{eg}
+	For \(\mathbb{Z}_7^* = \{1, \ldots, 6\}\):
+	\[
+		\text{powers of 3: } \{ 3^0 \equiv 1, 3^1 \equiv 3, 3^2 \equiv 2, 3^3 \equiv 6, 3^4 \equiv 4, 3^5 \equiv 5\}
+	\]
+	\[
+		\text{powers of 2: } \{ 2^0 \equiv 1, 2^1 \equiv 2, 2^2 \equiv 4, 2^3 \equiv 1, 2^4 \equiv 2, \ldots \}
+	\]
+	and so 3 is a generator of \(\mathbb{Z}_7^*\), but 2 is not.
+\end{eg}
+
+If there is no \(g \in G\) that generates \(G\), then \(G\) is not cyclic. Furthermore,
+when \(g\) does not generate \(G\), it generates a \textbf{subgroup}:
+
+\begin{definition}
+	\(G^{\prime} \subseteq G\), is a subgroup if \((G^{\prime}, \circ)\) is a group.  
+\end{definition}
+
+\begin{theorem}[Lagrange's Theorem]
+	If \(G^{\prime} \subseteq G\) is a subgroup, then \(|G^{\prime}|
+	\text{ divides } |G|\).
+\end{theorem}
+
+\section{Fast Exponentiation}
+Suppose we have an element \(g\) and we want to compute \(g^M\). Instead of
+naively multiplying \(g\) \(M\) times, we can observe that if \(M = 2^m\):
+\[
+	g^{M} = g^{2^m} = g^{2^{m - 1}} \cdot g^{2^{m - 1}} = (g^{2^{m - 1}})^2.
+\]
+So for any \(M\) we can rewrite it as
+\[
+	M = \sum_{i = 0}^l m_i . 2^i,
+\]
+allowing us to calculate \(g^m\):
+\[
+	g^m = \prod_{i=0}^{l} g^{2^i},
+\]
+where each \(g^{2^i}\) can be calculated using the above trick. This
+results in \(O(l^2)\) multiplications altogether if \(|M| = l\).
+
+\begin{corollary}
+	Fast exponentiation allows us to compute inverses efficiently because
+	\(g^{-1} = g^{|G| - 1}\) since \(g^{|G|} = 1\).  
+\end{corollary}
+
+We've shown we can compute \(g^m\) efficiently given \(g\) and \(m\). But,
+can we efficiently compute \(m\) from \(g^m\)? It's unknown, but conjectured
+to be extremely difficult to do so.     
