@@ -1,0 +1,113 @@
+04: Sessions
+
+  - HTTP is stateless, can add state on top of HTTP
+  - HTTP request headers, most optional
+    - Host (eg. cse.engin.umich.edu): distinguishes DNS names sharing single IP
+	- User-Agent: which browser is makign request
+	- Accept: which content ("file") types the client will accept
+  - HTTP response headers, most optional
+  - "Session protocol" used on top of HTTP bc HTTP is stateless
+    - implemented at application layer
+	- state maintained in session variables
+	- data stored in one request can be accessed by later request
+  - Server session model
+    - when? -> created as needed for app
+	- how? -> stored data in server
+	  - store user, session ID; use for db lookup
+	- when to close? -> need timeout
+
+  - Cookies: small files on client machine
+      - carry state bw HTTP requests
+	  - contain key/value pairs
+	  - Name, Value, Domain values stored in cookie
+	  - Path value: specifies scop of cookie (eg. / vs /cart/)
+	  - Expiration: tells client when to delete
+	  - Secure: how cookie may be transmitted
+	- ONLY overwritable by SAME DOMAIN and PATH, enforced by browser
+	- if someone has your cookies, can steal sesion and look like you to server
+	  - prevent by transmitting over HTTPS
+	- third-party cookies from page's objects (scripts, imgs, etc.)
+		- First-Party cookie: domain is same as domai of page you're on
+		- Third-Party cookie: domai is diff
+
+05 Encryption
+
+  - Symmetric Encryption
+    - key used to encrypt and decrypt
+	- both sides need same key
+	- used by AES
+  - Asymmetric Encryption
+    - uses a pair of keys -> public key cryptography
+	- each party has:
+	  - public key, available to all
+	  - private key, shared with no one else
+	  - idea from DH, but RSA popular
+  - Advanced Encryption Standard
+    - believed to be secure, but we don't know how to prove its security
+	- 128 bit block size (key is 128 or 256 bits)
+	- ...
+
+07 REST APIs
+
+  - HTTP request methods: indicate server actions
+    - GET: request a resource (eg. load a page)
+	- HEAD: same as GET, but without response body (eg. see if page changed)
+	- POST: send data to server (eg. web form)
+  - REST APIs are machine-readable data (eg. json)
+    - HTTP(S) request includes a method
+	- HTTP(S) respose includes a status code and JSON data
+	- REST is a collection of principles/best practices
+  - REST API tools:
+    - curl: HTTP GET request returns JSON-formatted string
+	- jq: pretty-prints JSON
+	- httpbin.org: an echo server
+  - REST API verbs:
+    - GET: return datum
+	- POST: create new datum
+	  - request: creates an object, includes JSON body
+	  - response: includes copy of created object
+	- PATCH: update part of datum
+	  - request: URL includes an ID, includes JSON body
+	  - response: includes copy of entire modified object
+	- PUT: replace entire datum
+	  - request: URL includes an ID, JSON body
+	  - response: includes copy of entire modified object
+	- DELETE: delete datum
+	  - request: URL includes an ID, no body
+	  - response: returns 204 NO CONTENT on success, no body
+	...
+
+09: Client Side Applications
+
+  - client-side dynamic page process overview:
+    1. client executes JavaScript
+	2. JavaScript code modifies the DOM
+	3. rendered page changes
+
+  - problem with server-side vs. client side dynamic pages:
+    - server-side: server respose is output of fuction; good for db access, bad for UI
+	- client-side: JavaScript running in client's browser modified DOM; bad for db, good for UI
+  -> solution: client-side with server-side dynamic pages
+    - JavaScript in client's browser makes REST API request, modifies DOM using data from the response
+	- server response is output of a function which runs an SQL query and returns res as JSON
+    - process so far:
+	  1. client requests root (index) page, server provides static HTML
+	  2. client loads HTML into DOM
+	  3. static HTML includes <script> tag
+	  4. client requests JavaScript source code, server responds w static JS file
+	  5. client executes JavaScript
+	  6. JavaScript makes request to REST API, server responds w JSON
+	  7. JavaScript parses JSON into object, then modifies DOM
+	  8. page updates
+	- Fetch API: fetching data from the REST API
+	  - provides interface for HTTP requests
+	  - call function when response arrives, parse JSON into JS object
+	  - call another function when JSON parsing is done, add DOM nodes using JS object
+	  - (above functions called for asynchronous programming)
+	- closures
+	  ...
+
+14: Networking
+
+  - IP: Internet Protocol -> how to get a message from one computer to another
+
