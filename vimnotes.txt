@@ -1,0 +1,34 @@
+four modes:
+  1. normal
+  2. insert
+  3. visual: activated by 'v', highlight w cursor
+  4. command: activated by ':', activate commands
+
+movements (motions)
+  basics:
+    h: left
+    j: down
+    k: up
+    l: right
+    w: forward word
+    b: backward word
+
+commands
+  u: undo
+  r: redo
+
+  count:
+    XXj: go down XX lines
+  
+  d command:
+    dw: delete next word
+    db: delete prev word
+    dd: delete line
+    d3j: delete current line and 3 below  
+
+visual mode
+  - shift + v => visual line mode (select lines)
+  - move around to highlight
+  
+  y: "yank"/copy
+  p: paste (last thing you yanked OR deleted)
