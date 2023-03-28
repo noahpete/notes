@@ -1,0 +1,104 @@
+%% Creator: Inkscape 1.2.2 (732a01da63, 2022-12-09), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'hitmiss.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{436.78933526bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.59506331)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{hitmiss.pdf}}%
+    \put(-0.00039126,0.57916698){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Hit:\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{hitmiss.pdf}}%
+    \put(0.38434807,0.47688261){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0x0040a0c0\end{tabular}}}}%
+    \put(0.11819334,0.46273464){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0x0040a0c0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{hitmiss.pdf}}%
+    \put(0.38481731,0.51301056){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0x...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{hitmiss.pdf}}%
+    \put(0.38481736,0.44075451){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0x...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{hitmiss.pdf}}%
+    \put(0.38481731,0.40509584){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0x...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{hitmiss.pdf}}%
+    \put(0.69811739,0.47868725){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}22\end{tabular}}}}%
+    \put(0.85827709,0.48509949){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}22\end{tabular}}}}%
+    \put(0.70156615,0.44287197){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}...\end{tabular}}}}%
+    \put(0.70232201,0.51724394){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}...\end{tabular}}}}%
+    \put(0.70326038,0.41026759){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}...\end{tabular}}}}%
+    \put(0.06435758,0.35301529){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}from the microprocessor\end{tabular}}}}%
+    \put(0.80149719,0.41601765){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}to the microprocessor\end{tabular}}}}%
+    \put(0.41437655,0.34832336){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}CAM\end{tabular}}}}%
+    \put(0.42565857,0.55469678){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Tag\end{tabular}}}}%
+    \put(0.68532469,0.55810564){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Block\end{tabular}}}}%
+    \put(0.6790235,0.34543598){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SRAM\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{hitmiss.pdf}}%
+    \put(0.00031704,0.2340775){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Miss:\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{hitmiss.pdf}}%
+    \put(0.38505635,0.13179312){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0x0040a0c0\end{tabular}}}}%
+    \put(0.11890164,0.11764516){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0x0050a0c0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{hitmiss.pdf}}%
+    \put(0.38552559,0.16792107){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0x...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{hitmiss.pdf}}%
+    \put(0.38552559,0.09566508){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0x...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{hitmiss.pdf}}%
+    \put(0.38552559,0.06000641){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0x...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{hitmiss.pdf}}%
+    \put(0.69882572,0.13359776){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}22\end{tabular}}}}%
+    \put(0.8327105,0.13813333){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0x0050a0c0\end{tabular}}}}%
+    \put(0.70227448,0.09778254){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}...\end{tabular}}}}%
+    \put(0.70303034,0.17215441){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}...\end{tabular}}}}%
+    \put(0.70396871,0.06517811){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}...\end{tabular}}}}%
+    \put(0.06506586,0.00792585){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}from the microprocessor\end{tabular}}}}%
+    \put(0.82754197,0.08031207){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}to main memory\end{tabular}}}}%
+    \put(0.41508483,0.00323393){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}CAM\end{tabular}}}}%
+    \put(0.42636686,0.20960726){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Tag\end{tabular}}}}%
+    \put(0.68603299,0.21301612){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Block\end{tabular}}}}%
+    \put(0.67973183,0.00034654){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SRAM\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{hitmiss.pdf}}%
+  \end{picture}%
+\endgroup%

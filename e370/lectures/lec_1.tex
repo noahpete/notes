@@ -1,165 +1,154 @@
-\chapter{Pipelining}
-\lecture{13}{16 Feb. 1:30}{Data Hazards and Forwarding}
-\section{Data Hazards}
+\setcounter{chapter}{2}
+\setcounter{lecture}{16}
+\chapter{Caches}
+\lecture{17}{14 Mar. 12:00}{Introduction to Caches}
+\section{Memory Hierarchy}
+We often need a lot of memory, LC2K alone can handle \(2^{18} \) bytes of memory. We have several choices for memory:
+\begin{itemize}
+	\item \textbf{SRAM}: Static Random Access Memory
+		\begin{itemize}
+			\item fast: ~2ns access time or faster
+			\item decoders are big
+			\item expensive, high area requirement
+		\end{itemize}
+	\item \textbf{DRAM}: Dynamic Random Access Memory
+		\begin{itemize}
+			\item slower: ~50ns access time
+			\item must stall for dozens of cycles each memory load
+			\item less expensive
+		\end{itemize}
+	\item \textbf{Flash}
+		\begin{itemize}
+			\item slow: access time varies wildly
+			\item less expensive than DRAM
+			\item non-volatile
+		\end{itemize}
+	\item \textbf{Disks}
+		\begin{itemize}
+			\item obnoxiously slow: 3,000,000ns access time
+			\item dirt cheap
+			\item non-volatile
+		\end{itemize}
+\end{itemize}
 
-\begin{definition}[Data hazard]
-	\emph{Data hazards} occur if one instruction uses a register value that
-	hasn't been updated by a prior instruction yet.
+As seen above, there are trade-offs among each type of memory. Ideally, we would have cheap \emph{and} fast memory. So, we can use a combination of memory types to optimize the common case via strategic \textbf{locality of reference}.
+
+\newpage
+
+\begin{figure}[ht]
+	\centering
+	\incfig[0.6]{memhier}
+	\caption{Caches Overview}
+	\label{fig:caches-overview}
+\end{figure}
+
+\begin{definition}
+	The \textbf{architectural} view of memory is what the machine language (or programmer) sees, i.e. just a big array.
 \end{definition}
-
 \begin{note}
-	Assume the register file yields the correct value of a register when 
-	read/written during the \emph{same} cycle. This is consistent with most
-	processors (eg. ARM/x86), but not Project 3.
+	Breaking up the memory system into different pieces (cache, main memory, disk) is \textbf{not architectural}. The machine language doesn't know about it.
 \end{note}
 
-\begin{definition}[Natural number]\label{def}
-	We denote the set of \emph{natural numbers} as \(\mathbb{\MakeUppercase{n}} \).
+Can use our variety of memories as follows:
+\begin{itemize}
+	\item use small array of SRAM for the \textbf{cache}
+	\item use a larger amount of DRAM for \textbf{main memory}
+	\item use a lot of flash and/or disk for \textbf{virtual memory}
+\end{itemize}
+
+\section{Cache Basics}
+
+Whenever memory returns data, we can store it in a cache. We'll need to store:
+\begin{itemize}
+	\item the data
+	\item a tag denoting its memory location
+	\item a "valid" status bit
+\end{itemize}
+
+Then for our next memory access, we can first check if the tag matches the address we are attempting to access.
+
+% \begin{figure}
+% 	\centering
+% 	\incfig[0.3]{simplecache}
+% 	\caption{The simplest cache}
+% 	\label{fig:simple-cache}
+% \end{figure}
+
+\begin{definition}[Cache Hit]
+	A \textbf{hit} occurs when data for a memory access is found in the cache.
 \end{definition}
 
+\begin{definition}[Cache Miss]
+	A \textbf{miss} occurs when data for a memory access is \emph{not} found in the cache.
+\end{definition}
 
-\begin{lemma}[Useful lemma]\label{lma}
-	Given the axioms of \hyperref[def]{natural numbers \(\mathbb{\MakeUppercase{n}} \)}, we have
-	\[
-		0\neq 1.
-	\]
-\end{lemma}
-\begin{proof}[An obvious proof]
-	Obvious.
-\end{proof}
-\begin{proposition}[Useful proposition]\label{prop}
-	From \autoref{lma}, we have
-	\[
-		0<1.
-	\]
-\end{proposition}
-\begin{exercise}
-	Prove that \(1 < 2\).
-\end{exercise}
+\begin{definition}[Hit/Miss Rate]
+	The \textbf{hit/miss rate} is the percentage of memory accesses that hit/miss in the cache.
+\end{definition}
+
+\newpage
+
+\subsection{CAMs}
+
+\begin{definition}
+	\textbf{CAMs: content addressable memories} are akin to a set of data matching a query. Instead of an address we send a key to the memory, asking whether the key exists and, if so, what value it is associated with. Memory answers: yes/no and gives associated value (if there is one).
+\end{definition}
+
+We apply \emph{operations} on CAMS:
+\begin{itemize}
+	\item \textbf{Search}: the primary way to access a CAM
+		\begin{itemize}
+			\item send data to CAM memory
+			\item return "found" or "not found"
+			\item if found, return location of where it was found or its associated value
+		\end{itemize}
+	\item \textbf{Write}: send data for CAM to remember
+\end{itemize}
+
+\subsection{Cache Organization}
+
+Cache memory can copy data from any part of main memory. Cache memory has two parts:
+\begin{itemize}
+	\item the \textbf{tag (CAM)}: holds the memory address
+	\item the \textbf{block (SRAM)}: holds the memory data
+\end{itemize}
+
+A \textbf{hit} in the cache occurs when a tag match is found. The microprocessor sends the address to the CAM containing the tags and searches for the tag. If there's a search result hit, the corresponding block is forwarded to the microprocessor. If not, the address is forwarded to main memory:
+
+\begin{figure}[h]
+	\centering
+	\incfig[0.9]{hitmiss}
+	\caption{Hardware view of caches.}
+	\label{fig:hardware-cache}
+\end{figure}
+
+\begin{problem}
+	Given:
+	\begin{itemize}
+		\item \emph{cache} has 1 cycle access time
+		\item \emph{main memory} has 100 cycle access time
+		\item \emph{disk} has 10,000 cycles access time
+	\end{itemize}
+	What is the average access time for 100 memory references if 90\% of the cache accesses are hits and 80\% of the accesses to main memory are hits? Assume main memory access time includes tag array access to determine hit/miss.
+\end{problem}
 \begin{answer}
-	We note the following.
-	\begin{note}
-		We have \autoref{prop}! We can use it iteratively!
-	\end{note}
-	With the help of \autoref{lma}, this holds trivially.
+	\(0.9 \cdot 1 + 0.1 \cdot (100 + 0.2 \cdot 10000) = 210.9\) 
 \end{answer}
-\begin{eg}
-	We now can have \(a < b\) for \(a < b\)!
-\end{eg}
-\begin{explanation}
-	Iteratively apply the exercise we did above.
-\end{explanation}
+
+\subsection{Cache Operation}
+Every cache \emph{miss} will get the data from memory and \emph{allocate} a cache line to put the data in (just like any CAM write). However... what do we replace in the cache? Does an optimal replacement policy exist?
+
+\begin{definition}[Temporal locality]
+	The principle of \textbf{temporal locality} in program references says that if you access a memory location (e.g., 1000) you will be more likely to re-access that location than you will be to reference some other random location.
+\end{definition}
+
 \begin{remark}
-	We see that \autoref{prop} is really powerful. We now give an immediate application of it.
+	Locality is a property of \emph{programs} (not hardware).
 \end{remark}
 
-\begin{theorem}[Mass-energy equivalence]\label{thm}
-	Given \autoref{prop}, we then have
-	\[
-		E = mc^2.
-	\]
-\end{theorem}
-\begin{proof}
-	The blank left for me is too small,\footnote{\url{https://en.wikipedia.org/wiki/Richard_Feynman}} hence we put the proof in \autoref{appendix}.
-\end{proof}
+Specifically, temporal locality says that the \textbf{least recently referenced (LRU)} cache line should be \emph{evicted} to make room for the new line. Because the re-access probability falls over time as a cache line isn't referenced, the LRU line is least likely to be re-referenced.
 
-From \autoref{thm}, we then have the following.
-\begin{corollary}[Riemann hypothesis]\label{col}
-	The real part of every nontrivial zero of the Riemann zeta function is \(\frac{1}{2}\), where the Riemann zeta function is just
-	\[
-		\zeta (s)=\sum _{n=1}^{\infty }{\frac {1}{n^{s}}}={\frac {1}{1^{s}}}+{\frac {1}{2^{s}}}+{\frac {1}{3^{s}}}+\cdots.
-	\]
-\end{corollary}
-\begin{proof}
-	The proof should be trivial, we left it to you.\todo{TODO}
-\end{proof}
-\begin{prev}
-	We see that \autoref{lma} is really helpful in the proof!
-\end{prev}
+\begin{definition}[Average Access Latency]
+	Average Access Latency = cache latency \(\cdot\) hit rate \(+\) memory latency \(\cdot\)
+\end{definition}
 
-\subsubsection{Internal Link}
-You should see all the common usages of internal links. Additionally, we can use citations as \cite{newton1726philosophiae}, which just link to the reference page!
-
-\section{Figures}
-A simple demo for drawing:
-\begin{figure}[H]
-	\centering
-	\incfig{test}
-	\caption[Caption]{A \(3\)-torus.\footnotemark}
-	\label{fig:test}
-\end{figure}
-\footnotetext{For detailed information, please see \url{https://github.com/sleepymalc/VSCode-LaTeX-Inkscape}.}
-
-\section{Commutative Diagram}
-We can use the package \texttt{tikz-cd} to draw some commutative diagram.
-\begin{eg}
-	The cellular homology agrees with singular homology.
-\end{eg}
-\begin{explanation}
-	The following commutative diagram shows everything.
-
-	\adjustbox{scale=0.85,center}{%
-		\begin{tikzcd}[column sep=tiny]
-			&&&& {\color{red}0} \\
-			& {\color{red}0} && {\color{red}H_n(X^{n+1})\cong H_n(X)} \\
-			&& {\color{red}H_n(X^n)} \\
-			\ldots & {\color{red}H_{n+1}(X^{n+1}, X^n)} && {\color{red}H_n(X^n, X^{n-1})} && {H_{n-1}(X^{n-1}, X^{n-2})} & \ldots \\
-			&&&& {\color{red}H_{n-1}(X^{n-1})} \\
-			&&& 0
-			\arrow[color={rgb,255:red,214;green,92;blue,92}, from=2-2, to=3-3]
-			\arrow["{\partial_{n+1}}", color={rgb,255:red,214;green,92;blue,92}, from=4-2, to=3-3]
-			\arrow[color={rgb,255:red,214;green,92;blue,92}, from=2-4, to=1-5]
-			\arrow[color={rgb,255:red,214;green,92;blue,92}, from=3-3, to=2-4]
-			\arrow[from=4-6, to=4-7]
-			\arrow["{d_n}"', from=4-4, to=4-6]
-			\arrow["{\partial_n}"', color={rgb,255:red,214;green,92;blue,92}, from=4-4, to=5-5]
-			\arrow["{j_{n-1}}"', from=5-5, to=4-6]
-			\arrow[from=6-4, to=5-5]
-			\arrow["{d_{n+1}}", from=4-2, to=4-4]
-			\arrow["{j_n}", color={rgb,255:red,214;green,92;blue,92}, from=3-3, to=4-4]
-			\arrow[from=4-1, to=4-2]
-		\end{tikzcd}
-	}
-\end{explanation}
-
-\section{Fancy Stuffs}
-With this header, you can achieve some cool things. For example, we can have multiple definitions under a parent environment, while maintains the numbering of definition. This is achieved by \texttt{definition*} environment with \texttt{definition} inside. For example, we can have the following.
-\begin{definition*}
-	We have the following number system.
-	\begin{definition}[Rational number]\label{def:rational}
-		The set of \emph{rational number}, denote as \(\mathbb{\MakeUppercase{q}} \).
-	\end{definition}
-	\begin{definition}[Real number]\label{def:real}
-		The set of \emph{real number}, denote as \(\mathbb{\MakeUppercase{r}} \).
-	\end{definition}
-	\begin{definition}[Complex number]\label{def:complex}
-		The set of \emph{complex number}, denote as \(\mathbb{\MakeUppercase{c}} \).
-	\end{definition}
-\end{definition*}
-
-\begin{note}
-	And indeed, we can still reference them correctly. For instance, we can use \hyperref[def:rational]{rational numbers} to define \hyperref[def:real]{real numbers} and then further use it to define \hyperref[def:complex]{complex numbers}.
-\end{note}
-
-Furthermore, we can completely control the name of our environments. We already saw we can name definition, lemma, proposition, corollary and theorem environment. In fact, we can also name remark, note, example and proof as follows.
-\begin{eg}[Interesting Example]\label{eg}
-	We note that \(1 \neq 2\)!
-	\begin{note}[Important note]
-		As a consequence, \(2 \neq 3\) also.
-	\end{note}
-
-	\begin{remark}[Easy observation]
-		We see that from here, we easily have the following theorem.
-		\begin{theorem}[Lebesgue Differentiation Theorem]\label{thm:Lebesgue-differentiation-theorem}
-			Let \(f\in L^1\), then
-			\[
-				\lim\limits_{r \to 0} \frac{1}{m(B(x, r))}\int_{B(x, r)}\left\vert f(y) - f(x) \right\vert   \,\mathrm{d}y = 0
-			\]
-			for a.e. \(x\).
-		\end{theorem}
-		\begin{proof}[An obvious proof of \autoref{thm:Lebesgue-differentiation-theorem}]
-			Obvious.
-		\end{proof}
-	\end{remark}
-\end{eg}
-As we can see, specifically for the \texttt{proof} environment, we allow \texttt{autoref} and \texttt{hyperref}. One can actually allow all example, note and remark environment's name to use reference, but I think that is overkilled. But this can be achieved by modify the header in an obvious way.\footnote{This time I mean it!}

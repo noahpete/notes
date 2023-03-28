@@ -1,15 +1,9 @@
 [0] Config.pm:306> INFO - This is Biber 2.18
 [0] Config.pm:309> INFO - Logfile is 'master.blg'
-[91] biber-MSWIN64:340> INFO - === 
-[122] Biber.pm:418> INFO - Reading 'master.bcf'
-[199] Biber.pm:978> INFO - Found 1 citekeys in bib section 0
-[209] Biber.pm:4401> INFO - Processing section 0
-[217] Biber.pm:4592> INFO - Looking for bibtex file 'ref.bib' for section 0
-[261] bibtex.pm:1713> INFO - LaTeX decoding ...
-[264] bibtex.pm:1518> INFO - Found BibTeX data source 'ref.bib'
-[291] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[291] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[291] Biber.pm:4221> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
-[291] Biber.pm:4227> INFO - No sort tailoring available for locale 'en-US'
-[295] bbl.pm:654> INFO - Writing 'master.bbl' with encoding 'UTF-8'
-[295] bbl.pm:757> INFO - Output to master.bbl
+[87] biber-MSWIN64:340> INFO - === 
+[121] Biber.pm:418> INFO - Reading 'master.bcf'
+[205] Biber.pm:978> INFO - Found 0 citekeys in bib section 0
+[216] bbl.pm:654> INFO - Writing 'master.bbl' with encoding 'UTF-8'
+[216] bbl.pm:757> INFO - Output to master.bbl
+[216] Biber.pm:130> WARN - The file 'master.bcf' does not contain any citations!
+[216] Biber.pm:132> INFO - WARNINGS: 1
