@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.16)  28 MAR 2023 16:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.16)  28 MAR 2023 17:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1527,7 +1527,7 @@ l.19 \end{abstract}
 Package marginnote Info: Using workaround for absolute page number on input line 19.
  (master.toc
 
-LaTeX Warning: Reference `thm' on page 1 undefined on input line 9.
+LaTeX Warning: Reference `thm' on page 1 undefined on input line 10.
 
 )
 \tf@toc=\write6
@@ -1692,24 +1692,34 @@ Package marginnote Info: right page because not two side mode on input line 2.
 Package marginnote Info: xpos seems to be 72.2698pt on input line 2.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 4.
-) [5] [6
+(mdframed)              on input line 3.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 9.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 24.
+ [5]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 38.
+) [6] [7
 
 ] (appendix.tex
 Appendix A.
 
-LaTeX Warning: Reference `thm' on page 7 undefined on input line 2.
+LaTeX Warning: Reference `thm' on page 8 undefined on input line 2.
 
 
-LaTeX Warning: Reference `thm' on page 7 undefined on input line 3.
+LaTeX Warning: Reference `thm' on page 8 undefined on input line 3.
 
 
-LaTeX Warning: Reference `thm' on page 7 undefined on input line 4.
+LaTeX Warning: Reference `thm' on page 8 undefined on input line 4.
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 4.
-) [7
+) [8
 
 ]
 
@@ -1729,17 +1739,17 @@ Package logreq Info: Writing requests to 'master.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 53226 strings out of 476339
- 1214071 string characters out of 5788591
- 2037042 words of memory out of 5000000
- 72691 multiletter control sequences out of 15000+600000
+ 53247 strings out of 476339
+ 1214455 string characters out of 5788591
+ 2038230 words of memory out of 5000000
+ 72702 multiletter control sequences out of 15000+600000
  539699 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,13n,100p,1292b,1235s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,13n,100p,1292b,1239s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1000.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1000.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss0900.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on master.pdf (9 pages, 202357 bytes).
+Output written on master.pdf (10 pages, 208684 bytes).
 PDF statistics:
- 554 PDF objects out of 1000 (max. 8388607)
- 43 named destinations out of 1000 (max. 500000)
+ 576 PDF objects out of 1000 (max. 8388607)
+ 53 named destinations out of 1000 (max. 500000)
  151 words of extra memory for PDF output out of 10000 (max. 10000000)
 
