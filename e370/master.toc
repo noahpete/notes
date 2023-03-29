@@ -6,5 +6,4 @@
 \contentsline {subsection}{\numberline {3.2.3}Cache Operation}{5}{subsection.3.2.3}%
 \contentsline {section}{\numberline {3.3}Cache Organization}{5}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Block Size}{5}{subsection.3.3.1}%
-\contentsline {chapter}{\numberline {A}Additional Proofs}{8}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Proof of \autoref {thm}}{8}{appendix.A.1}%
+\contentsline {subsection}{\numberline {3.3.2}Stores and the Cache}{6}{subsection.3.3.2}%

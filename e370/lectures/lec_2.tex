@@ -32,10 +32,65 @@ We now consider the design of a cache.
   \begin{enumerate}
     \item How many bits are for each tag? How many blocks in the cache?
     \item For the following reference stream, indicate whether each reference is a hit or miss: 0, 1, 3, 5, 12, 1, 2, 9, 4.
+    \item What is the hit rate?
+    \item How many bits are needed for storage overhead for each block?
   \end{enumerate}
 \end{problem}
 \begin{answer}
+  \: \newline
   \begin{enumerate}
-    \item 
+    \item 16 bits total - 1 bit for block offset = \textbf{15 bits} for each tag. 8 bytes total / 2 bytes per block = \textbf{4 blocks}.  
+    \item
+      \begin{itemize}
+        \item 0: never in cache before \(\to\) \textbf{miss}
+        \item 1: 0 was just cached and block size is 2 bytes \(\to\) \textbf{hit}
+        \item 3: 2 nor 3 have been cached yet \(\to\) \textbf{miss}
+        \item 5: 4 nor 5 have been cached yet \(\to\) \textbf{miss}
+        \item 12: 12 nor 13 have been cached yet \(\to\) \textbf{miss}
+        \item 1: 1 was cached and hasn't been booted from cache \(\to\) \textbf{hit}
+        \item 2: 3 was cached recently \(\to\) \textbf{hit}
+        \item 9: LRU was 4/5 block, so 4/5 booted from cache, 8/9 in now \(\to\) \textbf{miss}
+        \item 4: 4/5 block just booted, so not in cache; boots 12/13 \(\to\) \textbf{miss}
+      \end{itemize}
+    \item \(3 / 9 = 0.33\)
+    \item
+      \begin{itemize}
+        \item Tag: 15 bits
+        \item Valid: 1 bit
+        \item LRU: \(\log_2(4) = 2\) bits
+      \end{itemize}
+      \(\implies\) total: \textbf{18 bits}
   \end{enumerate}
 \end{answer}
+
+\subsection{Stores and the Cache}
+Where should we write the result of a store?
+\begin{itemize}
+  \item If that memory location is in the cache?
+    \begin{itemize}
+      \item Send it to the cache
+      \item should we also send it to memory (\textbf{write-through policy})
+    \end{itemize}
+  \item If that memory location is \emph{not} in the cache?
+    \begin{itemize}
+      \item Allocate the line, i.e. put it in the cache (\textbf{allocate-on-write policy})
+      \item Write it directly to memory without allocation (\textbf{no allocate-on-write policy})
+    \end{itemize}
+\end{itemize}
+
+\todo{Add memory diagram from lecture}
+
+\begin{definition}[Write-Through Policy]
+  When storing a value from the processor to memory and the memory location is in the cache, we store the value in the cache and simultaneously change the value in memory.
+\end{definition}
+
+\begin{definition}[Allocate-On-Write Policy]
+  When storing a value from the processor to memory and the memory location is \emph{not} in the cache, we must first \emph{read} the desired block from memory, before storing into the block in the cache and memory.
+\end{definition}
+
+\begin{definition}[No Allocate-On-Write Policy]
+  When storing a value from the processor to memory and the memory location is \emph{not} in the cache, we can ignore the cache and simply update memory with the given value.
+\end{definition}
+\begin{remark}
+  This method may sometimes be less advantageous if we are going to read the value from memory soon after writing to it. However, write data streams and read data streams are often independent, so this isn't usually the case.
+\end{remark}
