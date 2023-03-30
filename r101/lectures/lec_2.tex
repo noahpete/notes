@@ -1,0 +1,105 @@
+\lecture{19}{16 Mar. 9:00}{Vectors and Approximating Nonlinear Equations}
+\section{Vectors and Nonlinear Equations}
+
+We can use vectors for linear approximations by understanding partial derivatives. Given nonlinear funcitons \(f: \mathbb{R}^m \to \mathbb{R}^m \) we want the linear approximation at \(x_0 \in \mathbb{R}^m \).
+\[
+  f(x) \approx f(x_0) + A(x - x_0)
+\]
+where \(A_{n \cross m}, x, x_0 \in \mathbb{R}^m\), and \(f(x_0), f(x) \in \mathbb{R}^n \). Here, \(A\) represents a matrix made up of partial derivatives.
+
+\begin{remark}
+  Everything is the same as finding a linear approximation at a point. We are just replacing the slope with a matrix and the \(x\)s with vectors.
+\end{remark}
+
+\section{Partial Derivatives}
+
+Set \(x = x_0 + he_i\) where \(he_i\) is some small outside adjustment to \(x_0\) such that all \(x_0\) remain the same except the \(i\)-th component.
+
+\[
+  x_0 + he_i =
+    \begin{bmatrix}
+      x_{01} \\
+      x_{02} \\
+      \vdots \\
+      x_{0m} \\
+    \end{bmatrix} + h
+    \begin{bmatrix}
+      0 \\
+      0 \\
+      \vdots \\
+      1 \\
+      \vdots \\
+      0
+    \end{bmatrix} =
+    \begin{bmatrix}
+      x_{01} \\
+      x_{02} \\
+      \vdots \\
+      x_{0i} + h \\
+      \vdots \\
+      x_{0m} \\
+    \end{bmatrix}
+    \text{    where \(h\) is small}
+\]
+
+Equivalently, we have:
+\[
+  f(x_0 + he_i) \approx f(x_0) + A(x_0 + he_i - x_0) = f(x_0) + h a_i^{col}
+\]
+where we can now solve for \(a_i^{col}\), which represents the derivative of \(f\) with respect to \(x_i\).
+
+We can represent the numerical approximation of a partial derivative similar to how we represented the numerical approximation of a standard derivative. A partial derivative is represented with the mathematical symbol del: \(\partial\).
+
+\section{Jacobian}
+Given the nonlinear functions \(f: \mathbb{R}^m \to \mathbb{R}^m\), the \textbf{Jacobian} is
+\[
+  \frac{\partial f(x)}{\partial x} \coloneqq \Bigg [ \frac{\partial f(x)}{\partial x_1} \frac{\partial f(x)}{\partial x_2} \ldots \frac{\partial f(x)}{\partial x_m} \Bigg ]_{n \cross m}.
+\]
+\begin{itemize}
+  \item The partial derivatives are stacked to form a matrix
+  \item For each \(x \in \mathbb{R}^m \), \(\frac{\partial f(x)}{\partial x}\) is an \(n \cross m\) matrix
+  \item The \textbf{gradient} of \(f: \mathbb{R}^m \to \mathbb{R} \) is a special Jacobian that for each \(x \in \mathbb{R}^m \), \(\nabla f(x)\) is a \(1 \cross m\) matrix 
+\end{itemize}
+
+\(f: \mathbb{R}^m \to \mathbb{R}^n\) looks like:
+\[
+  f(x) =
+  \begin{bmatrix}
+    f_1(x) \\
+    f_2(x) \\
+    \vdots \\
+    f_n(x) \\
+  \end{bmatrix}
+\]
+
+\(\frac{\partial f(x)}{\partial x}\) looks like:
+\[
+  \frac{\partial f(x)}{\partial x} = \left[
+    \begin{array}{cccc}
+     \frac{\partial f_1(x)}{\partial x_1} & \frac{\partial f_1(x)}{\partial x_2} & \ldots & \frac{\partial f_1(x)}{\partial x_m} \\
+     \vdots & \vdots & \ddots & \vdots \\
+     \frac{\partial f_n(x)}{\partial x_1} & \frac{\partial f_n(x)}{\partial x_2} & \ldots & \frac{\partial f_n(x)}{\partial x_m} \\
+    \end{array}
+    \right]
+\] 
+
+The linear approximation of nonlinear functions \(f: \mathbb{R}^m \to \mathbb{R}^n\) at point \(x_0 \in \mathbb{R}^m\) is
+\[
+  f(x) \approx f(x_0) + A(x - x_0) = f(x_0) + \frac{\partial f(x_0)}{\partial x} (x - x_0).
+\]
+
+\begin{problem}
+  We have two functions:
+  \begin{align*}
+    f_1(x_1, x_2) &= \log (x_1) + \sqrt{x_2} \\
+    f_2(x_1, x_2) &= x_1 \cdot x_2
+  \end{align*}
+  and let \(x_0 =
+  \begin{bmatrix}
+    1 \\
+    2 \\  
+  \end{bmatrix}\). 
+\end{problem}
+\begin{answer}
+  \(f: \mathbb{R}^2 \to \mathbb{R}^2\) so 
+\end{answer}

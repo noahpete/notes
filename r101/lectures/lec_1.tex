@@ -1,0 +1,67 @@
+\setcounter{chapter}{10}
+\setcounter{lecture}{17}
+\chapter{Solutions of Nonlinear Equations}
+\lecture{18}{14 Mar. 12:00}{Review and Approximating Nonlinear Equations}
+\section{Bisection Algorithm}
+
+\begin{theorem}[Intermediate Value Theorem]
+	Suppose \(f: \mathbb{R} \to \mathbb{R}\) is a continuous function and you know two real numbers, \(a < b\), such that \(f(a) \cdot f(b) < 0\). Then \(\exists c \in \mathbb{R}\) such that:
+	\begin{align*}
+		a < c < b \\
+		f(c) = 0 \\
+	\end{align*} 
+\end{theorem}
+
+Using the midpoint between two numbers to find the root may not give us the root right away. Further, the root isn't always exactly in between \(a\) and \(b\). So, we can use the \textbf{bisection algorithm} to \emph{approximate} roots:
+
+\begin{algorithm}[H]\label{BisectionAlgorithm}
+	\DontPrintSemicolon
+	\caption{Bisection Algorithm}
+	\KwData{\(a < b \in \mathbb{R} \) such that \(f(a) \cdot f(b) < 0\)}
+	\(c = (a + b) / 2\)
+	\If{\(f(c) = 0\)}{
+		\Return{\(x^* = c\)}
+	}
+	\Else{
+		\If{\(f(c) \cdot f(a) < 0\)}{
+			\(b = c\) 
+		}
+		\Else{
+			\(a = c\)
+		}
+	}
+	Loop back to \textbf{1}.
+\end{algorithm}
+
+\section{Derivatives and Approximation}
+
+\begin{definition}[Derivative]
+	A \textbf{derivative} is the slope of a function at a specific point.
+\end{definition}
+
+There are 3 ways to represent the numerical approximation of a derivative:
+\begin{enumerate}
+	\item \textbf{Forward Difference Approximation}: \(\frac{df(x_0)}{dx} = \frac{f(x_0 + h) - f(x_0)}{h}\)
+	\item \textbf{Backward Difference Approximation}: \(\frac{df(x_0)}{dx} = \frac{f(x_0) - f(x_0 - h)}{h}\)
+	\item \textbf{Symmetric Difference Approximation}: \(\frac{df(x_0)}{dx} = \frac{f(x_0 + h) - f(x_0 - h)}{2h}\)  
+\end{enumerate}
+
+\newpage
+
+\begin{remark}
+	If the 3 approximations above don't agree, then the limit does not exist and the function is not differentiable.
+\end{remark}
+
+For a differentiable function, \(f(x)\), \(f(x) \approx f(x_0) + \frac{df(x_0)}{dx} (x - x_0)	\) near point \((x_0, f(x_0)) \: \forall x_0 \). We can use this idea to \emph{find roots} using linear approximations to nonlinear functions.
+
+\section{Newton's Method}
+To find the roots using linear approximations to nonlinear functions we can use \textbf{Newton's Method}:
+
+\begin{definition}[Newton's Method]
+	Assume \(f: \mathbb{R} \to \mathbb{R} \) is differentiable everywhere. Let \(x_k\) be our current estimate of a root, then: \[f(x) \approx f(x_k) + \frac{df(x_k)}{dx} (x - x_k).\] We want \(x_{k + 1}\) such that \(f(x_{k + 1}) = 0\).
+\end{definition}
+If we solve for \(x_{k + 1}\) we get: \[ x_{k + 1} = x_k - \frac{df(x_k)}{dx}^{-1} f(x_k). \] This method takes very big "steps", so it may be more beneficial to take smaller "steps". This leads to the \textbf{damped Newton Method},
+\[
+	x_{k+1} = x_k - \epsilon \big ( \frac{df(x_k)}{dx} \big )^{-1} f(x_k),
+\]
+where \(0 < \epsilon < 1\) A typical value may be \(\epsilon = 0.1\).

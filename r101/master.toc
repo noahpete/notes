@@ -1,0 +1,7 @@
+\contentsline {chapter}{\numberline {11}Solutions of Nonlinear Equations}{2}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Bisection Algorithm}{2}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Derivatives and Approximation}{2}{section.11.2}%
+\contentsline {section}{\numberline {11.3}Newton's Method}{3}{section.11.3}%
+\contentsline {section}{\numberline {11.4}Vectors and Nonlinear Equations}{3}{section.11.4}%
+\contentsline {section}{\numberline {11.5}Partial Derivatives}{3}{section.11.5}%
+\contentsline {section}{\numberline {11.6}Jacobian}{4}{section.11.6}%
