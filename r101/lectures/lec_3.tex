@@ -1,13 +1,15 @@
 \chapter{Basic Ideas of Optimization}
-\lecture{20}{16 Mar. 9:00}{Vectors and Approximating Nonlinear Equations}
+\lecture{20}{21 Mar. 9:00}{Gradient Descent}
 \section{Gradient}
 Let \(f: \mathbb{R}^m \to \mathbb{R} \), then the \textbf{gradient} of \(f\) is the partial derivatives of \(f\) with respect to \(x_i\):
-\[
-  \nabla f(x_0) =
-  \begin{bmatrix}
-    \frac{\partial f(x_0)}{\partial x_1} \frac{\partial f(x_0)}{\partial x_2} \ldots \frac{\partial f(x_0)}{\partial x_m}
-  \end{bmatrix}_{1 \cross m}.
-\] 
+\begin{definition}[Gradient (\(\nabla\))]
+  \[
+    \nabla f(x_0) =
+    \begin{bmatrix}
+      \frac{\partial f(x_0)}{\partial x_1} \frac{\partial f(x_0)}{\partial x_2} \ldots \frac{\partial f(x_0)}{\partial x_m}
+    \end{bmatrix}_{1 \cross m}.
+  \] 
+\end{definition}
 For linear approximation about a point:
 \[
   f(x) \approx f(x_0) + \nabla f(x_0) (x - x_0)
@@ -34,3 +36,36 @@ So, we let \(\Delta x_k = -s \frac{\partial f(x_k)}{\partial x} \) for \(s>0\) (
 \[
   x_{k+1} = x_k -s \frac{\partial f(x_k)}{\partial x} 
 \]
+
+\section{Gradient Descent}
+Note that the gradient vanishes at local minima: \(\nabla f(x^*) = 0\). In order to find an extremum (in our case: a minimum) we can start at some arbitrary \(x_k\) and calculate (for a satisfactory \(k\) ), \(x_{k+1} = x_k - s(\nabla f(x_k))^T\).
+
+\begin{remark}
+  We transpose \(\nabla f(x_k)\) because the gradient is a row vector, so we must transpose it into a column.
+\end{remark}
+
+\subsection*{Finding the Minimum: Gradient Descent Algorithm}
+Note that our \emph{key condition} is
+\[
+  \nabla f(x_k) \Delta x_k < 0.
+\]
+Using the above, we can find a minimum starting with the linear approximation of \(f: \mathbb{R} ^m \to \mathbb{R} \) near \(x_k\):
+\[
+  f(x) \approx f(x_k) + \nabla f(x_k)(x-x_k)
+\]
+We want \(x_{k+1}\) such that \(f(x_{k+1}) < f(x_k)\). We find that if \(\Delta x_k = -s(\nabla f(x_k))^T\) then we have:
+\[
+  \nabla f(x_k) \Delta x_k = -s \lVert (\nabla f(x_k))^T \rVert^2 < 0, \; \forall s > 0
+\]
+We can construct an algorithm from this:
+\begin{algorithm}
+  \DontPrintSemicolon
+  \caption{Gradient Descent Algorithm}
+  \KwData{\(f, x_i \gets 0, s \gets 0.1\)}
+  \While{\(\lVert \nabla f(x_i) \rVert < tol \And i < i_{\max }\) }{
+    \(\Delta x_i \gets -s \cdot \nabla f(x_i)\)\;
+    \(x_i \gets x_i + \Delta x_i\)\;
+    \(i \mathrel{{+}{=}} 1\)\;
+  }
+  \Return{\(x_i\) }
+\end{algorithm}
