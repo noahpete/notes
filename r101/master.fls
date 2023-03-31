@@ -2007,6 +2007,14 @@ INPUT .\Lectures\lec_3.tex
 INPUT Lectures\lec_3.tex
 INPUT .\Lectures\lec_3.tex
 INPUT Lectures\lec_3.tex
+INPUT C:\Users\Noah\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1200.tfm
+INPUT .\Lectures\lec_4.tex
+INPUT Lectures\lec_4.tex
+INPUT .\Lectures\lec_4.tex
+INPUT Lectures\lec_4.tex
+INPUT .\Lectures\lec_4.tex
+INPUT Lectures\lec_4.tex
+INPUT C:\Users\Noah\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecsi1000.tfm
 INPUT .\appendix.tex
 INPUT appendix.tex
 INPUT .\appendix.tex
@@ -2016,6 +2024,10 @@ INPUT .\master.out
 INPUT .\master.out
 INPUT master.run.xml
 OUTPUT master.run.xml
+INPUT C:\Users\Noah\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecsi1000.pk
+INPUT C:\Users\Noah\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecsi1000.pk
+INPUT C:\Users\Noah\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk
+INPUT C:\Users\Noah\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk
 INPUT C:\Users\Noah\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1000.pk
 INPUT C:\Users\Noah\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1000.pk
 INPUT C:\Users\Noah\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1000.pk

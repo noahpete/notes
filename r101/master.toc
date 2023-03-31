@@ -9,3 +9,5 @@
 \contentsline {chapter}{\numberline {12}Basic Ideas of Optimization}{6}{chapter.12}%
 \contentsline {section}{\numberline {12.1}Gradient}{6}{section.12.1}%
 \contentsline {section}{\numberline {12.2}Building Towards Optimization}{6}{section.12.2}%
+\contentsline {section}{\numberline {12.3}Gradient Descent}{6}{section.12.3}%
+\contentsline {section}{\numberline {12.4}Hessian}{7}{section.12.4}%

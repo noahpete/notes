@@ -1,0 +1,73 @@
+\lecture{21}{23 Mar. 9:00}{Root Finding With the Second Derivative}
+\section{Hessian}
+\begin{definition}
+  The \textbf{Hessian} of a function \(f: \mathbb{R} ^m \to \mathbb{R} \) is the Jacobian of the \emph{gradient transpose} of \(f\):
+  \[
+    \nabla^2 f(x) \coloneqq \frac{\partial (\nabla f(x))^T}{\partial x} 
+  \]
+  where \(x \in \mathbb{R} ^m\) and \(f(x) \in \mathbb{R} \).
+\end{definition}
+
+\begin{definition}[Gradient Transpose]
+  The \textbf{gradient transpose} is defined as:
+  \[
+    (\nabla f(x))^T \coloneqq
+    \begin{bmatrix}
+      \frac{\partial f(x)}{\partial x_1} \\
+      \vdots \\
+      \frac{\partial f(x)}{\partial x_m} \\
+    \end{bmatrix}_{m \cross 1}
+  \]
+\end{definition}
+
+
+\begin{figure}[h]
+  \[
+    \nabla^2 f(x) =
+    \left[
+      \begin{array}{ccc}
+        \frac{\partial^2 f(x)}{\partial x_1^2} & \ldots & \frac{\partial^2 f(x)}{\partial x_1 \partial x_m} \\
+        \vdots & \ddots & \vdots \\
+        \frac{\partial^2 f(x)}{\partial x_m \partial x_1} & \ldots & \frac{\partial^2 f(x)}{\partial x_m^2} \\
+      \end{array}
+    \right] 
+  \]
+  \caption{The Hessian in terms of individual entries.}
+\end{figure}
+
+\newpage
+    
+The \textbf{Jacobian} for \(g: \mathbb{R} ^m \to \mathbb{R} ^m\) is
+\[
+  \frac{\partial g(x)}{\partial x} \coloneqq
+  \begin{bmatrix}
+    \frac{\partial g(x)}{\partial x_1} \ldots \frac{\partial g(x)}{\partial x_m} 
+  \end{bmatrix}_{m \cross m}.
+\]
+
+To summarize the above, the two methods for finding a minimum that we have seen include:
+\begin{definition}[\emph{Scalar} Optimization (Newton's Method)]
+  For \(f: \mathbb{R} \to \mathbb{R} \):
+  \[
+    x_{k+1} = x_k - \left(\frac{\partial^2 f(x_k)}{\partial x^2}\right)^{-1} \frac{\partial f(x_k)}{\partial x} 
+  \]
+  and its \emph{damped} version where \(0 < s < 1\):
+  \[
+    x_{k+1} = x_k - s(\left(\frac{\partial^2 f(x_k)}{\partial x^2}\right)^{-1} \frac{\partial f(x_k)}{\partial x}).
+  \] 
+\end{definition}
+\begin{definition}[\emph{Vector} Optimization (Newton-Raphson)]
+  For \(f: \mathbb{R} ^m \to \mathbb{R} \):
+  \[
+    \nabla^2 f(x_k) \Delta x_k = -(\nabla f(x_k))^T
+  \]
+  and its \emph{damped} version where \(0 < s < 1\):
+  \[
+    x_{k+1} = x_k s \Delta x_k.
+  \]
+\end{definition}
+\begin{remark}
+  Use LU or QR factorization (i.e. \(Ax=b\)) to solve for \(\Delta x_k\).
+\end{remark}
+
+The Hessian used in the Newton-Raphson algorithm gives us the root of the gradient function. For us, our goal was to find the local minimum. In some problems, Newton-Raphson with the Hessian has a faster 
