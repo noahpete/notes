@@ -1,0 +1,36 @@
+\chapter{Basic Ideas of Optimization}
+\lecture{20}{16 Mar. 9:00}{Vectors and Approximating Nonlinear Equations}
+\section{Gradient}
+Let \(f: \mathbb{R}^m \to \mathbb{R} \), then the \textbf{gradient} of \(f\) is the partial derivatives of \(f\) with respect to \(x_i\):
+\[
+  \nabla f(x_0) =
+  \begin{bmatrix}
+    \frac{\partial f(x_0)}{\partial x_1} \frac{\partial f(x_0)}{\partial x_2} \ldots \frac{\partial f(x_0)}{\partial x_m}
+  \end{bmatrix}_{1 \cross m}.
+\] 
+For linear approximation about a point:
+\[
+  f(x) \approx f(x_0) + \nabla f(x_0) (x - x_0)
+\]
+
+\section{Building Towards Optimization}
+Optimization is finding a potential set of solutions to a problem in \(\mathbb{R} ^m\) The \textbf{cost function} \(f: \mathbb{R} ^m \to \mathbb{R} \) allows us to compare elements of \(\mathbb{R} ^m\) in order for us to decide which are more advantageous to us.
+
+\begin{enumerate}
+  \item \textbf{REGRET} functions minimize. If \(*\) is the minimum point of interest, as \(x \in \mathbb{R} ^m\)  gets close to our \(x^*\), it is small and as \(x\) get far from \(x^*\), it is large. Mathematically:
+  \[
+    x^* = \mathbf{argmin}_{x \in \mathbb{R}^m} f(x).
+  \]
+  \item \textbf{REWARD} functions maximize. Here we will focus on minimization.
+\end{enumerate}
+
+Suppose we start at \(x_k \in \mathbb{R} \) and we want to find \(x_{k +1} \in \mathbb{R}\) where \(f(x_{k+1}) < f(x_k)\). We note that \(f(x_{k+1}) - f(x_k) < 0\) if and only if \(\frac{\partial f(x_k)}{\partial x} (x_{k+1}-x_k) < 0\).
+
+\begin{remark}
+  Make sure that you do not begin with \(\frac{\partial f(x_k)}{\partial x} = 0\), as this would indicate \(x_k\) is already an extremum.
+\end{remark}
+
+So, we let \(\Delta x_k = -s \frac{\partial f(x_k)}{\partial x} \) for \(s>0\) (\textbf{step size}). If \(s\) is too big then we may overshoot our estimate. We typically use \(s \approx 0.1\). Solving for \(x_{k+1}\) (i.e. our \emph{next best guess} closer to the local extremum):
+\[
+  x_{k+1} = x_k -s \frac{\partial f(x_k)}{\partial x} 
+\]
