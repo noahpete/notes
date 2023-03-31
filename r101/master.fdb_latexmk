@@ -1,11 +1,11 @@
 # Fdb version 4
-["biber master"] 1680232970 "master.bcf" "master.bbl" "master" 1680235455 0
-  "master.bcf" 1680235455 107283 a05097f591b0a636ad6567397d81ccfa "pdflatex"
+["biber master"] 1680232970 "master.bcf" "master.bbl" "master" 1680286543 0
+  "master.bcf" 1680286542 107283 a05097f591b0a636ad6567397d81ccfa "pdflatex"
   (generated)
   "master.bbl"
   "master.blg"
   (rewritten before read)
-["pdflatex"] 1680235452 "c:/Users/Noah/notes/r101/master.tex" "master.pdf" "master" 1680235455 0
+["pdflatex"] 1680286540 "c:/Users/Noah/notes/r101/master.tex" "master.pdf" "master" 1680286543 0
   "C:/Users/Noah/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1680026834 81086 6fddea6b023469843de28035c851ec71 ""
   "C:/Users/Noah/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx0700.pk" 1680020514 17380 e9b90eb9d839af2e34e6517086fe4a2b ""
   "C:/Users/Noah/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1000.pk" 1678998571 25420 73b66a676533c25d0ffed8f0cf46130d ""
@@ -377,7 +377,7 @@
   "C:/Users/Noah/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1673965817 123 a302f2c651a95033260db60e51527ae8 ""
   "C:/Users/Noah/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1650051284 2245 c8a4088d07cffc2e5207730c738edd76 ""
   "C:/Users/Noah/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1650051284 20785 71a3d72ab517959a6979c27e6176bec1 ""
-  "Lectures/lec_1.tex" 1680232179 2897 8afbf08c7b916d6118bde285fa3717ec ""
+  "Lectures/lec_1.tex" 1680286537 2899 3e7545191c917efde5fcfc0c8fca59bb ""
   "Lectures/lec_2.tex" 1680220685 6747 deb3f9f7b9face8d7382a1519018f1a9 ""
   "Lectures/lec_3.tex" 1680234061 3390 ba8593f7997348bb858a3bb8c43e45a1 ""
   "Lectures/lec_4.tex" 1680235449 2514 da317fcefdb55b66f119df87b15117e0 ""
@@ -385,12 +385,12 @@
   "appendix.tex" 1680103912 251 62128bda34991e9d5cf2ed51792d78be ""
   "c:/Users/Noah/notes/r101/master.tex" 1680232322 1370 b3413d6804b0ab270e2edc7befacd1d8 ""
   "header.tex" 1680026828 10947 6d733f23313219c2b16aeed622bda5dd ""
-  "master.aux" 1680235455 7357 4d04c34507e3ffb45235fb6a3f22c22f "pdflatex"
+  "master.aux" 1680286542 7357 df4c7d7de605e2bc0d86aa2d8d12fb17 "pdflatex"
   "master.bbl" 1680232971 486 ee04f40f768daeed26442158e95aba61 "biber master"
-  "master.out" 1680235455 2067 9e844351f1dbd31220668b256cce0c45 "pdflatex"
-  "master.run.xml" 1680235455 2318 54cfa3ba94777505e137b706f4dd1953 "pdflatex"
+  "master.out" 1680286542 2067 9e844351f1dbd31220668b256cce0c45 "pdflatex"
+  "master.run.xml" 1680286542 2318 54cfa3ba94777505e137b706f4dd1953 "pdflatex"
   "master.tex" 1680232322 1370 b3413d6804b0ab270e2edc7befacd1d8 ""
-  "master.toc" 1680235455 1059 a26aca42a39b7a955761829e1c5efb39 "pdflatex"
+  "master.toc" 1680286542 1059 a26aca42a39b7a955761829e1c5efb39 "pdflatex"
   (generated)
   "master.aux"
   "master.bcf"
