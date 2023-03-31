@@ -1,0 +1,7 @@
+chapters
+2: Perfectly Secret Encryption
+3: Private-Key Encryption
+4: Message Authentication Codes
+5: Hash Functions and Applications
+9: Number Theory and Cryptographic Hardness Assumptions
+11: Key Management and the Public-Key Revolution

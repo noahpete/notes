@@ -1,0 +1,66 @@
+\lecture{21}{27 Mar. 10:30}{Diffie-Hellman Key Exchange, DDH Assumption, Public Key Encryption and CPA Security}
+
+\section{Diffie-Hellman}
+The key exchance problem occurs when two individuals seek to communicate over an insecure channel. The canonical story has \emph{Alice} and \emph{Bob} attempting to communicate over a channel being \emph{passively monitored} by an eavesdropper, \emph{Eve}.
+
+\begin{definition}[Diffie-Hellman Protocol]
+	\begin{enumerate}
+		\,
+		\item let Alice fix a large \hyperref[def:cyclicgroup]{cyclic group} \(G\) of known order \(q\). (\(|q| \approx \) security parameter).
+		\item Alice discovers a generator \(g\) for \(G = \mathbf{Z} _{q+1}^*\) for \(q+1\) prime. In other words, Alice finds a number \(g\) that enumerates all elements of the group \(G\) when raised to the powers \(\left\{ 0, 1, \ldots , q - 1 \right\} \).
+		\item Alice chooses random \(a \gets \mathbb{Z} _q\), let \(\mathcal{A} = g^a \in G\).
+		\item Alice sends \(\mathcal{A} = g^a, g\)  to Bob over the insecure channel. Eve has access to this information.
+		\item Bob receives the message and chooses a random \(b \gets \mathbb{Z} _q\) and sends \(\mathcal{B} = g^b \in G\) back to Alice.
+		\item Alice and Bob both calculate \(\mathcal{K} = (g^a)^b = (g^b)^a = g^{ab}\) as their shared secret key.  
+	\end{enumerate}
+\end{definition}
+
+An eavesdropper will have to take \emph{discrete log} to break this scheme (to find \(a\) or \(b\)). Formally, the security of this scheme is based on \textbf{DDH: Decisional Diffie-Hellman Assumption}.
+
+\begin{definition}[Decisional Diffie-Hellman Assumption (DDH)]
+	DDH holds for a group \(G = \langle g \rangle \) (i.e. \(G\) is \emph{generated} by \(g\)) if \[(g, g^a, g^b, g^{ab}) \in G^4\] is indistinguishable (for \(a, b \gets \mathbb{Z} _q, q = |G|\)) from \[(g, g^a, g^b, g^c), \text{ where }\: c \gets \mathbf{Z} _q\]
+\end{definition}
+\begin{remark}
+	Key derivation can simply be an algorithm for turning a group element into a random bit-string.
+\end{remark}
+
+\section{Modeling Public Key Encryption}
+We want to have a protocol (Gen, Enc, Dec) that can \emph{directly} handle public key encryption. We can model this analogously to EAV/CPA security, just in a public key setting:
+
+/\begin{figure}[H]
+	\centering
+	\incfig[0.5]{pubeavcpa}
+	\caption{Analog of EAV/CPA security in the context of public keys.}
+	\label{fig:pubeavcpa}
+\end{figure}
+
+\begin{definition}[Public Key CPA (EAV) Secure Scheme]
+	For our \textbf{CPA secure public key scheme} we have:
+	\begin{itemize}
+		\item \(\mathrm{Gen}(1^n): \text{outputs } (k_p, k_s)\)
+		\item \(\mathrm{Enc}(k_p, m \in M): \text{outputs ciphertext }c\)
+		\item \(\mathrm{Dec}(k_s, c): \text{outputs } m \in M \text{(or fail "\(\perp\)")} \)  
+	\end{itemize}
+	We analyze it's correctness. For \((k_p, k_s) \gets \mathrm{Gen}(1^n)\), we always have \(\forall m \in M\):
+	\[
+		\mathrm{Dec}(k_s, \mathrm{Enc}(k_p, m)) = m
+	\] 
+\end{definition}
+
+Just like previous instances of security, we can define public key CPA security in the context of a game. Here we have adversary \(\mathcal{A} \) against \(\Pi = (\mathrm{Gen, Enc, Dec})\):
+
+\begin{figure}[H]
+	\centering
+	\incfig[0.8]{pubcpasec}
+	\caption{title}
+	\label{fig:pubcpasec}
+\end{figure}
+
+\begin{definition}[Public CPA Security]
+	A public key encryption scheme \(\Pi\) as defined above is secure if \(\forall\) p.p.t. \(\mathcal{A} \):
+	\[
+		\mathbf{Adv}_\Pi (\mathcal{A}) \coloneqq \left[ 
+			% \Pr_{(k_p, k_s) \gets \math\mathrm{Gen}(1^n)} (\mathcal{A}^{\mathcal{O}_{k_p, 0} (.,.)})
+		 \right] 
+	\]
+\end{definition}
