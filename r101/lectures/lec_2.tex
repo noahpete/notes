@@ -101,5 +101,86 @@ The linear approximation of nonlinear functions \(f: \mathbb{R}^m \to \mathbb{R}
   \end{bmatrix}\). 
 \end{problem}
 \begin{answer}
-  \(f: \mathbb{R}^2 \to \mathbb{R}^2\) so 
+  \(f: \mathbb{R}^2 \to \mathbb{R}^2\) so \(\frac{\partial f(x)}{\partial x} \) is a \(2 \cross 2\) matrix. Using forward approximation we have \(\frac{\partial f(x_0)}{\partial x} = \frac{f(x_0 + he_i) - f(x_0)}{h} \) with \(h = 0.001\).
+  \begin{itemize}
+    \item \(f_1\) w.r.t \(x_1\):
+    \[
+      \frac{\partial f_1(x_1,x_2)}{\partial x_1} =
+      \frac{(\log (1 + 0.001) + \sqrt{2}) - (\log (1) + \sqrt{2})}{0.001} =
+      0.43408
+    \]
+    \item \(f_1\) w.r.t. \(x_2\):
+    \[
+      \frac{\partial f_1(x_1,x_2)}{\partial x_2} =
+      \frac{(\log (1) + \sqrt{2 + 0.0001}) - (\log (1) + \sqrt{2})}{0.001} =
+      0.35351
+    \]
+    \item \(f_2\) w.r.t. \(x_1\):
+    \[
+      \frac{\partial f_1(x_1,x_2)}{\partial x_1} =
+      \frac{(1.001)(2) - (1)(2)}{0.001} = 2
+    \]
+    \item \(f_2\) w.r.t. \(x_2\):
+    \[
+      \frac{\partial f_1(x_1,x_2)}{\partial x_2} =
+      \frac{(1)(2.001) - (1)(2)}{0.001} = 1
+    \]
+  \end{itemize}
+  So, the linear approximation is \(f(x) \approx f(x_0) + \frac{\partial f(x_0)}{\partial x} (x - x_0)\)
+  \begin{align*}
+    f(x) &\approx f(x_0) + \frac{\partial f(x_0)}{\partial x}(x-x_0) \\
+    &=
+    \begin{bmatrix}
+      \log (1) + \sqrt{2} \\
+      (1)(2) \\
+    \end{bmatrix} + \left[
+    \begin{array}{cc}
+      0.43408 & 0.35351 \\
+      2 & 1 \\
+    \end{array} \right]
+    \begin{bmatrix}
+      x_1 - 1 \\
+      x_2 - 2 \\
+    \end{bmatrix}
+  \end{align*}
 \end{answer}
+
+\section{Newton-Raphson Method}
+
+Just as Newton's Method was a useful tool for linear approximations, we can use the \textbf{Newton-Raphson Method} for \emph{non-linear approximations}. Given \(f: \mathbb{R}^n \to \mathbb{R}^n\), we want to find a root \(f(x_0) = 0\). Using our approximation above, we can substitute in \(x_{k+1}\) and solve for it:
+\[
+  x_{k+1} = x_k - \frac{\partial f(x)}{\partial x}^{-1} f(x_k)
+\]
+
+\begin{remark}
+  Similarly to when we were solving \(Ax - b = 0\) we made sure \(\det (A) \neq 0\), we want to make sure \(\det (\frac{\partial f(x_k)}{\partial x} \neq 0)\).
+\end{remark}
+
+We can find \(\Delta x_k\) to avoid the inverses in the equations above:
+\[
+  \Delta x_k = - \left( \frac{\partial f(x_k)}{\partial x}  \right)^{-1} f(x_k)
+\]
+
+  Instead of the inverses or dividing matrices, we solve for \(\Delta x_k\) using LU or QR factorization. This can be done using the Newton-Raphson algorithm:
+
+\begin{algorithm}
+  \DontPrintSemicolon
+  \caption{Newton-Raphson Algorithm}
+  \KwData{\(f\)}
+  \(F \gets \mathbf{LU} \left( \frac{\partial f(x_k)}{\partial x}  \right) \) \Comment*[r]{find \(\Delta x_k\) }
+  \(y \gets \mathbf{ForwardSub} \left( F.L, F.P \cdot -f(x_k) \right) \) \\
+  \(\Delta x_k \gets \mathbf{BackwardSub} \left( F.U, y \right) \) \\
+  \(x_{k + 1} \gets x_k + \Delta x_k \) \Comment*[r]{use \(\Delta x_k\) to find \(x_{k + 1}\) }
+  \If{\(f(x_{k+1}) = 0\)}{
+    \Return{\(x_{k+1}\)\text{ as the root}}
+  }
+  \Else{
+    loop back to \textbf{1}.
+  }
+\end{algorithm}
+
+If we replace \(x_{k+1} = x_k \Delta x_k \) with
+\[
+  x_{k+1} = x_k + \varepsilon \Delta x_k
+\]
+we get the \textbf{Damped Newton-Raphson Method} for \(\varepsilon > 0\) (usually \(\varepsilon = 0.1\) is sufficient). This prevents \(\Delta x_k\) from being too big by decreasing the step size.
