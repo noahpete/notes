@@ -1,0 +1,124 @@
+%% Creator: Inkscape 1.2.2 (732a01da63, 2022-12-09), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'setassociative.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{238.77869445bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.76265651)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{setassociative.pdf}}%
+    \put(0.87374568,0.73492757){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Memory\end{tabular}}}}%
+    \put(0.86773768,0.67570608){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}78\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{setassociative.pdf}}%
+    \put(0.86902507,0.63339643){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}29\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{setassociative.pdf}}%
+    \put(0.86816681,0.59134075){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}120\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{setassociative.pdf}}%
+    \put(0.86816681,0.54928497){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}34\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{setassociative.pdf}}%
+    \put(0.86816681,0.50637103){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}54\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{setassociative.pdf}}%
+    \put(0.86730855,0.46345699){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}22\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{setassociative.pdf}}%
+    \put(0.86730855,0.41968479){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}147\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{setassociative.pdf}}%
+    \put(0.86816681,0.37762884){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}72\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{setassociative.pdf}}%
+    \put(0.86816681,0.33557324){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}67\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{setassociative.pdf}}%
+    \put(0.86816681,0.29437573){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}256\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{setassociative.pdf}}%
+    \put(0.8681669,0.25317821){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}210\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{setassociative.pdf}}%
+    \put(0.86816681,0.21283914){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}104\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{setassociative.pdf}}%
+    \put(0.86902507,0.17164162){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}39\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{setassociative.pdf}}%
+    \put(0.86902516,0.13130236){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}90\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{setassociative.pdf}}%
+    \put(0.86816681,0.08924677){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}91\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{setassociative.pdf}}%
+    \put(0.86902516,0.04804926){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}197\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{setassociative.pdf}}%
+    \put(0.73384594,0.67913929){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0\end{tabular}}}}%
+    \put(0.73384594,0.63279222){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}1\end{tabular}}}}%
+    \put(0.7347042,0.5898781){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}2\end{tabular}}}}%
+    \put(0.73556246,0.54782224){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}3\end{tabular}}}}%
+    \put(0.7347042,0.50576664){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}4\end{tabular}}}}%
+    \put(0.73384594,0.46456922){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}5\end{tabular}}}}%
+    \put(0.733366,0.42091023){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}6\end{tabular}}}}%
+    \put(0.73384594,0.3778828){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}7\end{tabular}}}}%
+    \put(0.73384594,0.33754372){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}8\end{tabular}}}}%
+    \put(0.7347042,0.29291317){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}9\end{tabular}}}}%
+    \put(0.72526308,0.25514887){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}10\end{tabular}}}}%
+    \put(0.72612143,0.21223466){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}11\end{tabular}}}}%
+    \put(0.72526317,0.17103733){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}12\end{tabular}}}}%
+    \put(0.72526308,0.12983981){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}13\end{tabular}}}}%
+    \put(0.72526308,0.08864229){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}14\end{tabular}}}}%
+    \put(0.72440482,0.04830322){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}15\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{setassociative.pdf}}%
+    \put(0.3282907,0.56498587){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}data\end{tabular}}}}%
+    \put(0.18506326,0.56862723){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}tag\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{setassociative.pdf}}%
+    \put(0.0746082,0.12073806){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Address:\end{tabular}}}}%
+    \put(0.05640134,0.0673311){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}tag\end{tabular}}}}%
+    \put(0.42296645,0.06611725){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}block offset\end{tabular}}}}%
+    \put(0.05761507,0.00300044){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}2 bits\end{tabular}}}}%
+    \put(0.42175266,0.0017866){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}1 bit\end{tabular}}}}%
+    \put(0.21540804,0.06368993){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}set index\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{setassociative.pdf}}%
+    \put(0.20691154,0.00057257){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}1 bit\end{tabular}}}}%
+    \put(0.08553235,0.51886188){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Set 0\end{tabular}}}}%
+    \put(0.08795992,0.34043424){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Set 1\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{setassociative.pdf}}%
+    \put(0.49093882,0.494586){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Way0\end{tabular}}}}%
+    \put(0.49262292,0.41212693){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Way1\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

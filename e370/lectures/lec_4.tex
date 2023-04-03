@@ -25,6 +25,13 @@ Unlike fully-associative caches, in direct-mapped caches the tag array (CAM) doe
 \section{Set Associative Caches}
 We can achieve the advantages each the fully-associative and direct-mapped cache structures using \textbf{set associative caches}.
 
+\begin{figure}[H]
+  \centering
+  \incfig[0.56]{setassociative}
+  \caption{A basic set-associative cache.}
+  \label{fig:setassociative}
+\end{figure}
+
 \begin{definition}[Set Associative Cache]
   Set associative caches:
   \begin{itemize}
@@ -144,3 +151,5 @@ Block size is the data that is associated with an address tag. Too small blocks 
 
 \subsection{Associativity}
 How many blocks can map to the same index? Larger associativity causes lower miss rates, less variation among programs, but diminishing returns. Smaller associativity causes lower costs, faster hit time.
+
+\newpage
