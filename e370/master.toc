@@ -17,3 +17,4 @@
 \contentsline {subsection}{\numberline {3.8.1}Cache Size}{12}{subsection.3.8.1}%
 \contentsline {subsection}{\numberline {3.8.2}Block Size}{12}{subsection.3.8.2}%
 \contentsline {subsection}{\numberline {3.8.3}Associativity}{12}{subsection.3.8.3}%
+\contentsline {section}{\numberline {3.9}Instruction vs. Data Caches}{12}{section.3.9}%

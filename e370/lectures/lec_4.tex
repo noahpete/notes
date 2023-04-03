@@ -152,4 +152,11 @@ Block size is the data that is associated with an address tag. Too small blocks 
 \subsection{Associativity}
 How many blocks can map to the same index? Larger associativity causes lower miss rates, less variation among programs, but diminishing returns. Smaller associativity causes lower costs, faster hit time.
 
-\newpage
+\section{Instruction vs. Data Caches}
+We've been focusing on caching loads and stores (i.e. data), but what about cache for instructions? Instructions should be cached as well! We have two options:
+\begin{enumerate}
+  \item Treat instruction fetches as normal data and allocate cache lines when fetched
+  \item Create a second cache (called the \textbf{instruction cache} or ICache) which caches instrucations only; more common in practice.
+\end{enumerate}
+
+We can integrate caches into a pipeline by replacing instruction memory with \emph{Icache} and replacing data memory with \emph{Dcache}. But there are some issues: what happens when both caches miss at same time? What about added latency?
