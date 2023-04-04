@@ -8,7 +8,7 @@
    version="1.1"
    id="svg5"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
-   sodipodi:docname="pubcpasec.svg"
+   sodipodi:docname="onemanycpa.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -25,8 +25,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="1.2938725"
-     inkscape:cx="425.85341"
-     inkscape:cy="567.67573"
+     inkscape:cx="473.77158"
+     inkscape:cy="535.21503"
      inkscape:window-width="1649"
      inkscape:window-height="1259"
      inkscape:window-x="1151"
@@ -35,6 +35,44 @@
      inkscape:current-layer="layer1" />
   <defs
      id="defs2">
+    <marker
+       style="overflow:visible"
+       id="marker3614"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path3612" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker1580"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path1578" />
+    </marker>
     <marker
        style="overflow:visible"
        id="marker1563"
@@ -111,6 +149,25 @@
          d="M 5.77,0 -2.88,5 V -5 Z"
          id="path1343-9" />
     </marker>
+    <marker
+       style="overflow:visible"
+       id="marker1563-9"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path1561-1" />
+    </marker>
   </defs>
   <g
      inkscape:label="Layer 1"
@@ -118,7 +175,8 @@
      id="layer1">
     <g
        id="g380"
-       inkscape:label="adversary">
+       inkscape:label="adversary"
+       style="display:inline">
       <rect
          style="fill:#ffffff;stroke:#000000;stroke-width:0.429001;stroke-linecap:round;stroke-linejoin:round"
          id="rect448"
@@ -150,10 +208,6 @@
        style="fill:#ffffff;stroke:#000000;stroke-width:0.420012;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#marker1345-6)"
        d="m 101.87347,160.17894 h 25.08666"
        id="path1341-4" />
-    <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.420012;stroke-linecap:round;stroke-linejoin:round;marker-start:url(#marker1563)"
-       d="m 101.87347,140.94769 h 25.08666"
-       id="path1341-4-7" />
     <text
        xml:space="preserve"
        style="font-size:3.52777px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.429001;stroke-linecap:round;stroke-linejoin:round"
@@ -176,31 +230,49 @@
          style="stroke-width:0.429"
          x="109.4183"
          y="113.76366">$1^n, k_p$</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:3.52777px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.429001;stroke-linecap:round;stroke-linejoin:round"
-       x="112.01672"
-       y="137.3506"
-       id="text2561-8"><tspan
-         sodipodi:role="line"
-         id="tspan2559-4"
-         style="stroke-width:0.429"
-         x="112.01672"
-         y="137.3506">$m_0, m_1$</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:3.52777px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.429001;stroke-linecap:round;stroke-linejoin:round"
-       x="115.05754"
-       y="164.66139"
-       id="text2592"><tspan
-         sodipodi:role="line"
-         id="tspan2590"
-         style="stroke-width:0.429"
-         x="115.05754"
-         y="164.66139">$c \gets \mathrm{Enc}_{k_p} (m_b)$</tspan></text>
+    <g
+       id="g616"
+       inkscape:label="m_0 m_1">
+      <path
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.420012;stroke-linecap:round;stroke-linejoin:round;marker-start:url(#marker1563)"
+         d="m 101.87347,140.94769 h 25.08666"
+         id="path1341-4-7" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.52777px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.429001;stroke-linecap:round;stroke-linejoin:round"
+         x="114.87958"
+         y="137.96407"
+         id="text2561-8"><tspan
+           sodipodi:role="line"
+           id="tspan2559-4"
+           style="stroke-width:0.429"
+           x="114.87958"
+           y="137.96407">$m_0^j, m_1^j$</tspan></text>
+    </g>
+    <g
+       id="g616-2"
+       inkscape:label="m_0 m_1"
+       transform="translate(-70.015303,0.42120668)">
+      <path
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.420012;stroke-linecap:round;stroke-linejoin:round;marker-start:url(#marker1563-9)"
+         d="m 101.87347,140.94769 h 25.08666"
+         id="path1341-4-7-7" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.52777px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.429001;stroke-linecap:round;stroke-linejoin:round"
+         x="114.87958"
+         y="137.96407"
+         id="text2561-8-0"><tspan
+           sodipodi:role="line"
+           id="tspan2559-4-8"
+           style="stroke-width:0.429"
+           x="114.87958"
+           y="137.96407">$(m_0^i, m_1^i)$</tspan></text>
+    </g>
     <g
        id="g375"
-       inkscape:label="oracle">
+       inkscape:label="oracle"
+       transform="translate(-59.097465,-33.127299)">
       <rect
          style="fill:#ffffff;stroke:#000000;stroke-width:0.429001;stroke-linecap:round;stroke-linejoin:round"
          id="rect1727"
@@ -233,14 +305,51 @@
          y="156.27486">$b \in \{0, 1\}$</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:3.52777px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.429001;stroke-linecap:round;stroke-linejoin:round"
-       x="79.053162"
-       y="125.33133"
-       id="text3378"><tspan
+       style="font-size:3.52777px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;fill:#000000;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:round"
+       x="114.51413"
+       y="164.20508"
+       id="text472"><tspan
          sodipodi:role="line"
-         id="tspan3376"
-         style="stroke-width:0.429"
-         x="79.053162"
-         y="125.33133">$(k_p, k_s) \gets \mathrm{Gen}(1^n)$</tspan></text>
+         id="tspan470"
+         style="stroke-width:0.3"
+         x="114.51413"
+         y="164.20508">$c^j$</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.251449;stroke-linecap:round;stroke-linejoin:round"
+       id="rect576"
+       width="113.9492"
+       height="73.664764"
+       x="57.028297"
+       y="104.87883" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.496;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.49599999,0.99199998;marker-end:url(#marker1580);stroke-dashoffset:7.04319989"
+       d="M 99.099172,141.31465 H 60.576297"
+       id="path801" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.496001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.496001, 0.992;stroke-dashoffset:7.04321"
+       x="70.99659"
+       y="138.88437"
+       id="text2602"><tspan
+         sodipodi:role="line"
+         id="tspan2600"
+         style="fill:#000000;stroke:none;stroke-width:0.496"
+         x="70.99659"
+         y="138.88437">if $i == j$</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.484984;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.484984, 0.969967;stroke-dashoffset:6.88677;marker-end:url(#marker3614)"
+       d="m 80.766169,141.17666 c 0,19.19831 0,19.19831 0,19.19831 h 18.486719"
+       id="path3402" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.496001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.496001, 0.992;stroke-dashoffset:7.04321"
+       x="88.709579"
+       y="150.59665"
+       id="text4566"><tspan
+         sodipodi:role="line"
+         id="tspan4564"
+         style="fill:#000000;stroke:none;stroke-width:0.496"
+         x="88.709579"
+         y="150.59665">if $i &lt; j$</tspan></text>
   </g>
 </svg>

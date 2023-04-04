@@ -27,7 +27,7 @@ An eavesdropper will have to take \emph{discrete log} to break this scheme (to f
 \section{Modeling Public Key Encryption}
 We want to have a protocol (Gen, Enc, Dec) that can \emph{directly} handle public key encryption. We can model this analogously to EAV/CPA security, just in a public key setting:
 
-/\begin{figure}[H]
+\begin{figure}[H]
 	\centering
 	\incfig[0.5]{pubeavcpa}
 	\caption{Analog of EAV/CPA security in the context of public keys.}
@@ -52,15 +52,51 @@ Just like previous instances of security, we can define public key CPA security 
 \begin{figure}[H]
 	\centering
 	\incfig[0.8]{pubcpasec}
-	\caption{title}
+	\caption{The public key CPA game.}
 	\label{fig:pubcpasec}
 \end{figure}
 
 \begin{definition}[Public CPA Security]
 	A public key encryption scheme \(\Pi\) as defined above is secure if \(\forall\) p.p.t. \(\mathcal{A} \):
 	\[
-		\mathbf{Adv}_\Pi (\mathcal{A}) \coloneqq \left[ 
-			% \Pr_{(k_p, k_s) \gets \math\mathrm{Gen}(1^n)} (\mathcal{A}^{\mathcal{O}_{k_p, 0} (.,.)})
-		 \right] 
+		\mathbf{Adv}_\Pi (\mathcal{A}) \coloneqq \left| 
+			\Pr_{(k_p, k_s) \gets \mathrm{Gen}(1^n)} (\mathcal{A}^{\mathcal{O}_{k_p, 0} (.,.)}) -
+		  \Pr_{(k_p, k_s) \gets \mathrm{Gen}(1^n)} (\mathcal{A}^{\mathcal{O}_{k_p, 1} (.,.)})
+		\right| =
+		\mathrm{negl}(n).
 	\]
 \end{definition}
+\begin{remark}
+	The number of queries to the LR oracle, \(\mathcal{O} \) doesn't matter. I.e. if we have EAV-security allowing \(\mathcal{A} \) to query the oracle once, then we have security even if multiple queries are allowed.
+\end{remark}
+
+\begin{proof}
+	To show that
+	\[
+		\textit{one-query public CPA security} \implies \textit{many query public CPA security}
+	\]
+	we can use a similar proof that we used for CPA security originally and note that the adversary in this scenario can, in addition to the abilities of the original adversary, encrypt things themselves since the keys are public. \par
+
+	Imagine a many-query attacker, \(\mathcal{A} \) that makes up to \(q: \poly (n)\) queries. Consider the following worlds:
+	\begin{enumerate}[label=(\roman*)]
+		\item \emph{Hybrid 0}: All queries answered by \(c \gets Enc_{k_p}(m_0)\), then \(Enc_{k_p}(m_0)\) thereafter.
+		\item \emph{Hybrid 1}: First query \((m_0, m_1)\) answered by \(c \gets Enc_{k_p}(m_1)\), then \(Enc_{k_p}(m_0)\) thereafter.
+		\item \emph{Hybrid 2}: First \textbf{two} queries are answered by \(c \gets Enc_{k_p}(m_1)\), then \(Enc_{k_p}(m_0)\) thereafter.
+		\item \emph{Hybrid q}: All queries answered by \(c \gets Enc_{k_p}(m_1)\) 
+	\end{enumerate}
+
+	Using these hybrid worlds we can construct the \emph{left} and \emph{right} worlds as follows:
+	\begin{enumerate}[label=(\roman*)]
+		\item \textbf{Left world}: all queries \((m_0, m_1)\), to the LR oracle, \(\mathcal{O} \), answered with \(c \gets Enc_{k_p}(m_0)\).
+		\item \textbf{Right world}: each query to the LR oracle, \(\mathcal{O} \), answered with \(c \gets Enc_{k_p}{m_1}\).
+	\end{enumerate}
+
+	We can use the idea that if an adversary, \(\mathcal{A} \) can distinguish between the left and right worlds, they can distinguish between the \(i\)th hybrid world and the \(i+1\)th hybrid world where the \(i\)th hybrid world is defined as
+	\begin{align*}
+		HybridWorld_i &= \vcenter{\hbox{First $i$ queries of $(m_0, m_1)$ answered by $c \gets Enc_{k_p}(m_1)$,}} \\
+		&\quad \vcenter{\hbox{\: \: \: \: \: \: \: then $c \gets Enc_{k_p}(m_0)$ thereafter}}.
+	\end{align*}
+	
+	We first note that the difference between \(Hyb_{i - 1}\) and \(Hyb_i\) is only in how the \(i\)th query is answered. We can build a "simulator" \(\mathcal{S}_i^{\mathcal{O}}(k_p,)\) that gets \emph{one query} and simulates either \(Hyb_{i - 1}\) or \(Hyb_i\) depending on \(b\).
+\end{proof}
+
