@@ -88,7 +88,7 @@ Just like previous instances of security, we can define public key CPA security 
 	Using these hybrid worlds we can construct the \emph{left} and \emph{right} worlds as follows:
 	\begin{enumerate}[label=(\roman*)]
 		\item \textbf{Left world}: all queries \((m_0, m_1)\), to the LR oracle, \(\mathcal{O} \), answered with \(c \gets Enc_{k_p}(m_0)\).
-		\item \textbf{Right world}: each query to the LR oracle, \(\mathcal{O} \), answered with \(c \gets Enc_{k_p}{m_1}\).
+		\item \textbf{Right world}: each query to the LR oracle, \(\mathcal{O} \), answered with \(c \gets Enc_{k_p}({m_1})\).
 	\end{enumerate}
 
 	We can use the idea that if an adversary, \(\mathcal{A} \) can distinguish between the left and right worlds, they can distinguish between the \(i\)th hybrid world and the \(i+1\)th hybrid world where the \(i\)th hybrid world is defined as
