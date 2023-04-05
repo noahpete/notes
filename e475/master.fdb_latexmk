@@ -1,11 +1,11 @@
 # Fdb version 4
-["biber master"] 1680713044 "master.bcf" "master.bbl" "master" 1680713240 0
-  "master.bcf" 1680713239 107283 a05097f591b0a636ad6567397d81ccfa "pdflatex"
+["biber master"] 1680713044 "master.bcf" "master.bbl" "master" 1680718149 0
+  "master.bcf" 1680718149 107283 a05097f591b0a636ad6567397d81ccfa "pdflatex"
   (generated)
   "master.bbl"
   "master.blg"
   (rewritten before read)
-["pdflatex"] 1680713237 "c:/Users/Noah/notes/e475/master.tex" "master.pdf" "master" 1680713240 0
+["pdflatex"] 1680718146 "c:/Users/Noah/notes/e475/master.tex" "master.pdf" "master" 1680718149 0
   "C:/Users/Noah/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1680454717 81086 6fddea6b023469843de28035c851ec71 ""
   "C:/Users/Noah/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx0700.pk" 1680020514 17380 e9b90eb9d839af2e34e6517086fe4a2b ""
   "C:/Users/Noah/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1000.pk" 1678998571 25420 73b66a676533c25d0ffed8f0cf46130d ""
@@ -371,26 +371,28 @@
   "C:/Users/Noah/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1673965817 123 a302f2c651a95033260db60e51527ae8 ""
   "C:/Users/Noah/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1650051284 2245 c8a4088d07cffc2e5207730c738edd76 ""
   "C:/Users/Noah/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1650051284 20785 71a3d72ab517959a6979c27e6176bec1 ""
+  "Figures//ddhelgam.pdf" 1680717742 3209 7061b18a0650dbad1d4da02f04dfcbc6 ""
   "Figures//onemanycpa.pdf" 1680711473 7198 c4f45c8ab379f01515ac0bd8e0f8e0c8 ""
   "Figures//pubcpasec.pdf" 1680709385 3328 e5a1f85688b43146d8ff4852c780c2f5 ""
   "Figures//pubeavcpa.pdf" 1680276009 4774 c44887989e3cdb6cf0e3a5489439c839 ""
+  "Figures/ddhelgam.pdf_tex" 1680717742 3860 75babf25de081bf86a9da4635a250167 ""
   "Figures/onemanycpa.pdf_tex" 1680711473 4605 29fbba15176ebf288128bd8d8653f4cf ""
   "Figures/pubcpasec.pdf_tex" 1680709385 3350 ccc9d26ae3760487492e8522bf3d1027 ""
   "Figures/pubeavcpa.pdf_tex" 1680276009 4047 b57e5ca1e209d7dc5933108be324b830 ""
   "Lectures/lec_1.tex" 1680236623 3082 e922e47feade67465303876e13cfa4d8 ""
   "Lectures/lec_2.tex" 1680237255 5835 441238fc885fa8fb57ff20145b19ec4d ""
-  "Lectures/lec_3.tex" 1680713234 8105 99c8428619e0fa597ae064dfc45692dd ""
-  "Lectures/lec_4.tex" 1680645200 64 a71c85f91cda70807d360edeb9b57199 ""
+  "Lectures/lec_3.tex" 1680715817 8116 c12c8ddd7e335368b62d3a62c83e89c4 ""
+  "Lectures/lec_4.tex" 1680718146 3008 a6fc8d3473a13cb0ba8c6576a9095bf2 ""
   "Math.tex" 1680646962 2368 6cf95a639ae32b59c389aeb72b92070f ""
   "appendix.tex" 1680646957 239 ffa32715a28e22cce3e7a8ebecee74ff ""
   "c:/Users/Noah/notes/e475/master.tex" 1680646960 1378 80d2b98bdf97964d654d9ef419f6a2ba ""
   "header.tex" 1680646963 10928 b87de5510fddf5128f480a578fe52e80 ""
-  "master.aux" 1680713239 10304 93c903edaaaccbadecf60940bbb0e9b1 "pdflatex"
+  "master.aux" 1680718149 11617 3eb7c1521e137412f1dec38b8bc93a01 "pdflatex"
   "master.bbl" 1680713045 486 ee04f40f768daeed26442158e95aba61 "biber master"
-  "master.out" 1680713239 1493 08b6bcd6cd3da8c285aff7dbdcf9b1bd "pdflatex"
-  "master.run.xml" 1680713239 2318 54cfa3ba94777505e137b706f4dd1953 "pdflatex"
+  "master.out" 1680718149 1658 e0133d1a4098cc574f9a03c6d995b02d "pdflatex"
+  "master.run.xml" 1680718149 2318 54cfa3ba94777505e137b706f4dd1953 "pdflatex"
   "master.tex" 1680646960 1378 80d2b98bdf97964d654d9ef419f6a2ba ""
-  "master.toc" 1680713239 692 bec406f3e03a78b362b1d55431b486ae "pdflatex"
+  "master.toc" 1680718149 773 1c06e6abb3d41ef4d1fb4b7609e4f5cd "pdflatex"
   (generated)
   "master.aux"
   "master.bcf"

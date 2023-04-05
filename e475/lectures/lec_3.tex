@@ -17,7 +17,7 @@ The key exchance problem occurs when two individuals seek to communicate over an
 
 An eavesdropper will have to take \emph{discrete log} to break this scheme (to find \(a\) or \(b\)). Formally, the security of this scheme is based on \textbf{DDH: Decisional Diffie-Hellman Assumption}.
 
-\begin{definition}[Decisional Diffie-Hellman Assumption (DDH)]
+\begin{definition}[Decisional Diffie-Hellman Assumption (DDH)]\label{ddh}
 	DDH holds for a group \(G = \langle g \rangle \) (i.e. \(G\) is \emph{generated} by \(g\)) if \[(g, g^a, g^b, g^{ab}) \in G^4\] is indistinguishable (for \(a, b \gets \mathbb{Z} _q, q = |G|\)) from \[(g, g^a, g^b, g^c), \text{ where }\: c \gets \mathbf{Z} _q\]
 \end{definition}
 \begin{remark}
