@@ -46,6 +46,9 @@ We want to have a protocol (Gen, Enc, Dec) that can \emph{directly} handle publi
 		\mathrm{Dec}(k_s, \mathrm{Enc}(k_p, m)) = m
 	\] 
 \end{definition}
+\begin{remark}
+	Note that for the first time, our Gen function outputs two \emph{related} random keys, not just one private random string.
+\end{remark}
 
 Just like previous instances of security, we can define public key CPA security in the context of a game. Here we have adversary \(\mathcal{A} \) against \(\Pi = (\mathrm{Gen, Enc, Dec})\):
 
