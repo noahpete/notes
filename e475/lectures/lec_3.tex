@@ -63,8 +63,8 @@ Just like previous instances of security, we can define public key CPA security 
 	A public key encryption scheme \(\Pi\) as defined above is secure if \(\forall\) p.p.t. \(\mathcal{A} \):
 	\[
 		\mathbf{Adv}_\Pi (\mathcal{A}) \coloneqq \left| 
-			\Pr_{(k_p, k_s) \gets \mathrm{Gen}(1^n)} (\mathcal{A}^{\mathcal{O}_{k_p, 0} (.,.)}) -
-		  \Pr_{(k_p, k_s) \gets \mathrm{Gen}(1^n)} (\mathcal{A}^{\mathcal{O}_{k_p, 1} (.,.)})
+			\Pr_{(k_p, k_s) \gets \mathrm{Gen}(1^n)} (\mathcal{A}^{\mathcal{O}_{k_p, 0} (.,.)}(k_p)=1) -
+		  \Pr_{(k_p, k_s) \gets \mathrm{Gen}(1^n)} (\mathcal{A}^{\mathcal{O}_{k_p, 1} (.,.)}(k_p)=1)
 		\right| =
 		\mathrm{negl}(n).
 	\]
