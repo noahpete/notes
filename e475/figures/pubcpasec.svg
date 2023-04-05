@@ -24,9 +24,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.2938725"
-     inkscape:cx="425.85341"
-     inkscape:cy="567.67573"
+     inkscape:zoom="2.587745"
+     inkscape:cx="450.58536"
+     inkscape:cy="574.43836"
      inkscape:window-width="1649"
      inkscape:window-height="1259"
      inkscape:window-x="1151"
@@ -35,6 +35,25 @@
      inkscape:current-layer="layer1" />
   <defs
      id="defs2">
+    <marker
+       style="overflow:visible"
+       id="marker1116"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path1114" />
+    </marker>
     <marker
        style="overflow:visible"
        id="marker1563"
@@ -242,5 +261,21 @@
          style="stroke-width:0.429"
          x="79.053162"
          y="125.33133">$(k_p, k_s) \gets \mathrm{Gen}(1^n)$</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.458591;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.458591, 0.917179;stroke-dashoffset:6.51198;marker-end:url(#marker1116)"
+       d="m 131.85541,159.02719 c 0,0 8.61634,-6.29347 0,-15.64862"
+       id="path343" />
+    <g
+       id="g1322"
+       transform="translate(-14.927733,0.20448949)">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.505476;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:7.04321"
+         d="m 148.56635,148.77085 4.08031,4.69378"
+         id="path1274" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.518194;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:7.04321"
+         d="m 148.47047,153.57574 4.27208,-4.71152"
+         id="path1274-2" />
+    </g>
   </g>
 </svg>

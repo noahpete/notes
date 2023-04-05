@@ -4,5 +4,5 @@
 \contentsline {section}{\numberline {4.3}Fast Exponentiation}{5}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Diffie-Hellman}{5}{section.4.4}%
 \contentsline {section}{\numberline {4.5}Modeling Public Key Encryption}{6}{section.4.5}%
-\contentsline {chapter}{\numberline {A}Additional Proofs}{9}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Proof of \autoref {thm}}{9}{appendix.A.1}%
+\contentsline {chapter}{\numberline {A}Additional Proofs}{10}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Proof of \autoref {thm}}{10}{appendix.A.1}%

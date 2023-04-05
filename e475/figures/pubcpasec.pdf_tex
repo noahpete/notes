@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{406.91316904bp}%
+    \setlength{\unitlength}{406.91315823bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,17 +50,19 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.43413572)%
+  \begin{picture}(1,0.43413584)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{pubcpasec.pdf}}%
-    \put(0.66515841,0.21501314){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\mathcal{A}$\end{tabular}}}}%
+    \put(0.6651584,0.2150132){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\mathcal{A}$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{pubcpasec.pdf}}%
-    \put(0.40183808,0.41649628){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$1^n, k_p$\end{tabular}}}}%
-    \put(0.41993928,0.25218455){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$m_0, m_1$\end{tabular}}}}%
-    \put(0.44112227,0.06193164){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$c \gets \mathrm{Enc}_{k_p} (m_b)$\end{tabular}}}}%
-    \put(0.23462852,0.15460191){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\mathcal{O}_{k_p, b} (.,.)$\end{tabular}}}}%
-    \put(0.92663435,0.12035407){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$b \in \{0, 1\}$\end{tabular}}}}%
-    \put(0.19030791,0.33591341){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$(k_p, k_s) \gets \mathrm{Gen}(1^n)$\end{tabular}}}}%
+    \put(0.40183806,0.4164964){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$1^n, k_p$\end{tabular}}}}%
+    \put(0.41993927,0.25218461){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$m_0, m_1$\end{tabular}}}}%
+    \put(0.44112226,0.06193169){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$c \gets \mathrm{Enc}_{k_p} (m_b)$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{pubcpasec.pdf}}%
+    \put(0.23462853,0.15460197){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\mathcal{O}_{k_p, b} (.,.)$\end{tabular}}}}%
+    \put(0.92663435,0.12035413){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$b \in \{0, 1\}$\end{tabular}}}}%
+    \put(0.19030792,0.33591347){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$(k_p, k_s) \gets \mathrm{Gen}(1^n)$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{pubcpasec.pdf}}%
   \end{picture}%
 \endgroup%

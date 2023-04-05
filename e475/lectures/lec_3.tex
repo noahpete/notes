@@ -29,7 +29,7 @@ We want to have a protocol (Gen, Enc, Dec) that can \emph{directly} handle publi
 
 \begin{figure}[H]
 	\centering
-	\incfig[0.5]{pubeavcpa}
+	\incfig[0.45]{pubeavcpa}
 	\caption{Analog of EAV/CPA security in the context of public keys.}
 	\label{fig:pubeavcpa}
 \end{figure}
@@ -50,11 +50,11 @@ We want to have a protocol (Gen, Enc, Dec) that can \emph{directly} handle publi
 	Note that for the first time, our Gen function outputs two \emph{related} random keys, not just one private random string.
 \end{remark}
 
-Just like previous instances of security, we can define public key CPA security in the context of a game. Here we have adversary \(\mathcal{A} \) against \(\Pi = (\mathrm{Gen, Enc, Dec})\):
+Just like previous instances of security, we can define public key CPA security in the context of a game. Here we have adversary \(\mathcal{A} \) against \(\Pi = (\mathrm{Gen, Enc, Dec})\). Note that unlike the original CPA game, in this scenario the adversary only prompts the oracle once since the \emph{adversary can encrypt messages of their own}.
 
 \begin{figure}[H]
 	\centering
-	\incfig[0.8]{pubcpasec}
+	\incfig[0.78]{pubcpasec}
 	\caption{The public key CPA game.}
 	\label{fig:pubcpasec}
 \end{figure}
@@ -74,32 +74,70 @@ Just like previous instances of security, we can define public key CPA security 
 \end{remark}
 
 \begin{proof}
-	To show that
+	To show that \(\textit{one-query public CPA security} \implies \textit{many query public CPA security}\) we are essentially showing that
 	\[
-		\textit{one-query public CPA security} \implies \textit{many query public CPA security}
+		\textit{public EAV security} \implies \textit{public CPA security}.
 	\]
-	we can use a similar proof that we used for CPA security originally and note that the adversary in this scenario can, in addition to the abilities of the original adversary, encrypt things themselves since the keys are public. \par
+	We prove this by proposing a new adversary, \(\mathcal{A} \), that is capable of breaking a many-query CPA scheme, and then using this adversary to break the single-query EAV scheme. \par
 
 	Imagine a many-query attacker, \(\mathcal{A} \) that makes up to \(q: \poly (n)\) queries. Consider the following worlds:
 	\begin{enumerate}[label=(\roman*)]
-		\item \emph{Hybrid 0}: All queries answered by \(c \gets Enc_{k_p}(m_0)\), then \(Enc_{k_p}(m_0)\) thereafter.
+		\item \emph{Hybrid 0}: All queries answered by \(c \gets Enc_{k_p}(m_0)\).
 		\item \emph{Hybrid 1}: First query \((m_0, m_1)\) answered by \(c \gets Enc_{k_p}(m_1)\), then \(Enc_{k_p}(m_0)\) thereafter.
 		\item \emph{Hybrid 2}: First \textbf{two} queries are answered by \(c \gets Enc_{k_p}(m_1)\), then \(Enc_{k_p}(m_0)\) thereafter.
 		\item \emph{Hybrid q}: All queries answered by \(c \gets Enc_{k_p}(m_1)\) 
 	\end{enumerate}
 
-	Using these hybrid worlds we can construct the \emph{left} and \emph{right} worlds as follows:
+	These hyrbid worlds reflect the \emph{left} and \emph{right} worlds as follows:
 	\begin{enumerate}[label=(\roman*)]
-		\item \textbf{Left world}: all queries \((m_0, m_1)\), to the LR oracle, \(\mathcal{O} \), answered with \(c \gets Enc_{k_p}(m_0)\).
-		\item \textbf{Right world}: each query to the LR oracle, \(\mathcal{O} \), answered with \(c \gets Enc_{k_p}({m_1})\).
+		\item \textbf{Left world}: equivalent to \(Hyb_0\): all queries to the LR oracle are answered by \(c \gets Enc_{k_p}(m_0)\).
+		\item \textbf{Right world}: equivalent to \(Hyb_q\): all queries answered by \(c \gets Enc_{k_p}(m_1)\).
 	\end{enumerate}
 
-	We can use the idea that if an adversary, \(\mathcal{A} \) can distinguish between the left and right worlds, they can distinguish between the \(i\)th hybrid world and the \(i+1\)th hybrid world where the \(i\)th hybrid world is defined as
+	We can use the idea that if an adversary, \(\mathcal{A} \) can distinguish between the left and right worlds, they must be able to distinguish between the \(i\)th hybrid world and the \(i+1\)th hybrid world where the \(i\)th hybrid world is defined as
 	\begin{align*}
 		HybridWorld_i &= \vcenter{\hbox{First $i$ queries of $(m_0, m_1)$ answered by $c \gets Enc_{k_p}(m_1)$,}} \\
 		&\quad \vcenter{\hbox{\: \: \: \: \: \: \: then $c \gets Enc_{k_p}(m_0)$ thereafter}}.
 	\end{align*}
 	
-	We first note that the difference between \(Hyb_{i - 1}\) and \(Hyb_i\) is only in how the \(i\)th query is answered. We can build a "simulator" \(\mathcal{S}_i^{\mathcal{O}}(k_p,)\) that gets \emph{one query} and simulates either \(Hyb_{i - 1}\) or \(Hyb_i\) depending on \(b\).
+	We first note that the difference between \(Hyb_{i - 1}\) and \(Hyb_i\) is only in how the \(i\)th query is answered. We can build a "simulator" \(\mathcal{S}_i^{\mathcal{O}}(k_p)\) that gets \emph{one query} and simulates either \(Hyb_{i - 1}\) or \(Hyb_i\) depending on \(b\).
+
+	\begin{figure}[H]
+		\centering
+		\incfig[1]{onemanycpa}
+		\caption{A simulator that wins pEAV game using an adversary that wins the pCPA game.}
+		\label{fig:onemanycpa}
+	\end{figure}
+
+	Upon the \(j^\text{th} \) query of \(\mathcal{A} \) \((m_0^j, m_1^j)\):
+	\begin{itemize}
+		\item if \(j < i\), \(S_i\) runs \(c^j \gets Enc_{k_p}(m_1^j)\).
+		\item if \(j > i\), \(S_i\) runs \(c^j \gets Enc_{k_p}(m_0^j)\).
+		\item if \(j == i\), \(S_i\) queries its LR oracle and gives the result to \(\mathcal{A} \).
+	\end{itemize}
+	
+	Consider the two cases where \(S_i\) is in the worlds:
+	\begin{enumerate}[label=(\roman*)]
+		\item \emph{Left world} \((b=0)\): then we are simulating \(Hyb_{i-1}\).
+		\item \emph{Right world} \((b=1)\): then we are simulating \(Hyb_i\). 
+	\end{enumerate}
+
+	By the \textbf{triangle inequality},
+	\begin{align*}
+		\mathbf{Adv}_\Pi^{CPA} =& \left|
+			\Pr(\mathcal{A} = 1 \text{ in } Hyb_0) -
+			\Pr(\mathcal{A} = 1 \text{ in } Hyb_q)
+		\right| \\
+		=& |
+			\Pr(\mathcal{A} = 1 \text{ in } Hyb_0) -
+			\Pr(\mathcal{A} = 1 \text{ in } Hyb_1) + \\
+			&\Pr(\mathcal{A} = 1 \text{ in } Hyb_1) -
+			\Pr(\mathcal{A} = 1 \text{ in } Hyb_2) + \\
+			&\ldots \: - \Pr(\mathcal{A} = 1 \text{ in } Hyb_q)
+		| \\
+		\leq& \sum_{i=1}^q \mathbf{Adv}_\Pi^\text{Single CPA} (\mathcal{S}_i) = q \cdot \mathrm{negl}(n) = \mathrm{poly}(n) \cdot \mathrm{negl}(n) = \mathrm{negl}(n).
+	\end{align*}
+
+	Thus, by assuming we had single-query (pEAV) security we have concluded we also have multi-query (pCPA) security. If we didn't have multi-query security, you could use a multi-query attacker to make a single-query attacker (contradicting the assumption that we are single-query secure).
 \end{proof}
 
