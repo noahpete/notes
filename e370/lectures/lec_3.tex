@@ -1,0 +1,143 @@
+\lecture{19}{21 Mar. 12:00}{Direct Mapped and Set Associative Caches}
+
+\section{Write Back Caches}
+We can design the cache to \emph{not} write all stores to memory immediately. We can do this by keeping the most recent copy in the cache and update the memory \emph{only when} that data is evicted from the cache.
+
+\begin{definition}[Write-Back Policy]
+  Under this policy, when storing a value from the processor, we update the \emph{cache} but \emph{do not} update the value in \emph{memory}.
+\end{definition}
+
+We don't need to write-back all evicted lines, only those blocks that have been stored into. We can keep a \textbf{dirty bit} that \emph{resets when the line is allocated} and \emph{set when the block is stored into}. If a block is "dirty" when evicted, write its data back into memory.
+
+\begin{figure}[H]
+  \centering
+  \incfig[0.6]{cachelinecontents}
+  \caption{Contents of a cache line.}
+  \label{fig:cachelinecontents}
+\end{figure}
+
+\subsection*{Writes Summary}
+
+\begin{center}
+  \begin{tabular}{|l|p{6cm}|c|}
+    \hline
+    Store With \textbf{No Allocate}  & Write-Back & Write-Through \\
+    \hline
+    Hit? & Write Cache & Write to Cache and \emph{Mem} \\
+    Miss? & Write to Mem & Write to Mem \\
+    Replace Block? & If evicted block is dirty, write to Mem & Do nothing \\
+    \hline
+  \end{tabular}
+\end{center}
+\begin{center}
+  \begin{tabular}{|l|p{6cm}|p{6cm}|}
+    \hline
+    Store With \textbf{Allocate}  & Write-Back & Write-Through \\
+    \hline
+    Hit? & Write Cache & Write to Cache and \emph{Mem} \\
+    Miss? & Read from Mem to cache, alllocate to LRU block, write to cache & Read from Mem to cache, alllocate to LRU block, write to cache \emph{and Mem} \\
+    Replace Block? & If evicted block is dirty, write to Mem & Do nothing \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\newpage
+
+\begin{problem}
+  Consider the following cache:
+  \begin{multicols}{2}
+    \begin{itemize}
+      \item 32-bit memory addresses
+      \item byte addressable
+      \item 64 KB cache
+      \item 64 B cache block size
+      \item \textbf{write-allocate} 
+      \item \textbf{write-back}
+      \item \emph{fully} associative 
+    \end{itemize}
+  \end{multicols}
+  This cache will need 512 kilobits for the data area (64 kilobytes times 8 bits per byte). Note that here, 1 kilobyte = 1024 bytes. Besides the actualy cached data, this cache will need other storage. Consider \textbf{tags, valid bits, dirty bits, bits to track LRU, etc.} \\
+  \emph{How many additional bits (not counting data) will be needed to implement this cache?} 
+\end{problem}
+\begin{answer}
+  We have \(2^{10}\) blocks:
+  \[
+    64 \text{ KB} = 2^{16} \text{ b} \rightarrow \frac{2^{16} \text{ b} }{2^6 \text{b / block} } = 2^{10} \text{ blocks} .
+  \]
+  The \textbf{tag's} size:
+  \[
+    32 \text{ b for mem addresses} - 6 \text{ b for block offset} = 26 \text{ b for tag}. 
+  \]
+  The \textbf{valid} and \textbf{dirty bits} only need 1 bit each. To keep track of LRU we can calculate the number of bits needed as follows:
+  \[
+    2^{16} / 2^6 = 2^{10} \text{ blocks in the cache} \rightarrow \text{10 bits needed to keep track of LRU}
+  \]
+  So, the total number of additional bits needed for the cache is
+  \[
+    26 + 1 + 1 + 10 = \textbf{38 bits} \text{ (per block)} . 
+  \] 
+
+\end{answer}
+
+\begin{problem}
+  Suppose that accessing a cache takes \textbf{10 ns} while accessing main memory, and in the case of cache-miss it takes \textbf{100 ns}.
+  \begin{enumerate}[label=\alph*]
+    \item What is the average memory access time if the cache hit rate is 97\%?  
+    \item If the cache size is increased, causing the hit rate to rise by 1\% and the time for accessing the cache by 2 ns. Will this improve performance?
+  \end{enumerate}
+\end{problem}
+\begin{answer} \:
+  \begin{enumerate}[label=\alph*]
+    \item 
+    \[
+      10 \text{ ns} + 0.03 \cdot 100 \text{ ns} = 13 \text{ ns}.
+    \]
+    \item
+    \[
+      12 \text{ ns} + 0.02 \cdot 100 \text{ ns} = 14 \text{ ns}.
+    \]
+  \end{enumerate}
+\end{answer}
+
+\newpage
+
+\section{Direct-Mapped Caches}
+A block can go to \emph{any} location. This means that when we are checking tags, we \emph{check every cache tag} to determine whether the data is in the cache. This parallel approach is what is used for \textbf{fully associative caches}, which we have studied so far. However, this method is \emph{slow}. \par
+
+We can redesign the cache to eliminate the requirement for parallel tag lookups.
+\begin{definition}[Direct-Mapped Caches]
+  Direct-mapped caches partition memory into as many regions as there are cache lines. Each memory region maps to a \textbf{single cache line} in which data can be placed. You then only need to \textbf{check a single tag}: the one associated with the \emph{region the reference is located in}. 
+\end{definition}
+\begin{remark}
+  The memory regions that map to the same cache line are placed as far apart in memory as possible, so that blocks that are spatially close are not competing for the same cache line.
+\end{remark}
+
+Since two blocks in memory that map to the same index in the cache cannot be present in the cache at the same time, a 0\% hit rate is possible if more than one block accessed in an interleaved manner map to the same index.
+
+\begin{problem}
+  How many tag bits are required for the following cache specs? What are the overheads of this cache?
+  \begin{multicols}{2}
+    \begin{itemize}
+      \item 32-bit address, byte addressed
+      \item direct-mapped 32k cache
+      \item 128 byte block size
+      \item write-back
+    \end{itemize}
+  \end{multicols}
+\end{problem}
+\begin{answer}
+  The number of bits required for the line index is
+  \[
+    15 - 7 = 8. \: (2^{15} = \text{32 kb cache})
+  \]
+  The tag size is
+  \[
+    32 \text{ b total} - 7 \text{ b for block offset} - 8 \text{ b for line index} = \textbf{17 b for tag}.
+  \]
+  So the overhead in this cache is
+  \begin{align*}
+    17 + 1 \text{ b for valid bit} + 1 \text{ b for dirty bit} = 19 \text{ b / cache line} \\
+    19 \text{ b / line} \cdot 256 \text{ lines} = 4864 \text{ bits} \\
+    4864 \text{ b} / 32 \text{ KB} = \textbf{1.9\% overhead}. 
+  \end{align*}
+\end{answer}

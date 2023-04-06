@@ -1,0 +1,118 @@
+%% Creator: Inkscape 1.2.2 (732a01da63, 2022-12-09), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'fullyassociative.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{262.56151424bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.69688644)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{fullyassociative.pdf}}%
+    \put(0.8851818,0.67166919){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Memory\end{tabular}}}}%
+    \put(0.879718,0.61781198){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}78\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{fullyassociative.pdf}}%
+    \put(0.88088878,0.57933474){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}29\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{fullyassociative.pdf}}%
+    \put(0.88010826,0.54108846){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}120\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{fullyassociative.pdf}}%
+    \put(0.88010826,0.5028421){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}34\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{fullyassociative.pdf}}%
+    \put(0.88010826,0.4638153){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}54\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{fullyassociative.pdf}}%
+    \put(0.87932774,0.42478842){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}22\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{fullyassociative.pdf}}%
+    \put(0.87932774,0.3849811){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}147\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{fullyassociative.pdf}}%
+    \put(0.88010826,0.34673457){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}72\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{fullyassociative.pdf}}%
+    \put(0.88010826,0.30848837){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}67\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{fullyassociative.pdf}}%
+    \put(0.88010826,0.27102253){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}256\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{fullyassociative.pdf}}%
+    \put(0.88010834,0.23355668){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}210\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{fullyassociative.pdf}}%
+    \put(0.88010826,0.19687152){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}104\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{fullyassociative.pdf}}%
+    \put(0.88088878,0.15940568){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}39\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{fullyassociative.pdf}}%
+    \put(0.88088886,0.12272035){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}90\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{fullyassociative.pdf}}%
+    \put(0.88010826,0.08447415){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}91\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{fullyassociative.pdf}}%
+    \put(0.88088886,0.04700831){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}197\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{fullyassociative.pdf}}%
+    \put(0.75795417,0.62093422){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0\end{tabular}}}}%
+    \put(0.75795417,0.57878526){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}1\end{tabular}}}}%
+    \put(0.75873469,0.5397583){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}2\end{tabular}}}}%
+    \put(0.75951521,0.50151185){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}3\end{tabular}}}}%
+    \put(0.75873469,0.46326566){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}4\end{tabular}}}}%
+    \put(0.75795417,0.42579989){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}5\end{tabular}}}}%
+    \put(0.7575177,0.38609554){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}6\end{tabular}}}}%
+    \put(0.75795417,0.34696553){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}7\end{tabular}}}}%
+    \put(0.75795417,0.31028037){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}8\end{tabular}}}}%
+    \put(0.75873469,0.26969245){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}9\end{tabular}}}}%
+    \put(0.75014875,0.23534884){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}10\end{tabular}}}}%
+    \put(0.75092935,0.1963218){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}11\end{tabular}}}}%
+    \put(0.75014883,0.15885612){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}12\end{tabular}}}}%
+    \put(0.75014875,0.12139027){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}13\end{tabular}}}}%
+    \put(0.75014875,0.08392443){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}14\end{tabular}}}}%
+    \put(0.74936823,0.04723927){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}15\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{fullyassociative.pdf}}%
+    \put(0.38913412,0.51712081){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}data\end{tabular}}}}%
+    \put(0.25888022,0.52043233){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}tag\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{fullyassociative.pdf}}%
+    \put(0.15843019,0.11311296){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Address:\end{tabular}}}}%
+    \put(0.23349177,0.0645436){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}tag\end{tabular}}}}%
+    \put(0.47523415,0.06343971){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}block offset\end{tabular}}}}%
+    \put(0.2379071,0.00493612){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}3 bits\end{tabular}}}}%
+    \put(0.47192259,0.00052071){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}1 bit\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{fullyassociative.pdf}}%
+    \put(0.18713021,0.65510164){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Fully-Associative Cache\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

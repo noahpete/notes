@@ -1,0 +1,60 @@
+\lecture{21}{28 Mar. 12:00}{Cache Wrap-Up}
+
+\section{Cache Wrap-Up}
+
+\begin{problem}
+  The \emph{grinder} app running on LC2K with full data forwarding and all brances predicted not-taken has the following frequencies:
+  \[
+    \text{45\% R-type, 20\% branches} \: \: \: \text{15\% loads, 20\% stores}  
+  \]
+  In \emph{grinder}, 40\% of branches are taken and 50\% of LWs are followed by an immediate use. The I-cache has a miss rate of 3\% and the D-cache has a miss rate of 6\% (no overlapping of misses). On a miss, the main memory is accessed and has a latency of 100 ns. The clock frequency is 500 MHz. \\
+  \\
+  What is the CPI of \emph{grinder} on the LC2K?
+\end{problem}
+\begin{answer}
+  Since the clock frequency is 500 MHz, we have a 2 ns cycle time. So the stalls per cache miss have a length of
+  \[
+    100 \text{ ns} / 2 \text{ ns} = 50 \text{ cycles}.
+  \]
+  So the CPI will equal:
+  \[
+    CPI = 1 + \text{data hazard stalls} + \text{ctrl hazard stalls} + \text{I-Cache stalls} + \text{D-Cache stalls}
+  \]
+  \[
+    = 1 + 0.15 \cdot 0.5 \cdot 1 + 0.2 \cdot 0.4 \cdot 3 + 1 \cdot 0.03 \cdot 50 + 0.35 \cdot 0.06 \cdot 50 = \textbf{3.865}.
+  \]
+\end{answer}
+
+\begin{problem}
+  Say you have the following:
+  \begin{itemize}
+    \item \emph{program}: generates 2 billion loads, 1 billion stores, each 4 bytes in size
+    \item \emph{cache}: a 32-byte block which gets a 95\% hit rate on the program
+  \end{itemize}
+  How many bytes of memory would be read and written if:
+  \begin{enumerate}[label=\alph*]
+    \item We had no cache?
+    \item We had a write-through cache with a no-write allocate policy?
+    \item We had a write-back cache with a write-allocate policy? (Assume 25\% of misses result in dirty eviction)
+  \end{enumerate}
+\end{problem}
+\begin{answer} \:
+  \begin{enumerate}[label=\alph*]
+    \item \emph{No cache}: All stores go to memory and are 4 bytes each, so \(1 \text{ billion} \cdot 4 \text{ bytes} = 4 \text{ billion bytes}\) for writes. Similarly, there are 4 bytes per read, so there are \(2 \text{ billion} \cdot 4 \text{ bytes} = 8 \text{ billion bytes}\) for reads.
+    \item \emph{Write-through, no allocate}: No allocate means we bypass cache on a miss, and write-through means we write to cache and memory on hit. So, again all stores will go to memory and are still 4 bytes each, so there are \textbf{4 billion bytes of writes}. Only loads that miss in the cache go to memory, but they read the full cache block. So there are \(2 \text{ billion} \cdot 0.05 \cdot 32 \text{ bytes} = \textbf{3.2 billion bytes of reads}\).
+    \item \emph{Write-back, write-allocate}: In this case, store misses result in a cache block being read, causing \(1 \text{ billion stores} \cdot 0.05 \cdot 32 \text{ bytes} = 1.6 \text{ billion bytes}\) to be read due to store misses. Similarly, \emph{load} misses result in cache block being read, causing an additional \(2 \text{ billion loads} \cdot 0.05 \cdot 32 \text{ bytes} = 3.2 \text{ billion bytes} \) to be read. Thus, there are \textbf{4.8 billion bytes read}. We only write to memory when there are dirty evictions, which can be done by both loads and stores. Since there are \(0.05 \cdot 1 \text{ billion stores} \cdot 32 \text{ bytes} \cdot 25\% = 0.4 \text{ billion bytes} \) of writes due to store misses. There are \(2 \text{ billion loads} \cdot 0.05 \cdot 32 \text{ bytes}  \cdot 25\% = 0.8 \text{ billion bytes} \) of writing due to load misses, resulting in \textbf{1.2 billion bytes of writes} in total.
+  \end{enumerate}
+\end{answer}
+
+\begin{problem}
+  Given a 200 MHz processor with 8 KB instruction and data caches and a with memory access latency of 20 cycles. Both caches are 2-way associative. A program running on this processor has a 95\% icache hit rate and a 90\% dcache hit rate. On average, 30\% of the instructions are loads or stores. The CPI of this system, if caches were ideal would be 1. \\
+  \\
+  Suppose you have the following two options for the next generation processor, which do you pick?
+  \begin{enumerate}
+    \item Double the clock frequency \(\to\) assume this will increase your memory latency to 40 cycles, and the base CPI of 1 can still be achieved after this change
+    \item Double the size of your caches \(\to\) this will increase the instruction cache hit rate to 98\% and the data cache hit rate to 95\%; assume the hit latency is still 1 cycle
+  \end{enumerate}
+\end{problem}
+\begin{answer}
+  See end of lecture.
+\end{answer}

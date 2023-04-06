@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.16)  29 MAR 2023 12:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.16)  3 APR 2023 14:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -804,107 +804,31 @@ Package: transparent 2022-10-27 v1.5 Transparency with color stacks
 Package: transparent-nometadata 2022-10-27 v1.5 Transparency via pdfTeX's color stack (HO)
 )))
 \c@lecture=\count449
- (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
-Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\symAMSa=\mathgroup9
-\symAMSb=\mathgroup10
-LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
-LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-) (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mathtools.sty
-Package: mathtools 2022/06/29 v1.29 mathematical typesetting tools
- (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mhsetup.sty
-Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
-)
-\g_MT_multlinerow_int=\count450
-\l_MT_multwidth_dim=\dimen303
-\origjot=\skip79
-\l_MT_shortvdotswithinadjustabove_dim=\dimen304
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen305
-\l_MT_above_intertext_sep=\dimen306
-\l_MT_below_intertext_sep=\dimen307
-\l_MT_above_shortintertext_sep=\dimen308
-\l_MT_below_shortintertext_sep=\dimen309
-\xmathstrut@box=\box71
-\xmathstrut@dim=\dimen310
-) (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
-Package: amsthm 2020/05/29 v2.20.6
-\thm@style=\toks42
-\thm@bodyfont=\toks43
-\thm@headfont=\toks44
-\thm@notefont=\toks45
-\thm@headpunct=\toks46
-\thm@preskip=\skip80
-\thm@postskip=\skip81
-\thm@headsep=\skip82
-\dth@everypar=\toks47
-) (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
-Package: amssymb 2013/01/14 v3.01 AMS font symbols
-LaTeX Font Info:    Redeclaring math symbol \boxdot on input line 44.
-) (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
-Package: geometry 2020/01/02 v5.9 Page Geometry
- (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
-Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
-)
-\Gm@cnth=\count451
-\Gm@cntv=\count452
-\c@Gm@tempcnt=\count453
-\Gm@bindingoffset=\dimen311
-\Gm@wd@mp=\dimen312
-\Gm@odd@mp=\dimen313
-\Gm@even@mp=\dimen314
-\Gm@layoutwidth=\dimen315
-\Gm@layoutheight=\dimen316
-\Gm@layouthoffset=\dimen317
-\Gm@layoutvoffset=\dimen318
-\Gm@dimlist=\toks48
- (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\mathrsfs.sty
-Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
-\symrsfs=\mathgroup11
-) (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/cancel\cancel.sty
-Package: cancel 2013/04/12 v2.2 Cancel math terms
-) (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/systeme\systeme.sty (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/xstring\xstring.sty (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/generic/xstring\xstring.tex
-\integerpart=\count454
-\decimalpart=\count455
-)
-Package: xstring 2023/01/14 v1.85 String manipulations (CT)
-) (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/generic/systeme\systeme.tex
-\SYS_systemecode=\toks49
-\SYS_systempreamble=\toks50
-\SYSeqnum=\count456
-)
-Package: systeme 2020/05/03 v0.34 Mise en forme de systemes d'equations (CT)
-) (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
-Package: enumitem 2019/06/20 v3.9 Customized lists
-\labelindent=\skip83
-\enit@outerparindent=\dimen319
-\enit@toks=\toks51
-\enit@inbox=\box72
-\enit@count@id=\count457
-\enitdp@description=\count458
-) (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
+ (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
 Package: multicol 2021/11/30 v1.9d multicolumn formatting (FMi)
-\c@tracingmulticols=\count459
-\mult@box=\box73
-\multicol@leftmargin=\dimen320
-\c@unbalance=\count460
-\c@collectmore=\count461
-\doublecol@number=\count462
-\multicoltolerance=\count463
-\multicolpretolerance=\count464
-\full@width=\dimen321
-\page@free=\dimen322
-\premulticols=\dimen323
-\postmulticols=\dimen324
-\multicolsep=\skip84
-\multicolbaselineskip=\skip85
-\partial@page=\box74
-\last@line=\box75
-\maxbalancingoverflow=\dimen325
-\mult@rightbox=\box76
-\mult@grightbox=\box77
-\mult@firstbox=\box78
-\mult@gfirstbox=\box79
+\c@tracingmulticols=\count450
+\mult@box=\box71
+\multicol@leftmargin=\dimen303
+\c@unbalance=\count451
+\c@collectmore=\count452
+\doublecol@number=\count453
+\multicoltolerance=\count454
+\multicolpretolerance=\count455
+\full@width=\dimen304
+\page@free=\dimen305
+\premulticols=\dimen306
+\postmulticols=\dimen307
+\multicolsep=\skip79
+\multicolbaselineskip=\skip80
+\partial@page=\box72
+\last@line=\box73
+\maxbalancingoverflow=\dimen308
+\mult@rightbox=\box74
+\mult@grightbox=\box75
+\mult@firstbox=\box76
+\mult@gfirstbox=\box77
+\@tempa=\box78
+\@tempa=\box79
 \@tempa=\box80
 \@tempa=\box81
 \@tempa=\box82
@@ -939,17 +863,93 @@ Package: multicol 2021/11/30 v1.9d multicolumn formatting (FMi)
 \@tempa=\box111
 \@tempa=\box112
 \@tempa=\box113
-\@tempa=\box114
-\@tempa=\box115
-\c@minrows=\count465
-\c@columnbadness=\count466
-\c@finalcolumnbadness=\count467
-\last@try=\dimen326
-\multicolovershoot=\dimen327
-\multicolundershoot=\dimen328
-\mult@nat@firstbox=\box116
-\colbreak@box=\box117
-\mc@col@check@num=\count468
+\c@minrows=\count456
+\c@columnbadness=\count457
+\c@finalcolumnbadness=\count458
+\last@try=\dimen309
+\multicolovershoot=\dimen310
+\multicolundershoot=\dimen311
+\mult@nat@firstbox=\box114
+\colbreak@box=\box115
+\mc@col@check@num=\count459
+) (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup9
+\symAMSb=\mathgroup10
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+) (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mathtools.sty
+Package: mathtools 2022/06/29 v1.29 mathematical typesetting tools
+ (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+\g_MT_multlinerow_int=\count460
+\l_MT_multwidth_dim=\dimen312
+\origjot=\skip81
+\l_MT_shortvdotswithinadjustabove_dim=\dimen313
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen314
+\l_MT_above_intertext_sep=\dimen315
+\l_MT_below_intertext_sep=\dimen316
+\l_MT_above_shortintertext_sep=\dimen317
+\l_MT_below_shortintertext_sep=\dimen318
+\xmathstrut@box=\box116
+\xmathstrut@dim=\dimen319
+) (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks42
+\thm@bodyfont=\toks43
+\thm@headfont=\toks44
+\thm@notefont=\toks45
+\thm@headpunct=\toks46
+\thm@preskip=\skip82
+\thm@postskip=\skip83
+\thm@headsep=\skip84
+\dth@everypar=\toks47
+) (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+LaTeX Font Info:    Redeclaring math symbol \boxdot on input line 44.
+) (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count461
+\Gm@cntv=\count462
+\c@Gm@tempcnt=\count463
+\Gm@bindingoffset=\dimen320
+\Gm@wd@mp=\dimen321
+\Gm@odd@mp=\dimen322
+\Gm@even@mp=\dimen323
+\Gm@layoutwidth=\dimen324
+\Gm@layoutheight=\dimen325
+\Gm@layouthoffset=\dimen326
+\Gm@layoutvoffset=\dimen327
+\Gm@dimlist=\toks48
+ (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup11
+) (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/cancel\cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
+) (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/systeme\systeme.sty (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/xstring\xstring.sty (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/generic/xstring\xstring.tex
+\integerpart=\count464
+\decimalpart=\count465
+)
+Package: xstring 2023/01/14 v1.85 String manipulations (CT)
+) (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/generic/systeme\systeme.tex
+\SYS_systemecode=\toks49
+\SYS_systempreamble=\toks50
+\SYSeqnum=\count466
+)
+Package: systeme 2020/05/03 v0.34 Mise en forme de systemes d'equations (CT)
+) (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip85
+\enit@outerparindent=\dimen328
+\enit@toks=\toks51
+\enit@inbox=\box117
+\enit@count@id=\count467
+\enitdp@description=\count468
 ) (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/multirow\bigdelim.sty
 Package: bigdelim 2021/03/15 v2.8 Create big delimiters in tabular or array
  (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
@@ -1214,68 +1214,68 @@ Package zref Info: New property: mdf@pagevalue on input line 895.
 Package thmtools Info: Key `mdframed' (with value ` linewidth=2pt, rightline=false, topline=false, bottomline=false, linecolor=ForestGreen, backgroundcolor=ForestGreen!5, nobreak=false ')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=thmgreenbox' on input line 97.
+(thmtools)             that uses `style=thmgreenbox' on input line 98.
 Package thmtools Info: Key `mdframed' (with value ` linewidth=2pt, rightline=false, topline=false, bottomline=false, linecolor=ForestGreen, backgroundcolor=ForestGreen!8, nobreak=false ')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=thmgreen2box' on input line 107.
+(thmtools)             that uses `style=thmgreen2box' on input line 108.
 Package thmtools Info: Key `mdframed' (with value ` linewidth=2pt, rightline=false, topline=false, bottomline=false, linecolor=NavyBlue, backgroundcolor=NavyBlue!5, nobreak=false ')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=thmbluebox' on input line 117.
+(thmtools)             that uses `style=thmbluebox' on input line 118.
 Package thmtools Info: Key `mdframed' (with value ` linewidth=2pt, rightline=false, topline=false, bottomline=false, linecolor=TealBlue, nobreak=false ')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=thmblueline' on input line 127.
+(thmtools)             that uses `style=thmblueline' on input line 128.
 Package thmtools Info: Key `mdframed' (with value ` linewidth=2pt, rightline=false, topline=false, bottomline=false, linecolor=RawSienna, backgroundcolor=RawSienna!5, nobreak=false ')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=thmredbox' on input line 137.
+(thmtools)             that uses `style=thmredbox' on input line 138.
 Package thmtools Info: Key `mdframed' (with value ` linewidth=2pt, rightline=false, topline=false, bottomline=false, linecolor=RawSienna, backgroundcolor=RawSienna!8, nobreak=false ')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=thmred2box' on input line 147.
+(thmtools)             that uses `style=thmred2box' on input line 148.
 Package thmtools Info: Key `mdframed' (with value ` linewidth=2pt, rightline=false, topline=false, bottomline=false, linecolor=SeaGreen, backgroundcolor=SeaGreen!2, nobreak=false ')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=thmgreen3box' on input line 157.
+(thmtools)             that uses `style=thmgreen3box' on input line 158.
 Package thmtools Info: Key `mdframed' (with value ` linewidth=2pt, rightline=false, topline=false, bottomline=false, linecolor=WildStrawberry, backgroundcolor=WildStrawberry!5, nobreak=false ')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=thmpinkbox' on input line 167.
+(thmtools)             that uses `style=thmpinkbox' on input line 168.
 Package thmtools Info: Key `mdframed' (with value ` linewidth=2pt, rightline=false, topline=false, bottomline=false, linecolor=MidnightBlue, backgroundcolor=MidnightBlue!5, nobreak=false ')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=thmblue2box' on input line 177.
+(thmtools)             that uses `style=thmblue2box' on input line 178.
 Package thmtools Info: Key `mdframed' (with value ` linewidth=2pt, rightline=false, topline=false, bottomline=false, linecolor=Gray, backgroundcolor=Gray!5, nobreak=false ')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=notgraybox' on input line 187.
+(thmtools)             that uses `style=notgraybox' on input line 188.
 Package thmtools Info: Key `mdframed' (with value ` linewidth=2pt, rightline=false, topline=false, bottomline=false, linecolor=Gray, nobreak=false ')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=notgrayline' on input line 197.
+(thmtools)             that uses `style=notgrayline' on input line 198.
 Package thmtools Info: Key `numbered' (with value `no')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=thmexplanationbox' on input line 219.
+(thmtools)             that uses `style=thmexplanationbox' on input line 220.
 Package thmtools Info: Key `mdframed' (with value ` linewidth=2pt, rightline=false, topline=false, bottomline=false, linecolor=NavyBlue, backgroundcolor=NavyBlue!1, nobreak=false ')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=thmexplanationbox' on input line 219.
+(thmtools)             that uses `style=thmexplanationbox' on input line 220.
 Package thmtools Info: Key `numbered' (with value `no')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=thmanswerbox' on input line 230.
+(thmtools)             that uses `style=thmanswerbox' on input line 231.
 Package thmtools Info: Key `mdframed' (with value ` linewidth=2pt, rightline=false, topline=false, bottomline=false, linecolor=WildStrawberry, backgroundcolor=WildStrawberry!1, nobreak=false ')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=thmanswerbox' on input line 230.
+(thmtools)             that uses `style=thmanswerbox' on input line 231.
 Package thmtools Info: Key `mdframed' (with value ` linewidth=2pt, rightline=false, topline=false, bottomline=false, linecolor=Violet, backgroundcolor=Violet!1, nobreak=false ')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=conjpurplebox' on input line 240.
-Package thmtools Info: Automatically pulling in `thmdef-mdframed' on input line 243.
+(thmtools)             that uses `style=conjpurplebox' on input line 241.
+Package thmtools Info: Automatically pulling in `thmdef-mdframed' on input line 244.
  (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/thmtools\thmdef-mdframed.sty
 Package: thmdef-mdframed 2023/02/17 v0.75
 )
@@ -1300,23 +1300,23 @@ Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
 )
 
 Package fancyhdr Warning: \fancyhead's `E' option without twoside option is useless.
-(fancyhdr)                Please consider using the `twoside' option on input line 320.
-
-
-Package fancyhdr Warning: \fancyhead's `E' option without twoside option is useless.
-(fancyhdr)                Please consider using the `twoside' option on input line 322.
+(fancyhdr)                Please consider using the `twoside' option on input line 321.
 
 
 Package fancyhdr Warning: \fancyhead's `E' option without twoside option is useless.
 (fancyhdr)                Please consider using the `twoside' option on input line 323.
 
 
-Package fancyhdr Warning: \fancyfoot's `E' option without twoside option is useless.
+Package fancyhdr Warning: \fancyhead's `E' option without twoside option is useless.
 (fancyhdr)                Please consider using the `twoside' option on input line 324.
 
 
 Package fancyhdr Warning: \fancyfoot's `E' option without twoside option is useless.
 (fancyhdr)                Please consider using the `twoside' option on input line 325.
+
+
+Package fancyhdr Warning: \fancyfoot's `E' option without twoside option is useless.
+(fancyhdr)                Please consider using the `twoside' option on input line 326.
 
 (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/todonotes\todonotes.sty
 Package: todonotes 2023/01/31 v1.1.6 Todonotes source and documentation.
@@ -1549,27 +1549,27 @@ File: t1cmss.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 ) [2
 
 ] (Figures/memhier.pdf_tex
-<./Figures//memhier.pdf, id=56, page=1, 305.52002pt x 189.40204pt>
+<./Figures//memhier.pdf, id=91, page=1, 305.52002pt x 189.40204pt>
 File: ./Figures//memhier.pdf Graphic file (type pdf)
 <use ./Figures//memhier.pdf, page 1>
 Package pdftex.def Info: ./Figures//memhier.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 271.7837pt x 168.49791pt.
-<./Figures//memhier.pdf, id=57, page=2, 305.52002pt x 189.40204pt>
+<./Figures//memhier.pdf, id=92, page=2, 305.52002pt x 189.40204pt>
 File: ./Figures//memhier.pdf Graphic file (type pdf)
 <use ./Figures//memhier.pdf, page 2>
 Package pdftex.def Info: ./Figures//memhier.pdf , page2 used on input line 58.
 (pdftex.def)             Requested size: 271.7837pt x 168.49791pt.
-<./Figures//memhier.pdf, id=58, page=3, 305.52002pt x 189.40204pt>
+<./Figures//memhier.pdf, id=93, page=3, 305.52002pt x 189.40204pt>
 File: ./Figures//memhier.pdf Graphic file (type pdf)
 <use ./Figures//memhier.pdf, page 3>
 Package pdftex.def Info: ./Figures//memhier.pdf , page3 used on input line 60.
 (pdftex.def)             Requested size: 271.7837pt x 168.49791pt.
-<./Figures//memhier.pdf, id=59, page=4, 305.52002pt x 189.40204pt>
+<./Figures//memhier.pdf, id=94, page=4, 305.52002pt x 189.40204pt>
 File: ./Figures//memhier.pdf Graphic file (type pdf)
 <use ./Figures//memhier.pdf, page 4>
 Package pdftex.def Info: ./Figures//memhier.pdf , page4 used on input line 62.
 (pdftex.def)             Requested size: 271.7837pt x 168.49791pt.
-<./Figures//memhier.pdf, id=60, page=5, 305.52002pt x 189.40204pt>
+<./Figures//memhier.pdf, id=95, page=5, 305.52002pt x 189.40204pt>
 File: ./Figures//memhier.pdf Graphic file (type pdf)
 <use ./Figures//memhier.pdf, page 5>
 Package pdftex.def Info: ./Figures//memhier.pdf , page5 used on input line 64.
@@ -1597,67 +1597,67 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 94.
  (Figures/hitmiss.pdf_tex
-<./Figures//hitmiss.pdf, id=79, page=1, 438.42729pt x 260.89198pt>
+<./Figures//hitmiss.pdf, id=114, page=1, 438.42729pt x 260.89198pt>
 File: ./Figures//hitmiss.pdf Graphic file (type pdf)
 <use ./Figures//hitmiss.pdf, page 1>
 Package pdftex.def Info: ./Figures//hitmiss.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 407.66867pt x 242.59917pt.
-<./Figures//hitmiss.pdf, id=80, page=2, 438.42729pt x 260.89198pt>
+<./Figures//hitmiss.pdf, id=115, page=2, 438.42729pt x 260.89198pt>
 File: ./Figures//hitmiss.pdf Graphic file (type pdf)
 <use ./Figures//hitmiss.pdf, page 2>
 Package pdftex.def Info: ./Figures//hitmiss.pdf , page2 used on input line 58.
 (pdftex.def)             Requested size: 407.66867pt x 242.59917pt.
-<./Figures//hitmiss.pdf, id=81, page=3, 438.42729pt x 260.89198pt>
+<./Figures//hitmiss.pdf, id=116, page=3, 438.42729pt x 260.89198pt>
 File: ./Figures//hitmiss.pdf Graphic file (type pdf)
 <use ./Figures//hitmiss.pdf, page 3>
 Package pdftex.def Info: ./Figures//hitmiss.pdf , page3 used on input line 61.
 (pdftex.def)             Requested size: 407.66867pt x 242.59917pt.
-<./Figures//hitmiss.pdf, id=82, page=4, 438.42729pt x 260.89198pt>
+<./Figures//hitmiss.pdf, id=117, page=4, 438.42729pt x 260.89198pt>
 File: ./Figures//hitmiss.pdf Graphic file (type pdf)
 <use ./Figures//hitmiss.pdf, page 4>
 Package pdftex.def Info: ./Figures//hitmiss.pdf , page4 used on input line 63.
 (pdftex.def)             Requested size: 407.66867pt x 242.59917pt.
-<./Figures//hitmiss.pdf, id=83, page=5, 438.42729pt x 260.89198pt>
+<./Figures//hitmiss.pdf, id=118, page=5, 438.42729pt x 260.89198pt>
 File: ./Figures//hitmiss.pdf Graphic file (type pdf)
 <use ./Figures//hitmiss.pdf, page 5>
 Package pdftex.def Info: ./Figures//hitmiss.pdf , page5 used on input line 65.
 (pdftex.def)             Requested size: 407.66867pt x 242.59917pt.
-<./Figures//hitmiss.pdf, id=84, page=6, 438.42729pt x 260.89198pt>
+<./Figures//hitmiss.pdf, id=119, page=6, 438.42729pt x 260.89198pt>
 File: ./Figures//hitmiss.pdf Graphic file (type pdf)
 <use ./Figures//hitmiss.pdf, page 6>
 Package pdftex.def Info: ./Figures//hitmiss.pdf , page6 used on input line 67.
 (pdftex.def)             Requested size: 407.66867pt x 242.59917pt.
-<./Figures//hitmiss.pdf, id=85, page=7, 438.42729pt x 260.89198pt>
+<./Figures//hitmiss.pdf, id=120, page=7, 438.42729pt x 260.89198pt>
 File: ./Figures//hitmiss.pdf Graphic file (type pdf)
 <use ./Figures//hitmiss.pdf, page 7>
 Package pdftex.def Info: ./Figures//hitmiss.pdf , page7 used on input line 79.
 (pdftex.def)             Requested size: 407.66867pt x 242.59917pt.
-<./Figures//hitmiss.pdf, id=86, page=8, 438.42729pt x 260.89198pt>
+<./Figures//hitmiss.pdf, id=121, page=8, 438.42729pt x 260.89198pt>
 File: ./Figures//hitmiss.pdf Graphic file (type pdf)
 <use ./Figures//hitmiss.pdf, page 8>
 Package pdftex.def Info: ./Figures//hitmiss.pdf , page8 used on input line 81.
 (pdftex.def)             Requested size: 407.66867pt x 242.59917pt.
-<./Figures//hitmiss.pdf, id=87, page=9, 438.42729pt x 260.89198pt>
+<./Figures//hitmiss.pdf, id=122, page=9, 438.42729pt x 260.89198pt>
 File: ./Figures//hitmiss.pdf Graphic file (type pdf)
 <use ./Figures//hitmiss.pdf, page 9>
 Package pdftex.def Info: ./Figures//hitmiss.pdf , page9 used on input line 84.
 (pdftex.def)             Requested size: 407.66867pt x 242.59917pt.
-<./Figures//hitmiss.pdf, id=88, page=10, 438.42729pt x 260.89198pt>
+<./Figures//hitmiss.pdf, id=123, page=10, 438.42729pt x 260.89198pt>
 File: ./Figures//hitmiss.pdf Graphic file (type pdf)
 <use ./Figures//hitmiss.pdf, page 10>
 Package pdftex.def Info: ./Figures//hitmiss.pdf , page10 used on input line 86.
 (pdftex.def)             Requested size: 407.66867pt x 242.59917pt.
-<./Figures//hitmiss.pdf, id=89, page=11, 438.42729pt x 260.89198pt>
+<./Figures//hitmiss.pdf, id=124, page=11, 438.42729pt x 260.89198pt>
 File: ./Figures//hitmiss.pdf Graphic file (type pdf)
 <use ./Figures//hitmiss.pdf, page 11>
 Package pdftex.def Info: ./Figures//hitmiss.pdf , page11 used on input line 88.
 (pdftex.def)             Requested size: 407.66867pt x 242.59917pt.
-<./Figures//hitmiss.pdf, id=90, page=12, 438.42729pt x 260.89198pt>
+<./Figures//hitmiss.pdf, id=125, page=12, 438.42729pt x 260.89198pt>
 File: ./Figures//hitmiss.pdf Graphic file (type pdf)
 <use ./Figures//hitmiss.pdf, page 12>
 Package pdftex.def Info: ./Figures//hitmiss.pdf , page12 used on input line 90.
 (pdftex.def)             Requested size: 407.66867pt x 242.59917pt.
-<./Figures//hitmiss.pdf, id=91, page=13, 438.42729pt x 260.89198pt>
+<./Figures//hitmiss.pdf, id=126, page=13, 438.42729pt x 260.89198pt>
 File: ./Figures//hitmiss.pdf Graphic file (type pdf)
 <use ./Figures//hitmiss.pdf, page 13>
 Package pdftex.def Info: ./Figures//hitmiss.pdf , page13 used on input line 102.
@@ -1723,7 +1723,443 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 95.
-) [7] [8
+) (Lectures/lec_3.tex
+Package marginnote Info: Margin note 11.1 is on absolute page 11 on input line 2.
+Package marginnote Info: right page because not two side mode on input line 2.
+Package marginnote Info: xpos seems to be 72.2698pt on input line 2.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 6.
+ (Figures/cachelinecontents.pdf_tex
+<./Figures//cachelinecontents.pdf, id=179, page=1, 190.5985pt x 23.56393pt>
+File: ./Figures//cachelinecontents.pdf Graphic file (type pdf)
+<use ./Figures//cachelinecontents.pdf, page 1>
+Package pdftex.def Info: ./Figures//cachelinecontents.pdf , page1 used on input line 57.
+(pdftex.def)             Requested size: 271.7837pt x 33.60158pt.
+<./Figures//cachelinecontents.pdf, id=180, page=2, 190.5985pt x 23.56393pt>
+File: ./Figures//cachelinecontents.pdf Graphic file (type pdf)
+<use ./Figures//cachelinecontents.pdf, page 2>
+Package pdftex.def Info: ./Figures//cachelinecontents.pdf , page2 used on input line 62.
+(pdftex.def)             Requested size: 271.7837pt x 33.60158pt.
+)
+Overfull \hbox (19.61137pt too wide) in paragraph at lines 33--42
+ [] 
+ []
+
+[7 <./Figures//cachelinecontents.pdf> <./Figures//cachelinecontents.pdf>]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 47.
+Package mdframed Info: Not enough space on this page on input line 61.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 63.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 83.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 89.
+ [8]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 108.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 112.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 118.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 129.
+) (Lectures/lec_4.tex
+Package marginnote Info: Margin note 13.1 is on absolute page 13 on input line 2.
+Package marginnote Info: right page because not two side mode on input line 2.
+Package marginnote Info: xpos seems to be 72.2698pt on input line 2.
+ (Figures/fullyassociative.pdf_tex
+<./Figures//fullyassociative.pdf, id=213, page=1, 263.54613pt x 183.66171pt>
+File: ./Figures//fullyassociative.pdf Graphic file (type pdf)
+<use ./Figures//fullyassociative.pdf, page 1>
+Package pdftex.def Info: ./Figures//fullyassociative.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 203.83434pt x 142.05609pt.
+<./Figures//fullyassociative.pdf, id=214, page=2, 263.54613pt x 183.66171pt>
+File: ./Figures//fullyassociative.pdf Graphic file (type pdf)
+<use ./Figures//fullyassociative.pdf, page 2>
+Package pdftex.def Info: ./Figures//fullyassociative.pdf , page2 used on input line 59.
+(pdftex.def)             Requested size: 203.83434pt x 142.05609pt.
+<./Figures//fullyassociative.pdf, id=215, page=3, 263.54613pt x 183.66171pt>
+File: ./Figures//fullyassociative.pdf Graphic file (type pdf)
+<use ./Figures//fullyassociative.pdf, page 3>
+Package pdftex.def Info: ./Figures//fullyassociative.pdf , page3 used on input line 61.
+(pdftex.def)             Requested size: 203.83434pt x 142.05609pt.
+<./Figures//fullyassociative.pdf, id=216, page=4, 263.54613pt x 183.66171pt>
+File: ./Figures//fullyassociative.pdf Graphic file (type pdf)
+<use ./Figures//fullyassociative.pdf, page 4>
+Package pdftex.def Info: ./Figures//fullyassociative.pdf , page4 used on input line 63.
+(pdftex.def)             Requested size: 203.83434pt x 142.05609pt.
+<./Figures//fullyassociative.pdf, id=217, page=5, 263.54613pt x 183.66171pt>
+File: ./Figures//fullyassociative.pdf Graphic file (type pdf)
+<use ./Figures//fullyassociative.pdf, page 5>
+Package pdftex.def Info: ./Figures//fullyassociative.pdf , page5 used on input line 65.
+(pdftex.def)             Requested size: 203.83434pt x 142.05609pt.
+<./Figures//fullyassociative.pdf, id=218, page=6, 263.54613pt x 183.66171pt>
+File: ./Figures//fullyassociative.pdf Graphic file (type pdf)
+<use ./Figures//fullyassociative.pdf, page 6>
+Package pdftex.def Info: ./Figures//fullyassociative.pdf , page6 used on input line 67.
+(pdftex.def)             Requested size: 203.83434pt x 142.05609pt.
+<./Figures//fullyassociative.pdf, id=219, page=7, 263.54613pt x 183.66171pt>
+File: ./Figures//fullyassociative.pdf Graphic file (type pdf)
+<use ./Figures//fullyassociative.pdf, page 7>
+Package pdftex.def Info: ./Figures//fullyassociative.pdf , page7 used on input line 69.
+(pdftex.def)             Requested size: 203.83434pt x 142.05609pt.
+<./Figures//fullyassociative.pdf, id=220, page=8, 263.54613pt x 183.66171pt>
+File: ./Figures//fullyassociative.pdf Graphic file (type pdf)
+<use ./Figures//fullyassociative.pdf, page 8>
+Package pdftex.def Info: ./Figures//fullyassociative.pdf , page8 used on input line 71.
+(pdftex.def)             Requested size: 203.83434pt x 142.05609pt.
+<./Figures//fullyassociative.pdf, id=221, page=9, 263.54613pt x 183.66171pt>
+File: ./Figures//fullyassociative.pdf Graphic file (type pdf)
+<use ./Figures//fullyassociative.pdf, page 9>
+Package pdftex.def Info: ./Figures//fullyassociative.pdf , page9 used on input line 73.
+(pdftex.def)             Requested size: 203.83434pt x 142.05609pt.
+<./Figures//fullyassociative.pdf, id=222, page=10, 263.54613pt x 183.66171pt>
+File: ./Figures//fullyassociative.pdf Graphic file (type pdf)
+<use ./Figures//fullyassociative.pdf, page 10>
+Package pdftex.def Info: ./Figures//fullyassociative.pdf , page10 used on input line 75.
+(pdftex.def)             Requested size: 203.83434pt x 142.05609pt.
+<./Figures//fullyassociative.pdf, id=223, page=11, 263.54613pt x 183.66171pt>
+File: ./Figures//fullyassociative.pdf Graphic file (type pdf)
+<use ./Figures//fullyassociative.pdf, page 11>
+Package pdftex.def Info: ./Figures//fullyassociative.pdf , page11 used on input line 77.
+(pdftex.def)             Requested size: 203.83434pt x 142.05609pt.
+<./Figures//fullyassociative.pdf, id=224, page=12, 263.54613pt x 183.66171pt>
+File: ./Figures//fullyassociative.pdf Graphic file (type pdf)
+<use ./Figures//fullyassociative.pdf, page 12>
+Package pdftex.def Info: ./Figures//fullyassociative.pdf , page12 used on input line 79.
+(pdftex.def)             Requested size: 203.83434pt x 142.05609pt.
+<./Figures//fullyassociative.pdf, id=225, page=13, 263.54613pt x 183.66171pt>
+File: ./Figures//fullyassociative.pdf Graphic file (type pdf)
+<use ./Figures//fullyassociative.pdf, page 13>
+Package pdftex.def Info: ./Figures//fullyassociative.pdf , page13 used on input line 81.
+(pdftex.def)             Requested size: 203.83434pt x 142.05609pt.
+<./Figures//fullyassociative.pdf, id=226, page=14, 263.54613pt x 183.66171pt>
+File: ./Figures//fullyassociative.pdf Graphic file (type pdf)
+<use ./Figures//fullyassociative.pdf, page 14>
+Package pdftex.def Info: ./Figures//fullyassociative.pdf , page14 used on input line 83.
+(pdftex.def)             Requested size: 203.83434pt x 142.05609pt.
+<./Figures//fullyassociative.pdf, id=227, page=15, 263.54613pt x 183.66171pt>
+File: ./Figures//fullyassociative.pdf Graphic file (type pdf)
+<use ./Figures//fullyassociative.pdf, page 15>
+Package pdftex.def Info: ./Figures//fullyassociative.pdf , page15 used on input line 85.
+(pdftex.def)             Requested size: 203.83434pt x 142.05609pt.
+<./Figures//fullyassociative.pdf, id=228, page=16, 263.54613pt x 183.66171pt>
+File: ./Figures//fullyassociative.pdf Graphic file (type pdf)
+<use ./Figures//fullyassociative.pdf, page 16>
+Package pdftex.def Info: ./Figures//fullyassociative.pdf , page16 used on input line 87.
+(pdftex.def)             Requested size: 203.83434pt x 142.05609pt.
+<./Figures//fullyassociative.pdf, id=229, page=17, 263.54613pt x 183.66171pt>
+File: ./Figures//fullyassociative.pdf Graphic file (type pdf)
+<use ./Figures//fullyassociative.pdf, page 17>
+Package pdftex.def Info: ./Figures//fullyassociative.pdf , page17 used on input line 89.
+(pdftex.def)             Requested size: 203.83434pt x 142.05609pt.
+<./Figures//fullyassociative.pdf, id=230, page=18, 263.54613pt x 183.66171pt>
+File: ./Figures//fullyassociative.pdf Graphic file (type pdf)
+<use ./Figures//fullyassociative.pdf, page 18>
+Package pdftex.def Info: ./Figures//fullyassociative.pdf , page18 used on input line 106.
+(pdftex.def)             Requested size: 203.83434pt x 142.05609pt.
+<./Figures//fullyassociative.pdf, id=231, page=19, 263.54613pt x 183.66171pt>
+File: ./Figures//fullyassociative.pdf Graphic file (type pdf)
+<use ./Figures//fullyassociative.pdf, page 19>
+Package pdftex.def Info: ./Figures//fullyassociative.pdf , page19 used on input line 109.
+(pdftex.def)             Requested size: 203.83434pt x 142.05609pt.
+<./Figures//fullyassociative.pdf, id=232, page=20, 263.54613pt x 183.66171pt>
+File: ./Figures//fullyassociative.pdf Graphic file (type pdf)
+<use ./Figures//fullyassociative.pdf, page 20>
+Package pdftex.def Info: ./Figures//fullyassociative.pdf , page20 used on input line 115.
+(pdftex.def)             Requested size: 203.83434pt x 142.05609pt.
+) (Figures/directmapped.pdf_tex
+<./Figures//directmapped.pdf, id=233, page=1, 254.14406pt x 182.78902pt>
+File: ./Figures//directmapped.pdf Graphic file (type pdf)
+<use ./Figures//directmapped.pdf, page 1>
+Package pdftex.def Info: ./Figures//directmapped.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 203.83434pt x 146.60515pt.
+<./Figures//directmapped.pdf, id=234, page=2, 254.14406pt x 182.78902pt>
+File: ./Figures//directmapped.pdf Graphic file (type pdf)
+<use ./Figures//directmapped.pdf, page 2>
+Package pdftex.def Info: ./Figures//directmapped.pdf , page2 used on input line 59.
+(pdftex.def)             Requested size: 203.83434pt x 146.60515pt.
+<./Figures//directmapped.pdf, id=235, page=3, 254.14406pt x 182.78902pt>
+File: ./Figures//directmapped.pdf Graphic file (type pdf)
+<use ./Figures//directmapped.pdf, page 3>
+Package pdftex.def Info: ./Figures//directmapped.pdf , page3 used on input line 61.
+(pdftex.def)             Requested size: 203.83434pt x 146.60515pt.
+<./Figures//directmapped.pdf, id=236, page=4, 254.14406pt x 182.78902pt>
+File: ./Figures//directmapped.pdf Graphic file (type pdf)
+<use ./Figures//directmapped.pdf, page 4>
+Package pdftex.def Info: ./Figures//directmapped.pdf , page4 used on input line 63.
+(pdftex.def)             Requested size: 203.83434pt x 146.60515pt.
+<./Figures//directmapped.pdf, id=237, page=5, 254.14406pt x 182.78902pt>
+File: ./Figures//directmapped.pdf Graphic file (type pdf)
+<use ./Figures//directmapped.pdf, page 5>
+Package pdftex.def Info: ./Figures//directmapped.pdf , page5 used on input line 65.
+(pdftex.def)             Requested size: 203.83434pt x 146.60515pt.
+<./Figures//directmapped.pdf, id=238, page=6, 254.14406pt x 182.78902pt>
+File: ./Figures//directmapped.pdf Graphic file (type pdf)
+<use ./Figures//directmapped.pdf, page 6>
+Package pdftex.def Info: ./Figures//directmapped.pdf , page6 used on input line 67.
+(pdftex.def)             Requested size: 203.83434pt x 146.60515pt.
+<./Figures//directmapped.pdf, id=239, page=7, 254.14406pt x 182.78902pt>
+File: ./Figures//directmapped.pdf Graphic file (type pdf)
+<use ./Figures//directmapped.pdf, page 7>
+Package pdftex.def Info: ./Figures//directmapped.pdf , page7 used on input line 69.
+(pdftex.def)             Requested size: 203.83434pt x 146.60515pt.
+<./Figures//directmapped.pdf, id=240, page=8, 254.14406pt x 182.78902pt>
+File: ./Figures//directmapped.pdf Graphic file (type pdf)
+<use ./Figures//directmapped.pdf, page 8>
+Package pdftex.def Info: ./Figures//directmapped.pdf , page8 used on input line 71.
+(pdftex.def)             Requested size: 203.83434pt x 146.60515pt.
+<./Figures//directmapped.pdf, id=241, page=9, 254.14406pt x 182.78902pt>
+File: ./Figures//directmapped.pdf Graphic file (type pdf)
+<use ./Figures//directmapped.pdf, page 9>
+Package pdftex.def Info: ./Figures//directmapped.pdf , page9 used on input line 73.
+(pdftex.def)             Requested size: 203.83434pt x 146.60515pt.
+<./Figures//directmapped.pdf, id=242, page=10, 254.14406pt x 182.78902pt>
+File: ./Figures//directmapped.pdf Graphic file (type pdf)
+<use ./Figures//directmapped.pdf, page 10>
+Package pdftex.def Info: ./Figures//directmapped.pdf , page10 used on input line 75.
+(pdftex.def)             Requested size: 203.83434pt x 146.60515pt.
+<./Figures//directmapped.pdf, id=243, page=11, 254.14406pt x 182.78902pt>
+File: ./Figures//directmapped.pdf Graphic file (type pdf)
+<use ./Figures//directmapped.pdf, page 11>
+Package pdftex.def Info: ./Figures//directmapped.pdf , page11 used on input line 77.
+(pdftex.def)             Requested size: 203.83434pt x 146.60515pt.
+<./Figures//directmapped.pdf, id=244, page=12, 254.14406pt x 182.78902pt>
+File: ./Figures//directmapped.pdf Graphic file (type pdf)
+<use ./Figures//directmapped.pdf, page 12>
+Package pdftex.def Info: ./Figures//directmapped.pdf , page12 used on input line 79.
+(pdftex.def)             Requested size: 203.83434pt x 146.60515pt.
+<./Figures//directmapped.pdf, id=245, page=13, 254.14406pt x 182.78902pt>
+File: ./Figures//directmapped.pdf Graphic file (type pdf)
+<use ./Figures//directmapped.pdf, page 13>
+Package pdftex.def Info: ./Figures//directmapped.pdf , page13 used on input line 81.
+(pdftex.def)             Requested size: 203.83434pt x 146.60515pt.
+<./Figures//directmapped.pdf, id=246, page=14, 254.14406pt x 182.78902pt>
+File: ./Figures//directmapped.pdf Graphic file (type pdf)
+<use ./Figures//directmapped.pdf, page 14>
+Package pdftex.def Info: ./Figures//directmapped.pdf , page14 used on input line 83.
+(pdftex.def)             Requested size: 203.83434pt x 146.60515pt.
+<./Figures//directmapped.pdf, id=247, page=15, 254.14406pt x 182.78902pt>
+File: ./Figures//directmapped.pdf Graphic file (type pdf)
+<use ./Figures//directmapped.pdf, page 15>
+Package pdftex.def Info: ./Figures//directmapped.pdf , page15 used on input line 85.
+(pdftex.def)             Requested size: 203.83434pt x 146.60515pt.
+<./Figures//directmapped.pdf, id=248, page=16, 254.14406pt x 182.78902pt>
+File: ./Figures//directmapped.pdf Graphic file (type pdf)
+<use ./Figures//directmapped.pdf, page 16>
+Package pdftex.def Info: ./Figures//directmapped.pdf , page16 used on input line 87.
+(pdftex.def)             Requested size: 203.83434pt x 146.60515pt.
+<./Figures//directmapped.pdf, id=249, page=17, 254.14406pt x 182.78902pt>
+File: ./Figures//directmapped.pdf Graphic file (type pdf)
+<use ./Figures//directmapped.pdf, page 17>
+Package pdftex.def Info: ./Figures//directmapped.pdf , page17 used on input line 89.
+(pdftex.def)             Requested size: 203.83434pt x 146.60515pt.
+<./Figures//directmapped.pdf, id=250, page=18, 254.14406pt x 182.78902pt>
+File: ./Figures//directmapped.pdf Graphic file (type pdf)
+<use ./Figures//directmapped.pdf, page 18>
+Package pdftex.def Info: ./Figures//directmapped.pdf , page18 used on input line 106.
+(pdftex.def)             Requested size: 203.83434pt x 146.60515pt.
+<./Figures//directmapped.pdf, id=251, page=19, 254.14406pt x 182.78902pt>
+File: ./Figures//directmapped.pdf Graphic file (type pdf)
+<use ./Figures//directmapped.pdf, page 19>
+Package pdftex.def Info: ./Figures//directmapped.pdf , page19 used on input line 109.
+(pdftex.def)             Requested size: 203.83434pt x 146.60515pt.
+<./Figures//directmapped.pdf, id=252, page=20, 254.14406pt x 182.78902pt>
+File: ./Figures//directmapped.pdf Graphic file (type pdf)
+<use ./Figures//directmapped.pdf, page 20>
+Package pdftex.def Info: ./Figures//directmapped.pdf , page20 used on input line 117.
+(pdftex.def)             Requested size: 203.83434pt x 146.60515pt.
+<./Figures//directmapped.pdf, id=253, page=21, 254.14406pt x 182.78902pt>
+File: ./Figures//directmapped.pdf Graphic file (type pdf)
+<use ./Figures//directmapped.pdf, page 21>
+Package pdftex.def Info: ./Figures//directmapped.pdf , page21 used on input line 123.
+(pdftex.def)             Requested size: 203.83434pt x 146.60515pt.
+) [9] (Figures/setassociative.pdf_tex
+<./Figures//setassociative.pdf, id=265, page=1, 239.6741pt x 182.78902pt>
+File: ./Figures//setassociative.pdf Graphic file (type pdf)
+<use ./Figures//setassociative.pdf, page 1>
+Package pdftex.def Info: ./Figures//setassociative.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 253.66112pt x 193.45699pt.
+<./Figures//setassociative.pdf, id=266, page=2, 239.6741pt x 182.78902pt>
+File: ./Figures//setassociative.pdf Graphic file (type pdf)
+<use ./Figures//setassociative.pdf, page 2>
+Package pdftex.def Info: ./Figures//setassociative.pdf , page2 used on input line 59.
+(pdftex.def)             Requested size: 253.66112pt x 193.45699pt.
+<./Figures//setassociative.pdf, id=267, page=3, 239.6741pt x 182.78902pt>
+File: ./Figures//setassociative.pdf Graphic file (type pdf)
+<use ./Figures//setassociative.pdf, page 3>
+Package pdftex.def Info: ./Figures//setassociative.pdf , page3 used on input line 61.
+(pdftex.def)             Requested size: 253.66112pt x 193.45699pt.
+<./Figures//setassociative.pdf, id=268, page=4, 239.6741pt x 182.78902pt>
+File: ./Figures//setassociative.pdf Graphic file (type pdf)
+<use ./Figures//setassociative.pdf, page 4>
+Package pdftex.def Info: ./Figures//setassociative.pdf , page4 used on input line 63.
+(pdftex.def)             Requested size: 253.66112pt x 193.45699pt.
+<./Figures//setassociative.pdf, id=269, page=5, 239.6741pt x 182.78902pt>
+File: ./Figures//setassociative.pdf Graphic file (type pdf)
+<use ./Figures//setassociative.pdf, page 5>
+Package pdftex.def Info: ./Figures//setassociative.pdf , page5 used on input line 65.
+(pdftex.def)             Requested size: 253.66112pt x 193.45699pt.
+<./Figures//setassociative.pdf, id=270, page=6, 239.6741pt x 182.78902pt>
+File: ./Figures//setassociative.pdf Graphic file (type pdf)
+<use ./Figures//setassociative.pdf, page 6>
+Package pdftex.def Info: ./Figures//setassociative.pdf , page6 used on input line 67.
+(pdftex.def)             Requested size: 253.66112pt x 193.45699pt.
+<./Figures//setassociative.pdf, id=271, page=7, 239.6741pt x 182.78902pt>
+File: ./Figures//setassociative.pdf Graphic file (type pdf)
+<use ./Figures//setassociative.pdf, page 7>
+Package pdftex.def Info: ./Figures//setassociative.pdf , page7 used on input line 69.
+(pdftex.def)             Requested size: 253.66112pt x 193.45699pt.
+<./Figures//setassociative.pdf, id=272, page=8, 239.6741pt x 182.78902pt>
+File: ./Figures//setassociative.pdf Graphic file (type pdf)
+<use ./Figures//setassociative.pdf, page 8>
+Package pdftex.def Info: ./Figures//setassociative.pdf , page8 used on input line 71.
+(pdftex.def)             Requested size: 253.66112pt x 193.45699pt.
+<./Figures//setassociative.pdf, id=273, page=9, 239.6741pt x 182.78902pt>
+File: ./Figures//setassociative.pdf Graphic file (type pdf)
+<use ./Figures//setassociative.pdf, page 9>
+Package pdftex.def Info: ./Figures//setassociative.pdf , page9 used on input line 73.
+(pdftex.def)             Requested size: 253.66112pt x 193.45699pt.
+<./Figures//setassociative.pdf, id=274, page=10, 239.6741pt x 182.78902pt>
+File: ./Figures//setassociative.pdf Graphic file (type pdf)
+<use ./Figures//setassociative.pdf, page 10>
+Package pdftex.def Info: ./Figures//setassociative.pdf , page10 used on input line 75.
+(pdftex.def)             Requested size: 253.66112pt x 193.45699pt.
+<./Figures//setassociative.pdf, id=275, page=11, 239.6741pt x 182.78902pt>
+File: ./Figures//setassociative.pdf Graphic file (type pdf)
+<use ./Figures//setassociative.pdf, page 11>
+Package pdftex.def Info: ./Figures//setassociative.pdf , page11 used on input line 77.
+(pdftex.def)             Requested size: 253.66112pt x 193.45699pt.
+<./Figures//setassociative.pdf, id=276, page=12, 239.6741pt x 182.78902pt>
+File: ./Figures//setassociative.pdf Graphic file (type pdf)
+<use ./Figures//setassociative.pdf, page 12>
+Package pdftex.def Info: ./Figures//setassociative.pdf , page12 used on input line 79.
+(pdftex.def)             Requested size: 253.66112pt x 193.45699pt.
+<./Figures//setassociative.pdf, id=277, page=13, 239.6741pt x 182.78902pt>
+File: ./Figures//setassociative.pdf Graphic file (type pdf)
+<use ./Figures//setassociative.pdf, page 13>
+Package pdftex.def Info: ./Figures//setassociative.pdf , page13 used on input line 81.
+(pdftex.def)             Requested size: 253.66112pt x 193.45699pt.
+<./Figures//setassociative.pdf, id=278, page=14, 239.6741pt x 182.78902pt>
+File: ./Figures//setassociative.pdf Graphic file (type pdf)
+<use ./Figures//setassociative.pdf, page 14>
+Package pdftex.def Info: ./Figures//setassociative.pdf , page14 used on input line 83.
+(pdftex.def)             Requested size: 253.66112pt x 193.45699pt.
+<./Figures//setassociative.pdf, id=279, page=15, 239.6741pt x 182.78902pt>
+File: ./Figures//setassociative.pdf Graphic file (type pdf)
+<use ./Figures//setassociative.pdf, page 15>
+Package pdftex.def Info: ./Figures//setassociative.pdf , page15 used on input line 85.
+(pdftex.def)             Requested size: 253.66112pt x 193.45699pt.
+<./Figures//setassociative.pdf, id=280, page=16, 239.6741pt x 182.78902pt>
+File: ./Figures//setassociative.pdf Graphic file (type pdf)
+<use ./Figures//setassociative.pdf, page 16>
+Package pdftex.def Info: ./Figures//setassociative.pdf , page16 used on input line 87.
+(pdftex.def)             Requested size: 253.66112pt x 193.45699pt.
+<./Figures//setassociative.pdf, id=281, page=17, 239.6741pt x 182.78902pt>
+File: ./Figures//setassociative.pdf Graphic file (type pdf)
+<use ./Figures//setassociative.pdf, page 17>
+Package pdftex.def Info: ./Figures//setassociative.pdf , page17 used on input line 89.
+(pdftex.def)             Requested size: 253.66112pt x 193.45699pt.
+<./Figures//setassociative.pdf, id=282, page=18, 239.6741pt x 182.78902pt>
+File: ./Figures//setassociative.pdf Graphic file (type pdf)
+<use ./Figures//setassociative.pdf, page 18>
+Package pdftex.def Info: ./Figures//setassociative.pdf , page18 used on input line 106.
+(pdftex.def)             Requested size: 253.66112pt x 193.45699pt.
+<./Figures//setassociative.pdf, id=283, page=19, 239.6741pt x 182.78902pt>
+File: ./Figures//setassociative.pdf Graphic file (type pdf)
+<use ./Figures//setassociative.pdf, page 19>
+Package pdftex.def Info: ./Figures//setassociative.pdf , page19 used on input line 109.
+(pdftex.def)             Requested size: 253.66112pt x 193.45699pt.
+<./Figures//setassociative.pdf, id=284, page=20, 239.6741pt x 182.78902pt>
+File: ./Figures//setassociative.pdf Graphic file (type pdf)
+<use ./Figures//setassociative.pdf, page 20>
+Package pdftex.def Info: ./Figures//setassociative.pdf , page20 used on input line 116.
+(pdftex.def)             Requested size: 253.66112pt x 193.45699pt.
+<./Figures//setassociative.pdf, id=285, page=21, 239.6741pt x 182.78902pt>
+File: ./Figures//setassociative.pdf Graphic file (type pdf)
+<use ./Figures//setassociative.pdf, page 21>
+Package pdftex.def Info: ./Figures//setassociative.pdf , page21 used on input line 120.
+(pdftex.def)             Requested size: 253.66112pt x 193.45699pt.
+)
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 35.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 45.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 53.
+ [10 <./Figures//fullyassociative.pdf> <./Figures//fullyassociative.pdf> <./Figures//fullyassociative.pdf> <./Figures//fullyassociative.pdf> <./Figures//fullyassociative.pdf> <./Figures//fullyassociative.pdf> <./Figures//fullyassociative.pdf> <./Figures//fullyassociative.pdf> <./Figures//fullyassociative.pdf> <./Figures//fullyassociative.pdf> <./Figures//fullyassociative.pdf> <./Figures//fullyassociative.pdf> <./Figures//fullyassociative.pdf> <./Figures//fullyassociative.pdf> <./Figures//fullyassociative.pdf> <./Figures//fullyassociative.pdf> <./Figures//fullyassociative.pdf> <./Figures//fullyassociative.pdf> <./Figures//fullyassociative.pdf> <./Figures//fullyassociative.pdf> <./Figures//directmapped.pdf> <./Figures//directmapped.pdf> <./Figures//directmapped.pdf> <./Figures//directmapped.pdf> <./Figures//directmapped.pdf> <./Figures//directmapped.pdf> <./Figures//directmapped.pdf> <./Figures//directmapped.pdf> <./Figures//directmapped.pdf> <./Figures//directmapped.pdf> <./Figures//directmapped.pdf> <./Figures//directmapped.pdf> <./Figures//directmapped.pdf> <./Figures//directmapped.pdf> <./Figures//directmapped.pdf> <./Figures//directmapped.pdf> <./Figures//directmapped.pdf> <./Figures//directmapped.pdf> <./Figures//directmapped.pdf> <./Figures//directmapped.pdf> <./Figures//directmapped.pdf> <./Figures//setassociative.pdf> <./Figures//setassociative.pdf> <./Figures//setassociative.pdf> <./Figures//setassociative.pdf> <./Figures//setassociative.pdf> <./Figures//setassociative.pdf> <./Figures//setassociative.pdf> <./Figures//setassociative.pdf> <./Figures//setassociative.pdf> <./Figures//setassociative.pdf> <./Figures//setassociative.pdf> <./Figures//setassociative.pdf> <./Figures//setassociative.pdf> <./Figures//setassociative.pdf> <./Figures//setassociative.pdf> <./Figures//setassociative.pdf> <./Figures//setassociative.pdf> <./Figures//setassociative.pdf> <./Figures//setassociative.pdf> <./Figures//setassociative.pdf> <./Figures//setassociative.pdf>]
+Package mdframed Info: Not enough space on this page on input line 76.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 79.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 84.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 88.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 92.
+ [11]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 115.
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--118
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 123.
+[12]) (Lectures/lec_5.tex
+Package marginnote Info: Margin note 17.1 is on absolute page 17 on input line 2.
+Package marginnote Info: right page because not two side mode on input line 2.
+Package marginnote Info: xpos seems to be 72.2698pt on input line 2.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 6.
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--13
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 15.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 29.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 41.
+[13]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 50.
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--54
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 59.
+) [14] [15
 
 ] (appendix.tex)
 
@@ -1734,23 +2170,23 @@ LaTeX Warning: Empty bibliography on input line 36.
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `master.out' has not changed.
-(rerunfilecheck)             Checksum: A02E61A108210209E36B83CB950F2205;474.
+(rerunfilecheck)             Checksum: 9F83068329F4A180A9C1BEBC5DEB5EAD;1679.
 Package logreq Info: Writing requests to 'master.run.xml'.
 \openout1 = `master.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 53314 strings out of 476339
- 1215938 string characters out of 5788591
- 2040484 words of memory out of 5000000
- 72757 multiletter control sequences out of 15000+600000
- 539699 words of font info for 106 fonts, out of 8000000 for 9000
+ 53748 strings out of 476339
+ 1229832 string characters out of 5788591
+ 2083099 words of memory out of 5000000
+ 73082 multiletter control sequences out of 15000+600000
+ 542711 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,15n,100p,1292b,1239s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1000.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1000.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss0900.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on master.pdf (10 pages, 210824 bytes).
+ 108i,15n,100p,1292b,1262s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0900.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1000.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1000.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss0900.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Noah\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on master.pdf (17 pages, 332372 bytes).
 PDF statistics:
- 576 PDF objects out of 1000 (max. 8388607)
- 65 named destinations out of 1000 (max. 500000)
- 135 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 932 PDF objects out of 1000 (max. 8388607)
+ 149 named destinations out of 1000 (max. 500000)
+ 511 words of extra memory for PDF output out of 10000 (max. 10000000)
 

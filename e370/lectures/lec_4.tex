@@ -1,0 +1,162 @@
+\lecture{20}{23 Mar. 12:00}{Set-Associative Caches and 3 C's}
+
+Unlike fully-associative caches, in direct-mapped caches the tag array (CAM) doesn't have to be searched \emph{before} the data array (SRAM). Instead, we can do a \textbf{direct lookup} and search the tag array and data array in \textbf{parallel}, both of which are faster for cache lookups. The \emph{downside} to direct-mapped caches, however, is that there is an increased chance for collisions in the cache.
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}[b]{0.45\textwidth}
+    \centering
+    \scriptsize
+    \incfig{fullyassociative}
+    \caption{A basic \emph{fully-associative} cache.}
+    \label{fig:fullyassociative}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.45\textwidth}
+    \centering
+    \scriptsize
+    \incfig{directmapped}
+    \caption{A basic \emph{direct-mapped} cache.}
+    \label{fig:directmapped}
+  \end{subfigure}
+  \caption{Fully-associative and direct-mapped caches.}
+\end{figure}
+
+\section{Set Associative Caches}
+We can achieve the advantages each the fully-associative and direct-mapped cache structures using \textbf{set associative caches}.
+
+\begin{figure}[H]
+  \centering
+  \incfig[0.56]{setassociative}
+  \caption{A basic set-associative cache.}
+  \label{fig:setassociative}
+\end{figure}
+
+\begin{definition}[Set Associative Cache]
+  Set associative caches:
+  \begin{itemize}
+    \item Partition memory into regions (like direct-mapped but fewer partitions)
+    \item Associate a region to a set of cache lines; check tags for all lines in a set to determine a hit
+    \item Treat each line in a set like a small fully associative cache (with LRU policy)
+  \end{itemize}
+\end{definition}
+
+\begin{problem}
+  For a 32-bit address and 16 KB cache with 64-byte blocks, show the breakdown of the address for the following cache configurations:
+  \begin{enumerate}[label=\alph*]
+    \item Fully Associative Cache
+    \item 4-Way Set Associative Cache
+    \item Direct-Mapped Cache
+  \end{enumerate}
+\end{problem}
+\begin{answer}
+  Since the cache size is \(16 \text{ KB} = 2^4 \cdot 2^{10} = 2^{14} \text{ bytes} \) and there are 64 bytes per block we have
+  \[
+    2^{14} / 2^6 = 2^8 \text{ blocks}.
+  \]
+  \begin{enumerate}[label=\alph*]
+    \item For the \textbf{fully associative} cache: 
+      \begin{align*}
+        \text{64 byte blocks \(\to\) 6 bits for block offset} \\
+        \text{32 b - 6 b = 26 bits for tag}  
+      \end{align*}
+    \item For the \textbf{4-way associative} cache: 
+      \begin{align*}
+        \text{64 byte blocks \(\to\) 6 bits for block offset} \\
+        \text{\(2^8\) blocks} / \text{4 blocks per set} = 2^6 \text{ sets} \to 6 \text{ bits for set index}  \\
+        \text{32 b - 12 b = 20 bits for tag}  
+      \end{align*}
+    \item For the \textbf{direct-mapped} cache: 
+      \begin{align*}
+        \text{64 byte blocks \(\to\) 6 bits for block offset} \\
+        \text{\(2^8\) different blocks \(\to\) 8 bits for line index} \\
+        32 \text{ b} - 6 - 8 = 18 \text{ bits for tag} 
+      \end{align*}
+  \end{enumerate}
+\end{answer}
+
+\begin{remark}
+  Note that we've used \emph{block sizes, number of sets, number of ways} that are all be power of 2. This allows us to properly space blocks, sets, and data, etc.
+\end{remark}
+
+\section{The 3 C's of Cache Misses}
+
+\begin{definition}[Compulsory Miss]
+  A \textbf{compulsory} miss, also called a "cold start" miss, occurs the first time there is a reference to any block, which always results in a miss.
+\end{definition}
+
+\begin{definition}[Capacity Miss]
+  A \textbf{capacity} miss occurs when the cache is too small to hold all the data, and a hit would have occurred if the cache were large enough.
+\end{definition}
+
+\begin{definition}[Conflict Miss]
+  A \textbf{conflict} miss occurs when the cache is not associated enough. One set is getting a disproportionate amount of accesses, where a hit would have occurred with a fully associative cache.
+\end{definition}
+
+\subsection{Classifying Cache Misses}
+
+To classify cache misses we can use different forms of simulation:
+\begin{itemize}
+  \item Simulate with a cache of unlimited size (cache size = memory size) \(\to\) any misses must be \emph{compulsory} misses
+  \item Simulate again with a fully associative cache of intended size \(\to\) any new misses must be \emph{capacity} misses
+  \item Simulate a third time, with the actualy intended cache \(\to\) any \emph{new} misses must be \emph{conflict} misses
+\end{itemize}
+
+\subsection{Fixing Cache Misses}
+
+We have various methods of reducing each type of cache miss:
+\begin{itemize}
+  \item \emph{Compulsory}: increase block size (and thus reduce total number of blocks)
+  \item \emph{Capacity}: build bigger cache
+  \item \emph{Conflict}: increase associativity
+\end{itemize}
+
+\begin{problem}
+  Consider a cache with the following configuration: write-allocate, total size of 64 bytes, block size is 16 bytes and 2-way associative, memory address size is 16 bits and byte-addressable, replacement policy is LRU, and cache is empty at the start. \\
+  \\
+  For the following memory accesses, indicate whether the reference is a hit or miss, and the type of miss:
+  \[
+    \text{0x00, 0x14, 0x27, 0x08, 0x38, 0x4A, 0x18, 0x27, 0x0F, 0x40}
+  \]
+\end{problem}
+\begin{answer}
+  Note that the block size is 16 bytes, so FA and SA have 4 blocks. SA is 2-way.
+  \begin{center}
+    \begin{tabular}{|l|c|c|c|c|}
+      \hline
+      Address & Infinite & FA & SA & 3 Cs \\
+      \hline
+      0x00 & M & M & M & Compulsory \\
+      0x14 & M & M & M & Compulsory \\
+      0x27 & M & M & M & Compulsory \\
+      0x08 & H & H & H & N/A \\
+      0x38 & M & M & M & Compulsory \\
+      0x4A & M & M & M & Compulsory \\
+      0x18 & H & M & H & N/A \\
+      0x27 & H & M & M & Capacity \\
+      0x0F & H & M & M & Capacity \\
+      0x40 & H & H & M & Conflict \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{answer}
+
+\section{Cache Parameters vs. Miss Rate}
+
+\subsection{Cache Size}
+As cache total data (not including tag) capacity increases, temporal locality can be used better. However, it's not \emph{always} better. Too large of a cache adversely affects hit and miss latency, too small of a cache doesn't exploit temporal locality well. The \textbf{working set} (i.e. the whole set of data executing application references within a time interval) size is constant, so expanding cache size beyond that isn't necessarily advantageous.
+
+\subsection{Block Size}
+Block size is the data that is associated with an address tag. Too small blocks don't exploit spatial locality well and have larger tag overhead. Too large blocks have too few total number of blocks, so we're less likely to transfer useless data.
+
+\subsection{Associativity}
+How many blocks can map to the same index? Larger associativity causes lower miss rates, less variation among programs, but diminishing returns. Smaller associativity causes lower costs, faster hit time.
+
+\section{Instruction vs. Data Caches}
+We've been focusing on caching loads and stores (i.e. data), but what about cache for instructions? Instructions should be cached as well! We have two options:
+\begin{enumerate}
+  \item Treat instruction fetches as normal data and allocate cache lines when fetched
+  \item Create a second cache (called the \textbf{instruction cache} or ICache) which caches instrucations only; more common in practice.
+\end{enumerate}
+
+We can integrate caches into a pipeline by replacing instruction memory with \emph{Icache} and replacing data memory with \emph{Dcache}. But there are some issues: what happens when both caches miss at same time? What about added latency?
