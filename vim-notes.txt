@@ -1,3 +1,0 @@
-Basic movement
-h: left one char
-j: 

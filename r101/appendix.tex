@@ -1,6 +1,26 @@
-% \chapter{Additional Proofs}
-% \section{Proof of \autoref{thm}}\label{appendix}
-% We can now prove \autoref{thm}.
-% \begin{proof}[Proof of \autoref{thm}]
-% 	See \href{https://en.wikipedia.org/wiki/Mass%E2%80%93energy_equivalence}{here}.
-% \end{proof}
+\chapter{Eigenvalues and Eigenvectors}
+Consider the \textbf{scalar linear difference equation}
+\[
+    z_{k+1} = az_k
+\]
+where \(a, z_0 \in \mathbb{C}\). We compute some steps of the equation:
+\begin{align*}
+    z_1 &= az_0 \\
+    z_2 &= a_{z1} = a^2 z_0 \\
+    z_3 &= a_{z2} = a^3 z_0 \\
+    &\vdots \\
+    z_k &= a^k z_0
+\end{align*}
+
+\section{Iterating with Matrices: A Case for Eigenvalues}
+We now analyze the matrix versions of the above equations:
+\[
+    x_{k+1} = Ax_k,
+\]
+where \(A\) is a \(n \cross n\) real matrix. If we allow entries of \(A\) to be complex and \(x_0 \in \mathbb{C}\) we have:
+\[
+    z_k = A^k z_0.
+\]
+Now we shift our attention towards finding conditions on \(A\) such that \(\lVert z_k \rVert \) contracts, blows up, or stays bounded as \(k\) tends to infinity. Further, upon being given \(z_0\) we will detail the evolution of \(z_k\) for \(k>0\) . \par
+
+\todo{finish eigenstuff}
