@@ -1,4 +1,3 @@
-/untracked/
 **/*.aux
 **/*.blg
 **/*.bbl
@@ -10,26 +9,3 @@
 **/*.run.xml
 **/*.gz
 **/*.toc
-
-# Ignore all files except for specific ones
-# **
-
-# # Include the specified files and directories
-# !Math.tex
-# !appendix.tex
-# !header.tex
-# !ref.bib
-# !master.tex
-# !master.pdf
-# !figures/
-# !lectures/
-
-# # Exclude the specified directories
-# e370/**
-# e475/**
-# masa/**
-# python-notes.py
-# r101/**
-# templates/**
-# untracked/**
-# vimnotes.txt
