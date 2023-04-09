@@ -1,15 +1,15 @@
 /untracked/
-*.aux
-*.blg
-*.bbl
-*.bcf
-*.fdb_latexmk
-*.fls
-*.log
-*.out
-*.run.xml
-*.gz
-*.toc
+**/*.aux
+**/*.blg
+**/*.bbl
+**/*.bcf
+**/*.fdb_latexmk
+**/*.fls
+**/*.log
+**/*.out
+**/*.run.xml
+**/*.gz
+**/*.toc
 
 # Ignore all files except for specific ones
 # **
