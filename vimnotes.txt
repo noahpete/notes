@@ -5,6 +5,8 @@ four modes:
   4. command: activated by ':', activate commands
 
 movements (motions)
+  :<x> move to line x
+
   basics:
     h: left
     j: down
@@ -16,19 +18,29 @@ movements (motions)
 commands
   u: undo
   r: redo
+  
+  0w: go to beginning of first word on cur line
+  f<char>: go to next instance of char on cur line
 
   count:
     XXj: go down XX lines
   
-  d command:
+  d (or c) command:
     dw: delete next word
     db: delete prev word
     dd: delete line
     d3j: delete current line and 3 below  
+    D: delete the remaining line to right of cursor
+    C: D then i
+    dt<char>: deletes everything to right of cursor until next <char>
+
 
 visual mode
   - shift + v => visual line mode (select lines)
   - move around to highlight
   
   y: "yank"/copy
-  p: paste (last thing you yanked OR deleted)
+  yy: copy line
+  dd: cut line
+  p: paste below (last thing you yanked OR deleted)
+  P: paste above
