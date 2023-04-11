@@ -1,4 +1,99 @@
 \lecture{23}{3 Apr. 10:30}{RSA Cryptosystem}
+\section{RSA Cryptosystem}
 
-Whereas Diffie-Hellman relies on the hardness of discrete log, RSA relies on the \textbf{hardness of factoring and finding roots} in a group of \emph{unknown} order.
+Whereas Diffie-Hellman relies on the hardness of the discrete log problem in a group of \emph{known} order, RSA relies on the hardness of \textbf{factoring and finding roots} in a group of \emph{unknown} order.
 
+\subsection{RSA Math Foundation}
+First, recall Euler's totient function.
+\begin{definition}[Euler's Totient Function]\label{EulerTotient}
+    The totient, \(\Phi (n)\), of a positive integer \(n > 1\) is defined as hee number of positive integers less than \(n\) that are coprime to \(n\). The following table shows some function values. \\
+    \begin{center}
+        \begin{tabular}[h]{|c|c|c|}
+            \hline
+            \(n\) & \(\Phi (n)\) & numbers coprime to \(n\) \\
+            \hline
+            1 & 1 & 1 \\
+            2 & 1 & 1 \\
+            3 & 2 & 1, 2 \\
+            4 & 2 & 1, 3 \\
+            5 & 4 & 1, 2, 3, 4 \\
+            6 & 2 & 1, 5 \\    
+            \hline
+        \end{tabular}
+    \end{center}
+\end{definition}
+
+Let \(N=p\cdot q\) be the product of two (huge) distinct primes. Then
+\[
+    \mathbb{Z}_N^* = \left\{ a \in \mathbb{Z}_N = { 0, \ldots , N - 1} : \text{gcd($a, N$) = 1}  \right\}. 
+\]
+We start with \(\mathbb{Z}_N\) and remove all multiples of \(p\) (i.e. \(0, p, 2p, \ldots , (q-1)p\)) and all multtiples of \(q\) (i.e \(0, q, 2q, \ldots , (p-1)q\)) double counted 0. This means that
+\[
+    \left| \mathbb{Z}_N^* \right| = \Phi (N) = p . q - q - p + 1 = (p-1)(q-1). 
+\]
+
+\begin{definition}[Euler's Theorem]
+    In any group \(G\), \(\forall a \in G\), \(a^{|G|} = 1 \in G\). Say \(G = \mathbb{Z}_N^*\), therefore we have
+    \[
+        \forall a \in \mathbb{Z} _N^*, a^{\Phi (N)} = a^{(p-1)(q-1)} = 1 \mod N.
+    \]  
+\end{definition}
+
+By Euclid's Theorem, we can compute \(A, B \in \mathbb{Z}\) such that
+\[
+    A.e + B.\Phi (N) = \text{gcd}(e, \Phi (N)) = 1.
+\]
+\[
+    \implies A.e = 1 - B.\Phi (N) = 1 \mod \Phi (N)
+\]
+We can define \(d=A \mod \Phi (N)\) as the multiplicative inverse of \(e \mod \Phi (N)\):
+\begin{align*}
+    d = e^{-1} \mod \Phi (N) \\
+    d.e = 1 \mod \Phi (N).
+\end{align*}
+
+\subsection{RSA Function}
+The choice of \(N, e, d\) gives us the RSA function and its inverse.
+
+\begin{definition}[RSA Function]
+    For \(N = p . q\) where \(p, q\) are large disttinctt primes, and \(e \in \mathbb{Z} _{\Phi (N)}^*\) with \(d=e^{-1} \mod \Phi (N)\) the RSA function
+    \[
+        \text{RSA}_{N,e}: \mathbb{Z}_N^* \to \mathbb{Z} _N^*
+    \]
+    is a bijection.
+\end{definition}
+\begin{proof}
+    \(\text{RSA} _{N,e}\) maps \(\mathbb{Z} _N^* \to \mathbb{Z} _N^*\). Need to show \(\text{RSA} _{,d} = \text{RSA}_{N,e}^{-1}\). Why? Let \(y=\text{RSA} _{N,e}(x)=x^e \mod N\). Then we have
+    \[
+        y^d = (x^e)^d = x^{e.d} = x^{e.d + k. \Phi (N)} = x^1 \mod N.
+    \]
+    \todo{diagram}
+    RSA is an example of a \textbf{trapdoor function}. We can efficienly evaluate \(\text{RSA}_{N,e} \) in the \emph{forward} direction, and given \textbf{trapdoor information}, \(d\), we can efficiently invert.
+    \begin{remark}
+        What about without \(d\)?
+    \end{remark}   
+\end{proof}
+
+\subsection{RSA Key Generation}
+We define the RSA key generation process for \(\text{GenRSA} (1^n)\) as follows:
+
+\begin{algorithm}[H]\label{RSAKeyGen}
+	\DontPrintSemicolon
+	\caption{RSA Key Generation}
+	\KwData{\(1^n\) }
+    let \(p, q\) be large primes having bit lengths approximately related to \(n\) \\
+    let \(N=p.q\)\\
+    compute \(\Phi (N) = (p-1)(q-1)\) \\
+    choose some \(e > 1\) such that \(\text{gcd} (e, \Phi (N)) = 1\); Euclid also gives us \(d=e^{-1} \mod \Phi (N)\) \\
+    \Return{\(pk = (N,e)\) and \(sk=(N,d)\)}.  
+\end{algorithm}
+\begin{remark}
+    Common choices for \(e\) are \todo{...}
+\end{remark}
+
+\begin{definition}[RSA Hardness Assumption]
+    Given a public key \((N,e)\) and a \emph{random} \(y \gets \mathbb{Z}_N^*\), it is hard to find the pre-image \(x=y^d=y^{e^{-1}} \mod N\). So, the assumpion is that \(\forall \text{ p.p.t } \mathcal{A}\):
+    \[
+        \text{Adv}^{\text{RSA} } (\mathcal{A}) = \Pr_{(pk=(N,e), sk) \gets \text{GenRSA}(1^n), y \gets \mathbb{Z}_N^* } \left[ \mathcal{A}(1^n, (N, e), y) \text{ outputs } x=\text{RSA}_{N,e}^{-1}(y) \right] = \text{negl} (n).
+    \] 
+\end{definition}
