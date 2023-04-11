@@ -58,21 +58,28 @@ The choice of \(N, e, d\) gives us the RSA function and its inverse.
 \begin{definition}[RSA Function]
     For \(N = p . q\) where \(p, q\) are large disttinctt primes, and \(e \in \mathbb{Z} _{\Phi (N)}^*\) with \(d=e^{-1} \mod \Phi (N)\) the RSA function
     \[
-        \text{RSA}_{N,e}: \mathbb{Z}_N^* \to \mathbb{Z} _N^*
+        \text{RSA}_{N,e}: \mathbb{Z}_N^* \to \mathbb{Z} _N^* ; \; \text{RSA} _{N,e} (x) \coloneqq x^e \mod N
     \]
-    is a bijection.
+    is a bijection. The inverse is \(\text{RSA} _{N,d}(y)=\text{RSA} _{N,e}^{-1}(y)=y^d \mod N\).
 \end{definition}
 \begin{proof}
-    \(\text{RSA} _{N,e}\) maps \(\mathbb{Z} _N^* \to \mathbb{Z} _N^*\). Need to show \(\text{RSA} _{,d} = \text{RSA}_{N,e}^{-1}\). Why? Let \(y=\text{RSA} _{N,e}(x)=x^e \mod N\). Then we have
+    \(\text{RSA} _{N,e}\) maps \(\mathbb{Z} _N^* \to \mathbb{Z} _N^*\). Need to show \(\text{RSA} _{N,d} = \text{RSA}_{N,e}^{-1}\). Why? Let \(y=\text{RSA} _{N,e}(x)=x^e \mod N\). Then we have
     \[
-        y^d = (x^e)^d = x^{e.d} = x^{e.d + k. \Phi (N)} = x^1 \mod N.
+        y^d = (x^e)^d = x^{e.d} = x^{e.d + k. \Phi (N)} = x^1 \mod N,
     \]
-    \todo{diagram}
+    where \(k\) is some number that will make \(e.d + k.\Phi (N) = 1\).
     RSA is an example of a \textbf{trapdoor function}. We can efficienly evaluate \(\text{RSA}_{N,e} \) in the \emph{forward} direction, and given \textbf{trapdoor information}, \(d\), we can efficiently invert.
     \begin{remark}
         What about without \(d\)?
-    \end{remark}   
+    \end{remark}
 \end{proof}
+
+\begin{figure}[H]
+    \centering
+    \incfig[0.8]{rsatrapdoor}
+    \caption{RSA function is a trapdoor function: it is easy to go left to right, but not the other way around.}
+    \label{fig:rsatrapdoor}
+\end{figure}
 
 \subsection{RSA Key Generation}
 We define the RSA key generation process for \(\text{GenRSA} (1^n)\) as follows:
@@ -88,12 +95,35 @@ We define the RSA key generation process for \(\text{GenRSA} (1^n)\) as follows:
     \Return{\(pk = (N,e)\) and \(sk=(N,d)\)}.  
 \end{algorithm}
 \begin{remark}
-    Common choices for \(e\) are \todo{...}
+    Common choices for \(e\):
+    \begin{itemize}
+        \item random value
+        \item \(e=3\) if \(3t(p-1), 3t(q-1)\)
+        \item \(e=2^{16} + 1\) (prime) (in binary: \(e=1000\ldots 0001\), so exponentiation is faster)
+    \end{itemize}
 \end{remark}
 
 \begin{definition}[RSA Hardness Assumption]
-    Given a public key \((N,e)\) and a \emph{random} \(y \gets \mathbb{Z}_N^*\), it is hard to find the pre-image \(x=y^d=y^{e^{-1}} \mod N\). So, the assumpion is that \(\forall \text{ p.p.t } \mathcal{A}\):
+    Given a public key \((N,e)\) and a \emph{random} \(y \gets \mathbb{Z}_N^*\), it is hard to find the pre-image \(x=y^d=y^{e^{-1}} \mod N\). So, the assumption is that \(\forall \text{ p.p.t } \mathcal{A}\):
     \[
         \text{Adv}^{\text{RSA} } (\mathcal{A}) = \Pr_{(pk=(N,e), sk) \gets \text{GenRSA}(1^n), y \gets \mathbb{Z}_N^* } \left[ \mathcal{A}(1^n, (N, e), y) \text{ outputs } x=\text{RSA}_{N,e}^{-1}(y) \right] = \text{negl} (n).
     \] 
 \end{definition}
+
+How plausible is the \textbf{RSA hardness assumption}? Well, we can note the following:
+\begin{enumerate}[label=(\roman*)]
+    \item RSA \(\leq \) Factoring; i.e. if there is an efficient algorithm for factoring integers into their prime factors, then there is one for solving RSA.
+    \item Factoring \(\equiv\) Finding \(\Phi (N)\) from \(N\).
+    \item Factoring \(\equiv \) Finding \(d\) from \((N, e)\).
+\end{enumerate}
+\begin{remark}
+    It is noteworthy, however, that despite RSA \(\leq \) Factoring, it is \emph{unknown} whether RSA \(\equiv \) Factoring. In other words, we know Factoring is at least as hard as RSA, but we don't know if it is \emph{just} as hard.
+\end{remark}
+
+\subsection{RSA Encryption}
+Say our encryption scheme is the "textbook" RSA encryption scheme with a key generator \(\text{Gen} (1^n): (pk = (N, e), sk = (N, d))\), defined as: 
+\begin{itemize}
+    \item Enc(\(pk = (N,e), m \in \mathbb{Z} _N^*\)): output \(c = \text{RSA}_{N, e} (m) = m^e \mod N\)
+    \item Dec(\(sk = (N, d), c \in \mathbb{Z} _N^*\)): output \(m = \text{RSA} _{N,d} (c) = c^d \mod N\)
+\end{itemize}
+This scheme is correct, but since \emph{Enc is deterministic}, it is \textbf{not CPA secure}. 
