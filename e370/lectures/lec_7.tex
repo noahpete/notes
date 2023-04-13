@@ -1,0 +1,27 @@
+\lecture{22}{6 Apr. 12:00}{Page Tables Cont.}
+How do we do page table translation? We have two options:
+\begin{enumerate}
+  \item \textbf{Flat} (single-level): use a single, massive array
+  \begin{itemize}
+    \item One page table lookup
+    \item Always takes up a lot of memory
+  \end{itemize}
+  \item \textbf{Hierarchical} (multi-level): use pointer page that points to child pages spread throughout memory
+  \begin{itemize}
+    \item Dynamically adjusts memory usage
+    \item Typically uses much less memory than single-level
+    \item Two (or more) page table lookups
+    \item Used in most modern systems
+  \end{itemize}
+\end{enumerate}
+
+\section{Translation Look-Aside Buffer (TLB)}
+To translate a virtual address into a physical address, we must first access the page table in physical memory; this requires (sometimes several) slow memory lookups. We fix this performance problem by avoiding main memory in the translation from virtual to physical pages.
+
+\begin{definition}[Translation Look-Aside Buffer (TLB)]
+  A fast cache dedicated to storing a small subset of valid page table entries.
+  \begin{remark}
+    These generally have a very low (<1\%) miss rate.
+  \end{remark}
+\end{definition}
+~24:44
