@@ -1,0 +1,109 @@
+\chapter{Virtual Memory}
+\lecture{22}{4 Apr. 12:00}{Virtual Memory Basics}
+\subsection{Memory Problems}
+We run many programs on the same machine, each requiring (possibly) GBs of storage. Further, unrelated programs shouldn't have access to each other's storage. We also want to address the issues of expense, being able to run the same program on machines with different amounts of DRAM, and importantly: it would be nice to be able to \emph{enforce different polices} on \emph{different portions} of the memory (e.g. read-only).
+
+\section{Virtual Memory Basics}
+The solution to this is to build new hardware and software that automatically translates each memory reference from a \textbf{virtual address} (which the programmer sees as an array of bytes) to a \textbf{physical address} (which the hardware uses to either index DRAM or identify where the storage resides on disk).
+
+\begin{definition}[Virtual Memory]
+  \textbf{Virtual memory} hardware changes the virtual address the programmer sees into the physical one the memory chips see.
+  \begin{figure}[H]
+    \centering
+    \incfig[0.6]{virmembasic}
+    \caption{Basics of virtual memory.}
+    \label{fig:virmembasic}
+  \end{figure}
+\end{definition}
+
+Virtual memory enables multiple programs to share the physical memory. This provides the following 3 capabilities to the programs:
+\begin{enumerate}
+  \item \textbf{Transparency}: don't need to know how other programs are using memory
+  \item \textbf{Protection}: no program can modify the data of any other program
+  \item \textbf{No DRAM limit}: each program can have more data than DRAM size
+\end{enumerate}
+
+\subsection{Transparency and Protection}
+The operating system uses \textbf{page tables} to keep track of processes. Each process has its own page table, each containing address translational information (i.e. virtual address \(\to\) physical address).
+
+\begin{figure}[H]
+  \centering
+  \incfig[0.8]{ptbasics}
+  \caption{Page table basics.}
+  \label{fig:ptbasics}
+\end{figure}
+
+\subsection{No DRAM Limitation}
+We can use disk as temporary space in case memory capacity is exhausted. This temporary space in disk is called \textbf{swap partition}.
+
+\section{Pages}
+Now we aim to develop a method of simulating virtual sets of memory for applications. We can divide memory in chunks of \textbf{pages} (e.g. 4 KB for x86).
+
+\begin{definition}[Page]
+  Memory is divided into \textbf{pages}. The size of physical page = size of virtual page. A virtual address consists of a virtual page number and a page offset field (low order bits of the address).
+\end{definition}
+
+\begin{definition}[Page Table]
+  A \textbf{page table} contains a map of all the \emph{virtual} addresses and their corresponding \emph{physical} addresses in memory. 
+\end{definition}
+
+\begin{figure}[H]
+  \centering
+  \incfig[0.65]{pagetablecomp}
+  \caption{Page table components.}
+  \label{fig:pagetablecomp}
+\end{figure}
+
+\begin{definition}[Page Fault]
+  A \textbf{page fault} occurs when there is an access to the page table and the data is on the \emph{disk} (i.e. not in DRAM). When this happens, the following occurs:
+  \begin{enumerate}
+    \item Stop the current process
+    \item Pick page to replace
+    \item Write back data if dirty
+    \item Get referenced page
+    \item Update page table(s)
+    \item Reschedule process
+  \end{enumerate}
+  \begin{remark}
+    The operating system handles page faults and finds locations on the disk.
+  \end{remark}
+\end{definition}
+
+\begin{problem}
+  Given the following:
+  \begin{itemize}
+    \item 4 KB page size
+    \item 16 KB DRAM
+    \item Page Table stored in physical page 0; can't be evicted
+    \item 20 bit, byte-addressable virtual address space
+    \item Page Table has the following initial configuration:
+    \begin{itemize}
+      \item Virtual page 0 in physical page 1
+      \item Virtual page 1 in physical page 2
+      \item No valid data in other physical pages
+    \end{itemize}
+  \end{itemize}
+  Fill in the following table.
+  \begin{remark}
+    Like caches, we will use LRU when we need to replace a page.
+  \end{remark}
+\end{problem}
+\begin{answer}
+  Given only the virtual addresses and the conditions above, we can derive the rest: \\
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+      \hline
+      Virtual Addr & Virt Page & Page Fault? & Physical Addr \\
+      \hline
+      0x00F0C & 0x00 & n & 0x1F0C \\
+      0x01F0C & 0x01 & n & 0x2F0C \\
+      0x20F0C & 0x20 & y (into 3) & 0x3F0C \\
+      0x00100 & 0x00 & n & 0x110 \\
+      0x00200 & 0x00 & n & 0x1200 \\
+      0x30000 & 0x30 & y (2) & 0x2000 \\
+      0x01FFF & 0x01 & y (3) & 0x1FFF \\
+      0x00200 & 0x00 & n & 0x1200 \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{answer}

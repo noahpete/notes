@@ -58,3 +58,44 @@
 \begin{answer}
   See end of lecture.
 \end{answer}
+
+\begin{problem}
+  If you have a 16 KB cache with 32-byte cache lines that is four-way set-associative on a computer with 32-bit addresses:
+  \begin{enumerate}[a.]
+    \item How many sets do you have?
+    \item How many bits do you need for the Offset? Index? Tag?
+  \end{enumerate}
+\end{problem}
+\begin{answer} \;
+  \begin{enumerate}[a.]
+    \item
+    \begin{align*}
+      2^14 \text{ bytes} / 2^5 \text{ bytes per block} = 2^9 \text{ blocks} \\
+      2^9 \text{ blocks} / 2^2 \text{ blocks per set} = 2^7 \text{ sets} 
+    \end{align*}
+    \item
+    \begin{align*}
+      \log (2^5 \text{ bytes per block}) = 5 \text{ bits for Offset} \\
+      \log (2^7 \text{ sets}) = 7 \text{ bits for set Index} \\
+      32 - 7 - 5 = 20 \text{ bits for Tag} 
+    \end{align*}
+  \end{enumerate}
+\end{answer}
+
+\begin{problem}
+  Describe why we have an Icache and a Dcache on nearly all computers rather than just one unified cache.
+\end{problem}
+\begin{answer}
+  It's advantageous to separate them since we typically just read instructions, while we need to also write to data. Separating them allows for better bandwidth since you are going to different places for different things.
+\end{answer}
+
+\begin{problem}
+  Describe the primary \textbf{advantage} of \emph{write-back} caches over \emph{write-through} caches.
+\end{problem}
+\begin{answer}
+  Each are better in the following scenarios:
+  \begin{enumerate}
+    \item \textbf{Write-Back} is better when we are writing to the same place \emph{many, many times}.
+    \item \textbf{Write-Through} is better when we are writing to the same place \emph{only once}.
+  \end{enumerate}
+\end{answer}

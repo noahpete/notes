@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 297 210"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="virmembasic.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:lockguides="false"
+     inkscape:zoom="2"
+     inkscape:cx="449.5"
+     inkscape:cy="404.25"
+     inkscape:window-width="1649"
+     inkscape:window-height="1259"
+     inkscape:window-x="1457"
+     inkscape:window-y="485"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="TriangleStart"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;fill:#000000;stroke-width:0.496001;stroke-linecap:round;stroke-linejoin:round"
+       x="87.841667"
+       y="108.87604"
+       id="text426"><tspan
+         sodipodi:role="line"
+         id="tspan424"
+         style="stroke-width:0.496"
+         x="87.841667"
+         y="108.87604">0x800</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.496001;stroke-linecap:round;stroke-linejoin:round"
+       id="rect428"
+       width="28.045834"
+       height="9.260417"
+       x="73.818748"
+       y="103.05521" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;fill:#000000;stroke-width:0.496001;stroke-linecap:round;stroke-linejoin:round"
+       x="141.55208"
+       y="108.87604"
+       id="text426-8"><tspan
+         id="tspan424-1"
+         style="stroke-width:0.496"
+         x="141.55208"
+         y="108.87604"
+         sodipodi:role="line">0x3C00</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.496001;stroke-linecap:round;stroke-linejoin:round"
+       id="rect428-5"
+       width="28.045834"
+       height="9.260417"
+       x="127.52916"
+       y="103.05521" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.496001;stroke-linecap:round;stroke-linejoin:round"
+       x="87.841667"
+       y="116.94583"
+       id="text568"><tspan
+         sodipodi:role="line"
+         id="tspan566"
+         style="fill:#000000;stroke:none;stroke-width:0.496"
+         x="87.841667"
+         y="116.94583">Virual address</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.496001;stroke-linecap:round;stroke-linejoin:round"
+       x="142.12776"
+       y="117.74698"
+       id="text568-9"><tspan
+         sodipodi:role="line"
+         id="tspan566-7"
+         style="fill:#000000;stroke:none;stroke-width:0.496"
+         x="142.12776"
+         y="117.74698">Physical address</tspan></text>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.496001;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#TriangleStart)"
+       d="m 105.30417,107.55312 h 18.38854"
+       id="path651" />
+  </g>
+</svg>
