@@ -89,7 +89,17 @@ Now we aim to develop a method of simulating virtual sets of memory for applicat
   \end{remark}
 \end{problem}
 \begin{answer}
-  Given only the virtual addresses and the conditions above, we can derive the rest: \\
+  Given only the virtual addresses and the conditions above, we can derive the rest. We first calculate the number of virtual addresses possible:
+  \begin{align*}
+    \text{4 KB } \to 2^{12} \text{ bytes } \to \text{ 12 bits for offset} \\
+    \text{20 bit system} \to 20 - 12 = 8 \text{ bits for virt. pg num} \\
+    \implies \textbf{$2^8$ \text{ virtual pages}}  
+  \end{align*}
+  Further, we see that there are
+  \[
+    \text{16 KB DRAM} / \text{4 KB pg size} = \textbf{ 4 pages}
+  \]
+  in physical memory.
   \begin{center}
     \begin{tabular}{|c|c|c|c|}
       \hline
