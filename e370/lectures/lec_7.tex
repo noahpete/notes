@@ -1,7 +1,32 @@
 \lecture{22}{6 Apr. 12:00}{Page Tables Cont.}
-How do we do page table translation? We have two options:
+
+\begin{problem}
+  How big is a page table given the following specs:
+  \begin{itemize}
+    \item 32-bit virtual address
+    \item 1 GB = \(2^{30}\) bytes of \emph{physical} memory
+    \item 4 KB = \(2^{12}\) bytes per \emph{page}
+  \end{itemize}
+\end{problem}
+\begin{answer}
+  First we can calculate the number of bits required for a \textbf{physical page number}:
+  \[
+    30 \text{ bits for physical mem } - 12 \text{ bits for page offset } = 18 \text{ bits } 
+  \]
+  Each entry also has some extra bits (valid, read only, dirty, etc.), so let's round it off and say each entry is 3 bytes (18 bits for PPN, ~6 extra bits). \\
+  Next, we calculate the number of entries in the page table by noting we have 1 entry per virtual page. We can calculate the number of virtual page numbers (and thus entries in the page table) as
+  \[
+    32 \text{ bits for virtual addr } - 12 \text{ bits for page offset } = 20 \text{ bits } \to 2^{20} \text{ virtual pages }. 
+  \]
+  Finally, we see that the total size of the page table is
+  \[
+    \text{num virtual pgs } \cdot \text{ size of each pg table entry } = 2^{20} \cdot 3 \text{ bytes } \approx 3 \text{ MB}.
+  \]
+\end{answer}
+
+The above demonstrates how a single-level page table occupies a rather large amount of continuous space in physical memory. How can we better organize the page table? We have two options:
 \begin{enumerate}
-  \item \textbf{Flat} (single-level): use a single, massive array
+  \item \textbf{Flat} (single-level): use a single, massive array (what we've been doing)
   \begin{itemize}
     \item One page table lookup
     \item Always takes up a lot of memory
@@ -15,13 +40,74 @@ How do we do page table translation? We have two options:
   \end{itemize}
 \end{enumerate}
 
-\section{Translation Look-Aside Buffer (TLB)}
-To translate a virtual address into a physical address, we must first access the page table in physical memory; this requires (sometimes several) slow memory lookups. We fix this performance problem by avoiding main memory in the translation from virtual to physical pages.
+\begin{figure}[H]
+  \centering
+  \incfig{hierpt}
+  \caption{Hierarchical page table configuration.}
+  \label{fig:hierpt}
+\end{figure}
 
-\begin{definition}[Translation Look-Aside Buffer (TLB)]
-  A fast cache dedicated to storing a small subset of valid page table entries.
-  \begin{remark}
-    These generally have a very low (<1\%) miss rate.
-  \end{remark}
-\end{definition}
-~24:44
+\begin{problem}
+  How much memory is used for the following memory access pattern with a 12 bit page offset?
+  \begin{align*}
+    0x0000 0ABC \\
+    0x0000 0ABD \\
+    0x1000 0ABC \\
+    0x2000 0ABC \\
+  \end{align*}
+\end{problem}
+\begin{answer}
+  Since the leftmost 5 hex digits indicate our 1st and 2nd level page table addresses, the accesses will be as follows:
+  \begin{align*}
+    &0x0000 0ABC \text{ // Page fault} \\
+    &0x0000 0ABD \\
+    &0x1000 0ABC \text{ // Page fault} \\
+    &0x2000 0ABC \text{ // Page fault} \\
+  \end{align*}
+  So, the memory used can be calculated as:
+  \[
+    4 \text{ KB for 1st level PT } + 3 \cdot 4 \text{ KB for each 2nd level PT } = 16 \text{ KB}.
+  \]
+\end{answer}
+
+\begin{problem}
+  Design a two-level virtual memory system of a byte addressable processor with \textbf{24-bit long addresses}, no cache in the system, \textbf{256 KB memory} installed, and no additional memory can be added. Further, it must have the following specifications:
+  \begin{itemize}
+    \item \textbf{Virtual memory page: 512 bytes}
+    \item Each second-level page table must fit exactly in one memory page, and 1st level page table entries are 3 bytes each
+  \end{itemize}
+  Visually, we have the following:
+  \begin{figure}[H]
+    \centering
+    \incfig[0.84]{multivmprb}
+    \caption{The multi-level VM configuration.}
+    \label{fig:multivmprb}
+  \end{figure}
+\end{problem}
+\begin{answer}
+  First we can note the \textbf{total physical memory size} is \(256 \text{ KB } = 2^{18} \text{ bytes}\). From this, we can calculate the number of \textbf{physical pages}:
+  \[
+    2^{18} \text{ bytes of mem } / 2^9 \text{ bytes per page } = 2^9 \text{ physical pages}.
+  \]
+  \[
+    2^9 \text{ physical pages } \to 9 \text{ PPN bits } \to 2 \text{ bytes per entry in 2nd level p.t. (rounding to whole byte)}.
+  \]
+  Thus, the number of \textbf{entries per 2nd level p.t.} is
+  \[
+    512 \text{ bytes } / \text{ 2 bytes per entry } = 256 \text{ entries }.
+  \]
+  \[
+    2^8 \text{ entries } \implies 8 \text{ bits for 2nd level offset }
+  \]
+  Finally, we can calculate the number of bits required for the \textbf{first level offset} is
+  \[
+    24 \text{ total bits } - 8 \text{ 2nd level offset bits } - 9 \text{ pg offset bits } = 7 \text{ bits}.
+  \]
+  So the \textbf{1st level page table size} is
+  \[
+    2^7 \cdot 24 \text{ bits per entry } = 2^7 \cdot 3 \text{ bytes } = 384 \text{ bytes }. 
+  \]
+\end{answer}
+
+\subsection{Other Virtual Memory Translation Functions}
+The virtual memory must also keep track of other things pertinent to its operation such as LRU, page data location (i.e. is it on physical memory, the disk, or if unitialized). It must also track access permissions (e.g. read only for instructions); this is \textbf{how your system detects segmentation faults}.
