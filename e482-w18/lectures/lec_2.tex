@@ -1,0 +1,41 @@
+\chapter{The Kernel Abstraction}
+\lecture{2}{}{Threads}
+What does an OS do? It creates \textbf{abstractions} to make hardware easier to use. Further, it manages \textbf{shared} hardware resources. Operating systems use a variety of abstractions:
+
+\begin{figure}[H]
+	\centering
+	\incfig[0.45]{abstraction}
+	\label{fig:abstraction}
+\end{figure}
+
+Recall the complexity issues we've faced while designing an OS: multiple users, programs, I/O devices, etc. We can manage this complexity via:
+\begin{itemize}
+	\item \textbf{Divide and conquer} 
+	\item \textbf{Modularity and abstraction} 
+\end{itemize}
+
+\begin{definition}[Process]
+	A \textbf{process} is the OS abstraction for \textbf{execution}. It's also known as a \textbf{job} or \textbf{task}. 
+\end{definition}
+
+This is advantageous simply due to the alternative if we were using strictly hardware.
+
+\begin{figure}[H]
+	\centering
+	\incfig[0.2]{hardwareproc}
+	\caption{The interface hardware provides.}
+	\label{fig:hardwareproc}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\incfig[0.6]{osproc}
+	\caption{The interface that OS provides.}
+	\label{fig:osproc}
+\end{figure}
+
+A process is simply a \emph{running program} and is named using its \textbf{process ID (PID)}. It contains all the state for a running program.
+\begin{definition}[Program]
+	Programs are static entities with \emph{potential} for execution.
+\end{definition} 
+

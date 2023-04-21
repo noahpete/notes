@@ -1,0 +1,55 @@
+\chapter{Introduction}
+\lecture{1}{}{Introduction}
+\section{What is an Operating System?}
+What would happen if we ran applications directly on hardware? We would quickly run into the problems of \textbf{portability} and \textbf{resource sharing}. What can we do to resolve these problems? We can use an \textbf{operating system}:
+\begin{definition}[Operating system]
+	The operating system is the software layer between user applications and the hardware.
+\end{definition}
+
+We define particular roles for the OS:
+\begin{itemize}
+	\item \textbf{Illusionist}: it creates abstractions (i.e. CPU \(\to\) Threads; Memory \(\to\) Address space)
+	\item \textbf{Government}: it manages shared hardware resources (but at a cost)
+\end{itemize}
+
+\section{OS and Apps: 2 Perspectives}
+We can try two different approaches to our operating system:
+
+\subsection{App as the Main Program}
+Our first perspective consists of the \emph{application as the main program}. Under this perspective, the application gets services by calling the kernel (OS). However it has its problems:
+
+\begin{enumerate}[label=\roman*.]
+	\item How does the application start?
+	\item How do tasks occurring outside any program get done?
+	\item How do multiple programs run simultaneously without messing each other up?
+\end{enumerate}
+
+\subsection{OS as the Main Program}
+We try another perspective where the operating system is the main program. Under this perspective, the operating system \emph{calls applications as subroutines}. The \emph{illusion} is that every app runs on its own computer. We have the lower layer OS invoking higher layer applications. The app or processor returns control to the OS.
+
+\section{History of Operating Systems}
+Beyond the most basic hardware operator, a human, we observe the most basic forms of operating systems and work our way forward.
+
+\begin{definition}[Batch Processing]
+	Batch processing was a punchcard method of improving CPU and I/O utilization by removing user interaction. The operating system is the batch monitor and a library of standard services.
+\end{definition}
+
+However, in batch processing (i.e. where a human processes punchcards in batches), new problems arise such as protection and uninteractivity. We can improve our batching of punchcards by using a \textbf{multi-programmed batch}.
+
+\begin{definition}[Multi-Programmed Batch]
+	An improved version of batch processing where utilization is improved by overlapping CPU and I/O on different (concurrent) programs.
+\end{definition}
+
+This operating system is more complex, as it can:
+\begin{enumerate}[label=\roman*.]
+	\item Run multiple processes or I/Os concurrently
+	\item Enable simultaneous CPU and I/O
+	\item Protect processes from each other
+\end{enumerate}
+However, it is still \textbf{not interactive}. We can address this by adding user access to the system via \textbf{time sharing}.
+
+\begin{definition}[Time Sharing]
+	Model user as a (very slow) I/O device, allowing people to interact with programs as they run. In other words, \emph{share} some runtime with the User.
+\end{definition}
+
+While the user is interacting with the device, we can switch between processes. However, this continues to add complexity, as there are now lots of simultaneous jobs with multiple sources of new jobs (i.e. people can start new jobs), yet, importantly, \textbf{interactivity is restored}.

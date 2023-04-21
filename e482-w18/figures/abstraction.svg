@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="abstraction.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="3.659624"
+     inkscape:cx="352.08535"
+     inkscape:cy="468.764"
+     inkscape:window-width="1649"
+     inkscape:window-height="1259"
+     inkscape:window-x="1605"
+     inkscape:window-y="549"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     showguides="true" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.449001;stroke-linecap:round;stroke-linejoin:round"
+       x="94.927208"
+       y="106.49489"
+       id="text186"><tspan
+         sodipodi:role="line"
+         id="tspan184"
+         style="stroke:none;stroke-width:0.449"
+         x="94.927208"
+         y="106.49489">Applications</tspan></text>
+    <rect
+       style="opacity:1;fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       id="rect398"
+       width="65.068161"
+       height="11.712269"
+       x="64.128288"
+       y="99.409691" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.449001;stroke-linecap:round;stroke-linejoin:round"
+       x="94.999504"
+       y="130.4978"
+       id="text186-8"><tspan
+         sodipodi:role="line"
+         id="tspan184-5"
+         style="stroke:none;stroke-width:0.449"
+         x="94.999504"
+         y="130.4978">Operating System</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       id="rect398-2"
+       width="65.068161"
+       height="11.712269"
+       x="64.200584"
+       y="123.41261" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.449001;stroke-linecap:round;stroke-linejoin:round"
+       x="95.144089"
+       y="153.34396"
+       id="text186-6"><tspan
+         sodipodi:role="line"
+         id="tspan184-8"
+         style="stroke:none;stroke-width:0.449"
+         x="95.144089"
+         y="153.34396">Hardware</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       id="rect398-8"
+       width="65.068161"
+       height="11.712269"
+       x="64.345177"
+       y="146.25876" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;opacity:1;fill:#000000;stroke:none;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       x="72.659439"
+       y="118.71324"
+       id="text3263"><tspan
+         sodipodi:role="line"
+         id="tspan3261"
+         style="fill:#000000;stroke:none;stroke-width:0.4"
+         x="72.659439"
+         y="118.71324">Process</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;opacity:1;fill:#000000;stroke:none;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       x="92.179893"
+       y="118.64095"
+       id="text3269"><tspan
+         sodipodi:role="line"
+         id="tspan3267"
+         style="stroke-width:0.4"
+         x="92.179893"
+         y="118.64095">File system</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;opacity:1;fill:#000000;stroke:none;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       x="115.45983"
+       y="118.93013"
+       id="text3273"><tspan
+         sodipodi:role="line"
+         id="tspan3271"
+         style="stroke-width:0.4"
+         x="115.45983"
+         y="118.93013">Virtual memory</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;opacity:1;fill:#000000;stroke:none;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       x="74.033104"
+       y="141.99318"
+       id="text3277"><tspan
+         sodipodi:role="line"
+         id="tspan3275"
+         style="stroke-width:0.4"
+         x="74.033104"
+         y="141.99318">CPU</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;opacity:1;fill:#000000;stroke:none;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       x="95.867088"
+       y="142.28239"
+       id="text3281"><tspan
+         sodipodi:role="line"
+         id="tspan3279"
+         style="stroke-width:0.4"
+         x="95.867088"
+         y="142.28239">Disk</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;opacity:1;fill:#000000;stroke:none;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       x="119.00244"
+       y="142.13777"
+       id="text3285"><tspan
+         sodipodi:role="line"
+         id="tspan3283"
+         style="stroke-width:0.4"
+         x="119.00244"
+         y="142.13777">RAM</tspan></text>
+    <rect
+       style="opacity:1;fill:none;stroke:#000000;stroke-width:0.409195;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       id="rect3289"
+       width="20.740318"
+       height="7.4374938"
+       x="64.349777"
+       y="137.08151" />
+    <rect
+       style="opacity:1;fill:none;stroke:#000000;stroke-width:0.379314;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       id="rect3291"
+       width="19.39654"
+       height="7.2504811"
+       x="86.313416"
+       y="137.35577" />
+    <rect
+       style="opacity:1;fill:none;stroke:#000000;stroke-width:0.383143;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       id="rect3293"
+       width="21.561649"
+       height="7.1743546"
+       x="107.57092"
+       y="137.35767" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.366225;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       id="rect3289-5"
+       width="16.517708"
+       height="7.4804635"
+       x="64.255997"
+       y="114.06928" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.382347;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       id="rect3291-4"
+       width="18.959719"
+       height="7.5366397"
+       x="82.193954"
+       y="114.07736" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.430556;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       id="rect3293-6"
+       width="26.864285"
+       height="7.2715378"
+       x="102.17229"
+       y="114.24603" />
+  </g>
+</svg>
