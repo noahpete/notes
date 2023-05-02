@@ -1,0 +1,86 @@
+%% Creator: Inkscape 1.2.2 (732a01da63, 2022-12-09), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'hierpt.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{493.88986617bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.46749531)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{hierpt.pdf}}%
+    \put(0.29368048,0.30658957){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}1st level page table\end{tabular}}}}%
+    \put(0.26198725,0.43906501){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Page table register (points to start of page table)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{hierpt.pdf}}%
+    \put(0.17122175,0.36624833){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0x00004 (1st level offset)\end{tabular}}}}%
+    \put(0.44615556,0.36709809){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0x00002 (2nd level offset)\end{tabular}}}}%
+    \put(0.71259865,0.3662739){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0x0F3 (page offset)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{hierpt.pdf}}%
+    \put(0.16050793,0.30342472){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}valid\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{hierpt.pdf}}%
+    \put(0.66609864,0.30378869){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}2nd level page table\end{tabular}}}}%
+    \put(0.53292605,0.30062384){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}valid\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{hierpt.pdf}}%
+    \put(0.16143856,0.15437079){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}1\end{tabular}}}}%
+    \put(0.53412471,0.2323372){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}1\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{hierpt.pdf}}%
+    \put(0.55640677,0.01786748){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0x020C0 (physical page num)\end{tabular}}}}%
+    \put(0.77674537,0.01789322){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0x0F3\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{hierpt.pdf}}%
+    \put(0.93408231,0.0176474){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}physical address\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{hierpt.pdf}}%
+    \put(0.07763144,0.15577386){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}+\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{hierpt.pdf}}%
+    \put(0.4515741,0.23017336){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}+\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{hierpt.pdf}}%
+    \put(0.2942347,0.15203932){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}2nd level page table\end{tabular}}}}%
+    \put(0.66775805,0.23101462){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}physical page number\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{hierpt.pdf}}%
+    \put(0.91989435,0.36732657){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}virtual address\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

@@ -1,0 +1,19 @@
+\chapter{Introduction}
+\section{Machine Learning: An Overview}
+\textbf{Machine learning} is a set of methods that can automatically detect patterns in data. There are two types: \textbf{supervised} and \textbf{unsupervised} learning.
+ 
+\begin{definition}[Supervised learning]
+	\textbf{Predictive/Supervised learning}'s goal is to learn a mapping from inputs \(x\) to outputs \(y\), given a labeled set of input-output pairs \(\mathcal{D} = \left\{ (x_i, y_i) \right\} _{i=1}^N\).
+\end{definition}
+
+\begin{definition}[Unsupervised learning]
+	\textbf{Descriptive/unsupervised learning} only consists of inputs, \(\mathcal{D} = \left\{ x_i \right\} _{i=1}^N\) and has the goal of finding "interesting patterns" in the data. This is sometimes called \textbf{knowledge discovery}.
+\end{definition}
+
+Here, \(\mathcal{D} \) is the \textbf{training set}, and \(N\) is the number of training examples. In the simplest setting, each \(x_i\) is a \(D\)-dimensional vector of numbers, which are called \textbf{features}. However, in general, \(x_i\) could be a complex structured object such as an image, email, etc. \par
+
+The \textbf{response variable}, each \(y_i\), can be anything, but is usually a categorical or nominal variable from some finite set, \(y_i \in \left\{ 1, \ldots , C \right\} \). When \(y_i\) is \textbf{categorical}, the problem is known as \textbf{classification} or \textbf{pattern recognition}, and when it is real-valued, the problem is known as a \textbf{regression}. 
+
+\section{Supervised Learning}
+Here, the goal is to learn a mapping from inputs \(x\) to outputs \(y\), where \(y \in \left\{ 1, \ldots , C \right\} \) with \(C\) being the number of classes. One way to formalize the problem is as a \textbf{function approximation}: we assume \(y=f(x)\) for some unknown function \(f\), and the goal of learning is to estimate the function \(f\) given a labeled training set. Then we can make predictions using \(\hat{y}=\hat{f}(x)\) (where the hat symbol is used to denote an estimate). \par
+

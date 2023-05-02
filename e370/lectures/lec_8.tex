@@ -1,0 +1,30 @@
+\newpage
+\lecture{23}{11 Apr. 12:00}{Translation Look-aside Buffers}
+To translate a virtual address into a physical address, we must first access the page table in physical memory. If it's an \(n\)-level page table, we must do \(n\) total loads before getting the physical page number. Then, we access physical memory again to get the data. This is \textbf{very slow}.
+
+\section{Translation Look-Aside Buffer (TLB)}
+We fix this performance problem by avoiding main memory in the translation from virtual to physical pages. We do this by buffering common translations in a \textbf{translation look-aside buffer}, a fast cache memory dedicated to storing a small subset of valid virtual-to-physical page translations.
+
+\begin{definition}[Translation Look-Aside Buffer (TLB)]
+  A fast cache dedicated to storing a small subset of valid page table entries.
+  \begin{remark}
+    These generally have a very low (<1\%) miss rate.
+  \end{remark}
+\end{definition}
+
+\begin{figure}[H]
+  \centering
+  \incfig[0.7]{tlb}
+  \caption{Translation look-aside buffer configuration.}
+  \label{fig:tlb}
+\end{figure}
+
+We can put the TLB lookup in our processor pipeline \textbf{after the virtual address is calculated and before the memory reference is performed}. This can be before or during the data cache access. In the case of TLB miss, we need to perform the virtual to physical address translation during the memory stage of the pipeline.\\
+
+The overall process for \textbf{loading a program} in memory is as follows:
+\begin{enumerate}
+  \item Ask OS to create new process
+  \item Construct a page table for the process
+  \item Mark all page table entries as invalid with a pointer to the executable file containing the binary
+  \item Run the program and get an immediate page fault on first instruction
+\end{enumerate}

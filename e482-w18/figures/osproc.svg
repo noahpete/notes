@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="osproc.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.587745"
+     inkscape:cx="374.26409"
+     inkscape:cy="458.89375"
+     inkscape:window-width="1649"
+     inkscape:window-height="1259"
+     inkscape:window-x="1605"
+     inkscape:window-y="549"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     showguides="true" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;opacity:1;fill:#000000;stroke:none;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       x="60.52375"
+       y="117.6807"
+       id="text5630"><tspan
+         sodipodi:role="line"
+         id="tspan5628"
+         style="fill:#000000;stroke:none;stroke-width:0.4"
+         x="60.52375"
+         y="117.6807">app1</tspan></text>
+    <path
+       style="opacity:1;fill:#000000;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       d="M 46.921372,119.65311 H 74.539191"
+       id="path5686" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;opacity:1;fill:#000000;stroke:none;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       x="60.51339"
+       y="123.12341"
+       id="text5690"><tspan
+         sodipodi:role="line"
+         id="tspan5688"
+         style="fill:#000000;stroke:none;stroke-width:0.4"
+         x="60.51339"
+         y="123.12341">CPU + memory</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       x="92.529457"
+       y="117.51183"
+       id="text5630-0"><tspan
+         sodipodi:role="line"
+         id="tspan5628-2"
+         style="fill:#000000;stroke:none;stroke-width:0.4"
+         x="92.529457"
+         y="117.51183">app2</tspan></text>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       d="M 78.927078,119.48423 H 106.5449"
+       id="path5686-0" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       x="92.519096"
+       y="122.95454"
+       id="text5690-4"><tspan
+         sodipodi:role="line"
+         id="tspan5688-7"
+         style="fill:#000000;stroke:none;stroke-width:0.4"
+         x="92.519096"
+         y="122.95454">CPU + memory</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;opacity:1;fill:#000000;stroke:none;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       x="68.249275"
+       y="99.988075"
+       id="text5694"><tspan
+         sodipodi:role="line"
+         id="tspan5692"
+         style="stroke-width:0.4"
+         x="68.249275"
+         y="99.988075" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       x="124.8388"
+       y="117.30734"
+       id="text5630-4"><tspan
+         sodipodi:role="line"
+         id="tspan5628-3"
+         style="fill:#000000;stroke:none;stroke-width:0.4"
+         x="124.8388"
+         y="117.30734">app3</tspan></text>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       d="m 111.23642,119.27974 h 27.61782"
+       id="path5686-3" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       x="124.82844"
+       y="122.75005"
+       id="text5690-5"><tspan
+         sodipodi:role="line"
+         id="tspan5688-72"
+         style="fill:#000000;stroke:none;stroke-width:0.4"
+         x="124.82844"
+         y="122.75005">CPU + memory</tspan></text>
+  </g>
+</svg>

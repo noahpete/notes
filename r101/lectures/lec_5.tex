@@ -1,1 +1,36 @@
-\lecture{22}{28 Mar. 9:00}{Root Finding With the Second Derivative}
+\chapter{Background to Machine Learning}
+\lecture{23}{4 Apr. 12:00}{Max-Margin Classifiers via Support Vector Machines}
+\section{Hyperspaces}
+Say we have a variety of points of two possible classes, that we would like to be able to automatically classify given some parameters, \(x,y\). 
+
+\begin{figure}[H]
+  \centering
+  \incfig[0.5]{basicopt}
+  \caption{Basic concept of optimization in multiple dimensions (here, \(\mathbb{R}^2\)).}
+  \label{fig:basicopt}
+\end{figure}
+
+\subsection{Hyperplanes}
+For \(\mathbb{R}^1\) we only need a single point to divide it into two "half spaces": \(H^+, H^-\):
+\[
+  H^+=\left\{ x \in \mathbb{R} | x-x_c > 0 \right\} 
+\]
+\[
+  H^-=\left\{ x \in \mathbb{R} | x-x_c < 0 \right\} 
+\]
+
+We can extend this to \(\mathbb{R}^2\), where we would need 2 points to form a \emph{line} to separate the space; for \(\mathbb{R}^3\) we'd need 3 points to form a \emph{plane} to separate the space. \textbf{Hyperspaces} have dimension \emph{one less} than the ambient space.
+
+\begin{lemma}
+  All co-dimension subspaces of \(\mathbb{R} ^n\) can be expressed as
+  \[
+    \left\{ x \in \mathbb{R} ^n | a \cdot x = 0 \right\} \text{ for } a \neq
+    \begin{bmatrix}
+      0 \\
+      \vdots \\
+      0
+    \end{bmatrix}.
+  \]
+  These are \emph{hyperspaces} that pass through the origin.
+\end{lemma}
+
