@@ -1,0 +1,69 @@
+\chapter{Optimization}
+\section{Hill Climbing}
+The most basic form of optimization we explore is that of the local search.
+
+\begin{definition}[Local Search]
+	Search algorithms that maintain a single node and searches by moving to a neighboring node.
+\end{definition}
+
+We can implement a local searching using \textbf{hill climbing} in which we do the following:
+\begin{itemize}
+	\item Check values of neighbors of current best value
+	\item If a neighbor has a value closer to the desired value, set that value as current best
+\end{itemize}
+
+\begin{algorithm}[H]\label{HillClimb}
+	\DontPrintSemicolon
+	\caption{HillClimb}
+	\KwData{problem}
+	cur = initial state of problem \\
+	\Repeat{better neighbor does not exist}{
+		neighbor = best val neighbor of cur \\
+		\If{neighbor not better than current}{
+			\Return cur
+		}
+		cur = neighbor
+	}
+\end{algorithm}
+
+The problem with this naive approach (\textbf{steepest ascent}) is that we may get stuck at a local extremum rather than the global extremum. Further, we may encounter a "shoulder", where several neighboring values are the same, and get stuck. \par
+
+\section{Simulated Annealing}
+
+Although there are a variety of hill climbing algorithms (stochastic, first-choice, beam, etc.). They have their flaws but the theme is that we never go from a good value to a worse value. Thus, we must overcome local extrema. We can tackle this with \textbf{simulated annealing}. 
+
+\begin{definition}[Simulated Annealing]
+	Simulated annealing is akin to a "cooling" physical process.
+	\begin{itemize}
+		\item Early on, higher "temperature": more likely to accept neighbors that are worse than current state
+		\item Later on, lower "temperature": less likely to accept neighbors that are worse than current state
+	\end{itemize}
+\end{definition}
+
+\begin{algorithm}[H]
+	\DontPrintSemicolon
+	\caption{SimulatedAnnealing}
+	\KwData{problem, max}
+	cur = initial state of problem \\
+	\For{\(t=1\) to max}{
+		\(T=\) Temperature(\(t\)) \\
+		neighbor = random neighbor of cur \\
+		\(\Delta E =\) how much better neighbor is than cur \\
+		\If{\(\Delta  E > 0\)}{
+			cur = neighbor
+		}
+		with probability \(e^{\Delta E / T}\), set cur = neighbor \\
+	}
+\end{algorithm}
+
+\section{Linear Programming}
+In the context where we are trying to optimize for some function or when we have real values we are often trying to minimize or maximize a cost function given a variety of constraints. This is where \textbf{linear programming} becomes useful.
+
+\begin{definition}
+	Linear programming problems often entail the following:
+	\begin{itemize}
+		\item Minimize a cost function \(c_1 x_1 + c_2 x_2 + \ldots + c_n x_n\)
+		\item With constraints of form \(a_1 x_1 + a_2 x_2 + \ldots + a_n x_n \leq b\) or of form \(a_1 x_1 + a_2 x_2 + \ldots + a_n x_n = b\)
+		\item With bounds for each variable \(l_i \leq x_i \leq u_i\) 
+	\end{itemize}
+\end{definition}
