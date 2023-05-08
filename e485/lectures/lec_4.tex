@@ -1,0 +1,77 @@
+\section{Sessions}
+\lecture{4}{}{Sessions}
+We now shift our goal towards maintaining state with stateless HTTP. We do this through the use of \textbf{sessions}.
+
+\begin{definition}[Session]
+	A group of user interactions with a website that take place within a given time frame.
+\end{definition}
+
+Note that we \emph{could} have built state into HTTP, however this would clash with the principle of the web (and of computing) to build in layers, with each layer as simple as possible. Instead, we build state \emph{on top of} HTTP. This "session protocol" is implemented at the application layer (i.e. Flask, React, etc. will handle sessions).
+
+\subsection{Server Session Model}
+Sessions are explicitly opened and closed \textbf{by the server}. We now address the details of sessions:
+\begin{itemize}
+	\item Session data storage: best practice is to store a small amount of data to identify the session (e.g. a username, session ID, etc.)
+	\item Session length: we can use timeouts to close a session
+\end{itemize}
+
+We can then link a session to a user by observing their session data (e.g. a username/password combination). Take a user trying to access \texttt{https://mail.google.com}, for example, we can link the user to their session in the following process:
+\begin{enumerate}
+	\item Client requests \texttt{https://mail.google.com}
+	\item Server responds with redirect to \texttt{https://acccounts.google.com/signin/v2/identifier? \\ continue=https\%3A\%2F\%2Fmail.google.com\%2Fmail\%2F}
+	\item Client sends request with username and password
+	\item Server tests and responds with redirect to \texttt{https://mail.google.com}
+\end{enumerate}
+
+\section{Cookies}
+\textbf{Cookies} are simply the implementation of sessions.
+
+\begin{definition}[Cookies]
+	Cookies are small files on client machines that carry state between HTTP requests. They're composed of key/value pairs.
+\end{definition}
+
+\begin{figure}[H]
+	\centering
+	\incfig[0.7]{cookiesdiag}
+	\caption{Basic cookie transmission}
+	\label{fig:cookiesdiag}
+\end{figure}
+
+Cookies often contain the following:
+\begin{itemize}
+	\item Name
+	\item Value
+	\item Domain (used by browser)
+	\item Path
+	\item Expiration
+	\item Secure
+\end{itemize}
+
+The browser ensures that cookies are only over-writable by the same domain and path.
+
+\subsection{Cookie Transfer}
+Cookie transfer simply involves the server setting the cookie and the client sending the cookie, but never editing it. Either side can delete/ignore cookies. Because cookies are transferred as part of HTTP headers, cookies add to HTTP overhead. \par
+
+Cookie leaks can be prevented by transmitting them only over HTTPS. However, if the client has a copy of cookies set by the server, then the client can manipulate the server. This can be prevented by encrypting cookie content such that \emph{only the server can decrypt}. 
+
+\subsection{Third-Party Cookies}
+A page may contain objects from many sources. These 3rd-party objects set and get cookies.
+
+\begin{definition}[First-Party Cookie]
+	A cookie where the domain is the same as the domain of the page you are on.
+\end{definition}
+
+\begin{definition}[Third-Part Cookie]
+	A cookie where the domain is different from the domain of the page you are on.
+\end{definition}
+
+For an example, consider accessing nytimes.com via browser:
+\begin{enumerate}[label=\roman*.]
+	\item Browser issues \texttt{GET} request to nytimes.com; this includes nytimes.com cookies
+	\item Browser receives HTML for nytimes.com; HTML contains some JavaScript
+	\item Browser executes JavaScript included by nytimes.com; JS code initiates request to doubleclick.net
+	\item Browser issues \texttt{GET} request to doubleclick.net; includes doubleclick.net cookie, appends current location (nytimes.com) to the URL
+	\item Now doubleclick.net knows you visited nytimes.com
+\end{enumerate}
+
+Alternative methods exist to uniquely identify users, such as \textbf{browser fingerprinting}. 

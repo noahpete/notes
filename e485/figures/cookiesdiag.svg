@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="210mm" height="297mm" version="1.1" viewBox="0 0 210 297" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <marker id="TriangleStart" overflow="visible" markerHeight="6.155385" markerWidth="5.3244081" orient="auto-start-reverse" preserveAspectRatio="xMidYMid" viewBox="0 0 5.3244081 6.1553851">
+   <path transform="scale(.5)" d="m5.77 0-8.65 5v-10z" fill="context-stroke" fill-rule="evenodd" stroke="context-stroke" stroke-width="1pt"/>
+  </marker>
+  <marker id="TriangleStart-2" overflow="visible" markerHeight="6.155385" markerWidth="5.3244081" orient="auto-start-reverse" preserveAspectRatio="xMidYMid" viewBox="0 0 5.3244081 6.1553851">
+   <path transform="scale(.5)" d="m5.77 0-8.65 5v-10z" fill="context-stroke" fill-rule="evenodd" stroke="context-stroke" stroke-width="1pt"/>
+  </marker>
+  <marker id="TriangleStart-20" overflow="visible" markerHeight="6.155385" markerWidth="5.3244081" orient="auto-start-reverse" preserveAspectRatio="xMidYMid" viewBox="0 0 5.3244081 6.1553851">
+   <path transform="scale(.5)" d="m5.77 0-8.65 5v-10z" fill="context-stroke" fill-rule="evenodd" stroke="context-stroke" stroke-width="1pt"/>
+  </marker>
+ </defs>
+ <text x="63.867584" y="91.868645" fill="#000000" font-family="serif" font-size="3.175px" stroke-width=".471" text-align="center" text-anchor="middle" xml:space="preserve"><tspan x="63.867584" y="91.868645" fill="#000000" stroke-width=".471">Client</tspan></text>
+ <text x="102.19137" y="92.003021" fill="#000000" font-family="serif" font-size="3.175px" stroke-width=".471" text-align="center" text-anchor="middle" xml:space="preserve"><tspan x="102.19137" y="92.003021" fill="#000000" stroke-width=".471">Server</tspan></text>
+ <g stroke="#000">
+  <path d="m55.216 94.071h55.687" stroke-width=".471"/>
+  <g stroke-width=".41538">
+   <path d="m67.021 99.913 30.834 8.0131" marker-end="url(#TriangleStart)"/>
+   <path d="m68.067 127.79 30.834 8.0131" marker-end="url(#TriangleStart-2)"/>
+   <path d="m99.95 112.43-30.834 8.0131" marker-end="url(#TriangleStart-20)"/>
+  </g>
+ </g>
+ <g fill="#000000" font-family="serif" text-anchor="middle">
+  <text transform="rotate(14.987)" x="106.40477" y="77.970764" font-size="3.175px" stroke-width=".371" text-align="center" xml:space="preserve"><tspan x="106.40477" y="77.970764" stroke-width=".371">Put book in cart</tspan></text>
+  <text transform="rotate(-13.555)" x="54.652199" y="130.46973" font-size="3.175px" stroke-width=".371" text-align="center" xml:space="preserve"><tspan x="54.652199" y="130.46973" stroke-width=".371">OK (and set cookie)</tspan></text>
+  <text transform="matrix(.97128 .24354 -.24429 .96832 0 0)" x="113.38101" y="101.94702" font-size="3.065px" stroke-width=".35814" text-align="center" xml:space="preserve"><tspan x="113.38101" y="101.94702">Put another book in</tspan><tspan x="113.38101" y="105.77826">(and here's my cookie)</tspan></text>
+  <g font-size="3.175px" stroke-width=".371">
+   <text x="108.85805" y="110.74576" text-align="center" xml:space="preserve"><tspan x="108.85805" y="110.74576" stroke-width=".371">(modifies db)</tspan></text>
+   <text x="109.8019" y="134.65677" text-align="center" xml:space="preserve"><tspan x="109.8019" y="134.65677" stroke-width=".371">(modifies db)</tspan></text>
+   <text x="120.34164" y="138.90413" text-align="center" xml:space="preserve"><tspan x="120.34164" y="138.90413" stroke-width=".371">(cart looks full bc cookie info)</tspan></text>
+  </g>
+ </g>
+</svg>
