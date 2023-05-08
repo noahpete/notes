@@ -1,0 +1,89 @@
+\chapter{Knowledge}
+\section{Propositional Logic}
+
+We use standard logic notation:
+\begin{itemize}
+	\item \(\neg p\)
+	\item \(p \lor q\) 
+	\item \(p \land q\) 
+	\item \(p \implies q\): \\
+		\begin{tabular}[h]{|c|c|c|}
+			\hline
+			\(p\)  & \(q\)  & \(p \implies q\) \\
+			\hline
+			false & false & true \\
+			false & true & true \\
+			true & false & false \\
+			true & true & true \\
+			\hline
+		\end{tabular}
+	\item \(p \iff q\): \\
+		\begin{tabular}[h]{|c|c|c|}
+			\hline 
+			\(p\)  & \(q\)  & \(p \iff q\) \\
+			\hline
+			false & false & true \\
+			false & true & true \\
+			true & false & false \\
+			true & true & true \\
+			\hline 
+		\end{tabular}
+\end{itemize}
+
+Now we must establish \emph{what} is considered to be "true" in our world by defining a \textbf{model}.
+
+We need to represent that knowledge. We do so by defining it via a \textbf{knowledge base}.
+
+\begin{definition}[Model]
+	Assignnment of a truth value to every propositional symbol.
+\end{definition}
+\begin{definition}[Knowledge Base]
+	A set of sentences known by a knowledge-based agent.
+\end{definition}
+
+\begin{definition}[Enatilment]
+	\[
+		\alpha \models \beta \; "\alpha \; entails \; \beta"
+	\]
+	In every model in which sentence \(\alpha \) is true, sentence \(\beta \) is also true.
+\end{definition}
+
+\section{Inference}
+Our aim is to see if our knowledge base, \(KB\), entails some query about the world, \(\alpha\):
+\[
+	KB \models \alpha ?
+\]  
+
+We first define a \textbf{model checking algorithm} to determinne if \(KB \models \alpha \). We can deermine this by doing the following:
+\begin{itemize}
+	\item enumerate all possible models
+	\item if in every model where \(KB\) is true, \(\alpha \) is also true, then \(KB \models \alpha \) 
+\end{itemize}
+
+\section{Inference By Resolution}
+To determine if \(KB \models \alpha \) via knowledge resolution:
+\begin{itemize}
+	\item Check if \(KB \land \neg \alpha \) is a contradiction
+	\begin{itemize}
+		\item Conver \(KB \land \neg \alpha \) tto Conjunctive Normal Form
+		\item Keep checking to see if we can use resolution to produce new clause
+		\item If we ever produce the empty clause (equivalen to False), we have a contradiction and so \(KB \models \alpha \)
+	\end{itemize}
+	\item If so, then \(KB \models \alpha \)
+	\item Otherwise, no entailment
+\end{itemize}
+
+\begin{problem}
+	Does \((A \vee B) \land (\neg B \vee C) \land (\neg C)\) entail \(A\) ?
+\end{problem}
+\begin{answer}
+	First, we convert to CNF:
+	\[
+		(A \vee B) \land (\neg B \vee C) \land (\neg C) \land (\neg A)
+	\]
+	We can resolve \((\neg B \vee C)\) and \((\neg C)\) by concluding that \(\neg B\). With the knowledge of \(\neg B\) we now see that, considering \(A \vee B\), we can conclude \(A\). We see that
+	\[
+		A \land \neg A \implies False
+	\]
+	and so we can conclude that the clause entails \(A\).
+\end{answer} 

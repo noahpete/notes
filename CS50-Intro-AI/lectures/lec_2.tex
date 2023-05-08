@@ -1,0 +1,173 @@
+\chapter{Probability}
+\section{Introduction to Probability}
+
+We can represent a \textbf{possible world} using \(\omega \) where all possible worlds is the set \(\Omega\) . Thus, we can define total probability as:
+\[
+	\sum_{\omega \in \Omega } p(\omega ).
+\]
+
+We build machine models to predict outcomes based on data using \textbf{conditional probability}. In other words, we have probability based on some evidence. We can calculate conditional probability using the following formula:
+\[
+	P(a | b) = \dfrac{P (a \land b)}{P(b)}.
+\]
+
+\section{Random Variables}
+In probability we define a variable with a set of possible values as a \textbf{random variable}:
+
+\begin{definition}[Random Variable]
+	A variable possessing a distribution of probabilities for various "states".
+\end{definition}
+
+\section{Baye's Rule}
+
+From the above equation we have:
+\[
+	P(a \land b) = P(b) P(a | b) = P(a) P(b | a)
+\]
+
+\begin{definition}[Independence]
+	The knowledge that one event occurs does not affect the probability of the other event. So we have
+	\[
+		P(a \land  b) = P(a)P(b)
+	\]
+	since \(P(b) = P(b | a)\) if \(a\) and \(b\) are independent.
+\end{definition}
+
+Thus, we can derive Baye's rule, which relates the probability of one event on the condition of another event, to the reverse relationship.
+
+\begin{definition}[Baye's Rule]
+	\[
+		P(a | b) = \dfrac{P(b | a) P(a)}{P(b)}
+	\]
+\end{definition}
+
+What Baye's rule allows us to do is that given:
+\[
+	P(\text{visible effect }|\text{ unknown cause})
+\]
+we can calculate
+\[
+	P(\text{unknown cause }|\text{ visible effect}).
+\]
+
+\section{Bayesian Networks}
+There are a number of different probabilistic models. The first we discuss are \textbf{Bayesian Networks}.
+
+\begin{definition}[Bayesian Network]
+	A data structure that represents the dependencies among random variables. They have the following characteristics:
+	\begin{itemize}
+		\item directed graph
+		\item each node represents a random variable
+		\item arrow from \(X\) to \(Y\) means \(X\) is a parent of \(Y\)
+		\item each node \(X\) has probability distribution \(P(X | \text{Parents}(X))\) 
+	\end{itemize}
+\end{definition}
+
+\begin{figure}[H]
+	\centering
+	\incfig[0.3]{bayeneteg}
+	\caption{A basic example of a Bayesian Network.}
+	\label{fig:bayeneteg}
+\end{figure}
+
+We now aim to make an \emph{inference} using the Bayesian Network. Given the following:
+\begin{itemize}
+	\item Query \(X\): variable for which to compute distribution
+	\item Evidence variables \(E\): observed variables for event \(e\)
+	\item Hidden variables \(Y\): non-evidence, non-query variable
+\end{itemize}
+our goal is to calculate \(P(X|e)\).
+
+\begin{problem}
+	Calculate \(P(\text{Appointment} | \text{light, no} )\) 
+\end{problem}
+\begin{answer}
+	Here, the \emph{evidence} is that there is light rain and no maintenance. The \emph{query} is the status of Appointment. The \emph{hidden layer} is the status of the train, since you are not given the train's status and you are not querying it; it's just a confounding variable. \par
+
+	We note that
+	\[
+		P(\text{Appointment} | \text{light, no} ) = \alpha P(\text{Appointment, light, no} )
+	\]
+	and by the marginalization technique:
+	\[
+		=\alpha [P(\text{Appointment, light, no, on time}) + P(\text{Appointment, light, no, delayed} )].
+	\]
+\end{answer}
+
+\section{Inference by Enumeration}
+The above is an example of \textbf{inference by enumeration}. More formally, for the following:
+\begin{itemize}
+	\item \(X\): the query variable
+	\item \(e\): the evidence
+	\item \(y\): ranges over values of hidden variables
+	\item \(\alpha \): normalizes the result
+\end{itemize} 
+we have:
+\[
+	P(X | e) = \alpha P(X, e) = \alpha \sum_{y} P(X, e, y)
+\]
+
+\section{Sampling}
+Rather than attempting to calculate an exact probability, we can approximate a probability instead via \textbf{sampling}. By randomly generating samples for \(n = 1000\) or \(n=10000\), we can get fairly useful results. 
+
+\begin{definition}[Rejection Sampling]
+	\textbf{Rejection sampling} is the process of simulating numerous examples from a distribution while considering only the samples that possess the attributes of the desired query. 
+\end{definition}
+\begin{remark}
+	Rejection sampling is not particularly effective when the evidence you are looking for is fairly unlikely, since you are rejecting a lot of samples. This is inefficient since you are throwing away a large portion of your samples.
+\end{remark}
+
+\begin{definition}[Likelihood Weighting]
+	Rather than sampling everything, in \textbf{likelihood weighting}, we start by \emph{fixing} the values for evidence variables. We then sample the non-evidence variables using conditional probabilities in the Bayesian Network. Finally we weight each sample by its \emph{likelihood}.
+\end{definition}
+
+\section{Markov Models}
+As opposed to assigning one random variable to a value, but rather an array of random variables to a value over a timescale. This leads to a lot more data, and so we must make some assumptions.
+
+\begin{definition}[Markov Assumption]
+	The assumption that the current state depends only on a finite fixed number of previous states.
+\end{definition}
+
+\begin{definition}[Markov Chain]
+	A sequence of random variables where the distribution of each variable follows the Markov assumption.
+\end{definition}
+
+For example, consider the basic Markov Chain
+\[
+	X_t \to X_{t+1}
+\]
+where \(X_t\) represents the weather today, and \(X_{t+1}\) represents the weather tomorrow. We can construct a \textbf{transition model} to describe the relationship as follows:
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+			 & \(X_{t+1}\): Sunny & \(X_{t+1}\): Rainy \\
+		\hline
+			\(X_t\): Sunny & 0.8 & 0.2  \\
+			\(X_t\): Rainy & 0.3 & 0.7  \\
+		\hline
+	\end{tabular}
+\end{table}
+
+We can refine our definition of the Markov Model further, by introducing \emph{hidden} states.
+
+\begin{definition}[Hidden Markov Model]
+	A Markov model for a system with hidden states that generate some observed event.
+\end{definition}
+
+\begin{definition}[Filtering]
+	Given observations from start until now, calculate distribution for current state.
+\end{definition}
+
+\begin{definition}[Prediction]
+	Given observations from start until now, calculate the distribution for a future state.
+\end{definition}
+
+\begin{definition}[Smoothing]
+	Given observations from start until now, calculate the distribution for a past state.	
+\end{definition}
+
+\begin{definition}[Most Likely Explanation]
+	Given observations from start until now, calculate most likely sequence of states.
+\end{definition}

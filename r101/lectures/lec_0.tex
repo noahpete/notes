@@ -1,0 +1,235 @@
+\setcounter{chapter}{8}
+\chapter{The Vector Space \(\mathbb{R}^n\): Part 2}
+\lecture{18}{14 Mar. 9:00}{Review and Approximating Nonlinear Equations}
+\section{\(\mathbb{R} ^n\) as a Vector Space}
+An \(n\)-tuple is essentially just an ordered list of \(n\) numbers:
+\[
+	(x_1, x_2, \ldots , x_n) \leftrightarrow
+	\begin{bmatrix}
+		x_1 \\ x_2 \\ \vdots \\ x_n
+	\end{bmatrix}.
+\]
+Further, we define \(\mathbb{R} ^n\) as the set of all \(n\)-column vectors with real entries:
+\[
+	\mathbb{R} ^n \iff \left\{ 
+		\begin{bmatrix}
+			x_1 \\ x_2 \\ \vdots \\ x_n
+		\end{bmatrix}
+		| x_i \in \mathbb{R}, 1 \leq i \leq n
+	 \right\}.
+\]
+The choice of identifying \(n\)-tuples of numbers with column vectors rather than row vectors is arbitrary.
+
+\section{Subspaces of \(\mathbb{R} ^n\)}
+
+\begin{definition}[Subspace]
+	Suppose that \(V \subset \mathbb{R} ^n\) is nonempty. \(V\) is a \textbf{subspace} of \(\mathbb{R} ^n\) if any linear combination consructed from elements of \(V\) and scalars in \(\mathbb{R} \) is once again an element of \(V\). Formally, \(V \subset \mathbb{R} ^n\) is a subspace of \(\mathbb{R} ^n\) if for all realy numbers \(\alpha, \beta \in V\) and all \(v_1, v_2 \in V\) we have
+	\[
+		\alpha v_1 + \beta  v_2 \in V
+	\]. 
+	\begin{remark}
+		Further, we say that \(V\) is \textbf{closed under linear combinations} if the above is true.
+	\end{remark}
+	\begin{remark}
+		  Every subspace must contain the zero vector.
+	\end{remark}
+\end{definition}
+From the equivalence of being closed under linear combinations and closed under vector addition and scalar-vector multiplication, one can check that a subset is a subspace by checking individually that it is \textbf{closed under vector addition} and \textbf{closed under scalar times vector multiplication}.
+
+\newpage
+
+\begin{problem}
+	Let \(V \subset \mathbb{R} ^2\) be the set of all points that lie on a line \(y=mx+b\):
+	\[
+		V \coloneqq \left\{ 
+			\begin{bmatrix}
+				x \\ mx + b
+			\end{bmatrix}
+			| x \in \mathbb{R} 
+		 \right\}.
+	\]
+	Is \(V\) a subspace?
+\end{problem}
+\begin{answer}
+	\(V\) is a subspace if and only if it contains the zero vector. \(V\) contains the zero vector if and only if the \(y\)-intercept is zero, meaning \(b=0\). Now we confirm that \(V\) with \(b=0\) is \textbf{closed under vector addition}:
+	\[
+		V \coloneqq \left\{ 
+			\begin{bmatrix}
+				x \\ mx
+			\end{bmatrix}
+			| x \in \mathbb{R} 
+		 \right\}.
+	\]
+	For arbitrary \(v_1 = 
+	\begin{bmatrix}
+		x_1 \\ mx_1
+	\end{bmatrix}, v_2 =
+	\begin{bmatrix}
+		x_2 \\ mx_2
+	\end{bmatrix}\), we can confirm:
+	\[
+		v_1 + v_2 = \begin{bmatrix}
+			x_1 + x_2 \\
+			mx_1 + mx_2
+		\end{bmatrix} = \begin{bmatrix}
+			x_1 + x_2 \\
+			m(x_1 + x_2)
+		\end{bmatrix} \in V
+	\]. 
+	To confirm that \(V\) with \(b=0\) is \textbf{closed under scalar-vector multiplication}, again for arbitrary \(v_1 \in V\):
+	\[
+		\alpha v_1 = \alpha \begin{bmatrix}
+			x_1 \\ mx_1
+		\end{bmatrix} =
+		\begin{bmatrix}
+			\alpha x_1 \\
+			\alpha m x_1
+		\end{bmatrix} =
+		\begin{bmatrix}
+			\alpha x_1 \\
+			m(ax_1)
+		\end{bmatrix} \in V.
+	\]
+\end{answer}
+
+\section{Null Space, Spans, and Column Spans}
+
+\begin{definition}[Null Space]
+	For an \(n \cross m\) matrix \(A\), its \textbf{null space} is defined as
+	\[
+		\text{null}(A) \coloneqq \left\{ x \in \mathbb{R}^m | Ax = 0_{n \cross 1}\right\}, 
+	\] 
+	or the set of all solutions (i.e. vectors) that result in \(Ax\) being the zero vector or the "null vector".
+\end{definition}
+\begin{remark}
+	\(Ax=0\) has a unique solution if and only if \(\text{null} (A) = \left\{ 0_{m \cross 1}\right\}\), the zero vector in \(\mathbb{R} ^m\). If \(Ax=b\) has a solution and \(\text{null} (A) \neq \left\{ 0_{m \cross 1} \right\} \), then the equation has an infinite number of solutions. We can find the solution with minimum norm.
+\end{remark}
+
+\begin{problem}
+	Compute the null space of \(A = \begin{bmatrix}
+		1 & 3 & 0 \\
+		0 & 4 & 1
+	\end{bmatrix}\).
+\end{problem}
+\begin{answer}
+	We note that \(A\) is a \(2 \cross 3\) matrix, so its null space is
+	\[
+		\text{null} (A) \coloneqq \left\{  x \in \mathbb{R} ^3 | Ax = 0_{2 \cross 1} \right\} \subset \mathbb{R} ^3.
+	\]
+	So we have
+	\[
+		Ax = 0_{2 \cross 1} \iff
+		\begin{bmatrix}
+			1 & 3 & 0 \\
+			0 & 4 & 1
+		\end{bmatrix}
+		\begin{bmatrix}
+			x_1 \\ x_2 \\ x_3
+		\end{bmatrix} =
+		0_{2 \cross 1} \iff
+		x_1 = -3x_2, x_2 = -4x_2.
+	\]
+	Hence,
+	\[
+		x \in \text{null} (A) \iff x =
+		\begin{bmatrix}
+			-3x_2 \\ x_2 \\ -4x_2
+		\end{bmatrix} = \left\{ 
+			\alpha 
+			\begin{bmatrix}
+				-3 \\ 1 \\ -4
+			\end{bmatrix}
+			| \; \alpha  \in \mathbb{R}.
+		 \right\}.
+	\]
+\end{answer}
+\begin{remark}
+	Anticipating the next definition, we can express the above null space of \(A\) as
+	\[
+		\text{null} (A) = \text{span} \{ \begin{bmatrix}
+			-3 \\ 1 \\ -4 
+		\end{bmatrix} \} \coloneqq 
+		\left\{ 
+			\alpha 
+			\begin{bmatrix}
+				-3 \\ 1 \\ -4
+			\end{bmatrix}
+			| \; \alpha  \in \mathbb{R}.
+		 \right\}.
+	\]
+\end{remark}
+
+\begin{definition}[Span]
+	Suppose that \(S \subset \mathbb{R} ^n\) is a set of vectors, the set of all possible linear combinations of elements of \(S\) is called the \textbf{span} of \(S\):
+	\[
+		\text{span} \{S\} \coloneqq \left\{ \text{all possible linear combinations of elements of \(S\)}  \right\} 
+	\] 
+	\begin{remark}
+		If \(S\) is a set, \(\text{span} \left\{ S \right\} \) is the smallest subspace that contains all of the elements of the set \(S\).
+	\end{remark}
+\end{definition}
+
+\begin{definition}[Column Span]
+	Let \(A\) be an \(n \cross m\) matrix. Then its columns are vectors in \(\mathbb{R} ^n\). Their span is called the \textbf{column span of A}:
+	\[
+		\text{col span} \left\{ A \right\} \coloneqq  \text{span} \left\{ a_1^\text{col}, \ldots, a_m^\text{col}\right\} 
+	\]
+	\begin{remark}
+		\(Ax=b\) has a solution if and only if \(b \in \text{col span} \left\{ A \right\} \).
+	\end{remark}
+\end{definition}
+
+\begin{problem}
+	Suppose \(A = 
+	\begin{bmatrix}
+		3 & 2 \\
+		1 & -2 \\
+		-1 & 1
+	\end{bmatrix}\)
+	and \(b =
+	\begin{bmatrix}
+		0 \\ -8 \\ 5
+	\end{bmatrix}\) 
+	Does \(Ax=b\) have a solution?
+\end{problem}
+\begin{answer}
+	We first check that
+	\[
+		b=-2a_1^{\text{col}}+3a_2^{\text{col}} \in \text{span} \left\{ a_1^{\text{col} }, a_2^{\text{col} } \right\}, 
+	\]
+	and so \(b\) is in the column span of \(A\), and the system of linear equations has a solution \(x = \begin{bmatrix}
+		-2 \\ 3
+	\end{bmatrix}\) 
+\end{answer}
+
+\section{Dot Product and Orthonormal Vectors}
+
+\begin{definition}
+	For two column vectors \(u, v \in \mathbb{R} ^n\), the \textbf{dot product} of \(u\) and \(v\) is defined as
+	\[
+		u \cdot v \coloneqq \sum_{i=1}^n u_i v_i
+	\]
+\end{definition}
+
+The dot product is most commonly used for defining orthogonality between vectors. For example, two vectors \(w_1, w_2\) are orthogonal, written \(w_1 \perp w_2\) if and only if \(w_1 \cdot w_2 = 0\). \par
+
+\begin{definition}
+	A set of vectors \(v_1, v_2, \ldots , v_n\) is \textbf{orthogonal} if for all \(1 \leq  i, j \leq n, i \neq j\)
+	\[
+		v_i \cdot v_j = 0
+	\]
+	or equivalently, \(v_i^T v_j = 0\) or \(v_i \perp v_j\).
+\end{definition}
+
+\begin{definition}
+	A set of vectors \(v_1, v_2, \ldots , v_n\) is \textbf{orthonormal} if:
+	\begin{itemize}
+		\item they are orthognoal
+		\item for all \(i\), \(\lVert v_i \rVert = 1\).
+	\end{itemize}
+\end{definition}
+
+Note that we can now say that for a set of vectors \(v_1, v_2, \ldots , v_k\) in \(\mathbb{R} ^n\), the following statements are true:
+\begin{enumerate}
+	\item 
+\end{enumerate}
