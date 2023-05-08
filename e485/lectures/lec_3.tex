@@ -1,0 +1,37 @@
+\section{Server-Side Dynamic Pages}
+\lecture{3}{}{Server-Side Dynamic Pages}
+So far we've seen static pages. For static pages, static content is the same every time. Pages rarely change via a manual process. You must \emph{manually} update data, templates, and everyone accessing the website will get the same content until the next manual update. In other words, \emph{generation of content is not specific to each request}. Instead, we can use \textbf{server-side dynamic pages}.
+
+\begin{definition}[Server-Side Dynamic Page]
+	Webpages that are generated on the fly from a database. For server-side dynamic pages, the response is the output of a function.
+	\begin{enumerate}
+		\item Client makes a request
+		\item Server executes a function (output is usually HTML)
+		\item Server response is the output of the function
+	\end{enumerate}
+\end{definition}
+
+This highlights the principle of \textbf{data/computation duality}, which essentially notes that we can substitute \emph{data} for \emph{deterministic computation} and visa versa. \par
+
+The process of server-side dynamic page generation occurs as follows. Note that the \emph{generation of content is specific to each request}.
+\begin{enumerate}[label=\roman*.]
+	\item Client specifies a URL
+	\item Server runs a function based on specified URL
+	\item Function issues SQL queries to database to get relevant state
+	\item Python object (e.g. a \texttt{dict}) is populated
+	\item Template is rendered using the object
+	\item Rendered template is returned
+\end{enumerate}
+
+\subsection{URL Routing}
+The server utilizes \textbf{URL routing} to decide which function to call (and with what inputs) given a URL. This leads to a key distinction between static and dynamic pages:
+\begin{itemize}
+	\item Static pages: \emph{1 URL} maps to \emph{1 file}
+	\item Dynamic pages: \emph{many URLs} map to \emph{1 function}
+\end{itemize}
+
+There are a variety of ways to implement URL routing, although a common approach is to simply create a table that maps URLs to function-references. In Flask, a Python decorator is used to describe routing.
+
+\begin{definition}[Register Pattern]
+	The use of decorators to register functions (i.e. put a function into function table).
+\end{definition}
