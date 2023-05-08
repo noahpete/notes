@@ -1,15 +1,136 @@
-\lecture{2}{}{Static Pages I}
+\lecture{2}{}{Static Pages}
 \subsection{Document Object Model (DOM)}
 HTML tags form a tree called the \textbf{document object model (DOM)}: 
 
 \begin{lstlisting}[language=html]
-	<html>
-	  <head></head>
-	  <body>
-	    ...
-	  </body>
-	</html>
+<html>
+	<head></head>
+	<body>
+	...
+	</body>
+</html>
 \end{lstlisting}
 
 The DOM is a data structure built from the HTML. In the DOM, everything is a \textbf{node}. All HTML elements are element nodes, with text inside HTML being text nodes.
 
+\subsection{HTML5}
+HTML5 merges the advancements made during HTML's lifespan, specifically those from XHTML and browser-specific extensions of HTML.
+
+\section{URLs and HTTP}
+We can download a webpage using \textbf{curl}:
+\begin{lstlisting}[language=bash]
+$ curl --verbose http://cse.eecs.umich.edu/ > index.html
+\end{lstlisting}
+or more generally:
+\begin{lstlisting}[language=bash]
+$ curl --verbose protocol://server:port/path?query#fragment > out.html
+\end{lstlisting}
+
+\subsection{URLs}
+We can observe each part of the URL in more detail:
+
+\begin{itemize}
+	\item \texttt{protocol} - tells the server what protocol to use, i.e. what "language" to speak
+	\item \texttt{server} - locates the machine we want to talk to
+	\begin{itemize}
+		\item DNS lookup translates server name into an IP address (e.g. localhost and 127.0.0.1)
+	\end{itemize}
+	\item \texttt{port} - used to identify a specific service
+	\begin{itemize}
+		\item we can check what ports are open using \texttt{\$ nmap cse.eecs.umich.edu}
+	\end{itemize}
+	\item \texttt{path} - a file name relative to the server root
+	\begin{itemize}
+		\item default is \texttt{/index.html}
+	\end{itemize}
+	\item \texttt{query} - a general-purpose string of parameters that the server can use
+	\item \texttt{fragment} - identified at the client, ignored by server; think page navigation
+\end{itemize}
+
+\subsection{HTTP}
+Hypertext Transfer Protocol essentially reflects the request/response protocol outlined prior with the additional constraints that a \textbf{server cannot open connection to the client} and the protocol is completely \textbf{stateless}.
+
+\section{Requests}
+
+\begin{definition}[\texttt{GET} Request]
+	A \texttt{GET} request is simply the prompting of a server for data. Requests using \texttt{GET} should only retrieve data.
+\end{definition}
+
+\subsection{General Request-Response Structure}
+
+So far we've seen what a \texttt{GET} request looks like. Now we will look at the other two types of requests: \texttt{HEAD} and \texttt{POST}. Take the following example server request-response:
+\begin{lstlisting}[language=bash]
+$ curl --verbose http://cse.eecs.umich.edu/ > index.html
+* Connected to cse.eecs.umich.edu	
+(141.212.113.143) port 80 (#0)
+> GET / HTTP/1.1
+> Host: cse.eecs.umich.edu
+> User-Agent: curl/7.54.0
+> Accept: */*
+\end{lstlisting}
+
+The above request to \texttt{cse.eecs.umich.edu} contains the following headers:
+\begin{itemize}
+	\item \texttt{Host}: distinguishes between DNS names sharing a single IP address
+	\item \texttt{User-Agent}: which browser is making the request
+	\item \texttt{Accept}: which content (i.e. file) types the client will accept
+\end{itemize}
+
+The response from the server will start with a status code:
+\begin{itemize}
+	\item 1XX: informational
+	\item 2XX: successful
+	\item 3XX: redirection error
+	\item 4XX: server error
+\end{itemize}
+Further, the response will have accompanying headers, most of which are optional. Take the following example:
+\begin{lstlisting}[language=bash]
+$ curl --verbose http://cse.eecs.umich.edu/
+* Connected to cse.eecs.umich.edu
+> GET / HTTP/1.1
+...
+< HTTP/1.1 200 OK
+< Date: Tue, 12 Sep 2017 20:04:20 GMT
+< Server: Apache/2.2.15 (Red Hat)
+< Accept-Ranges: bytes
+< Connection: close
+< Transfer-Encoding: chunked
+< Content-Type: text/html; charset=UTF-8	
+\end{lstlisting}
+
+Where the \texttt{Content-Type} describes the "file" type and encoding (e.g. \texttt{text/html} or \texttt{image/png}). The type and encoding are known as the \textbf{MIME type}. Next is the character encoding, which is often just \texttt{UTF-8}, which corresponds to Unicode, which covers almost all of the characters and symbols in the world. It shares the first 128 values with ASCII, although unlike ASCII, Unicode is expandable.
+
+\subsection{\texttt{HEAD} Requests}
+\texttt{HEAD} requests are useful for checking if a page has changed or for caching stuff that doesn't change much and updating it. Along with other typical headers, it returns a \texttt{Last-Modified} header that may look like the following:
+\begin{lstlisting}[language=bash]
+< Last-Modified: Thu, 28 May 2015 13:40:55 GMT	
+\end{lstlisting}
+
+\begin{definition}[\texttt{HEAD} Request]
+	A \texttt{HEAD} request acts just like a \texttt{GET} request, but doesn't return the body, only the headers.
+\end{definition}
+
+\subsection{\texttt{POST} Request}
+\begin{definition}[\texttt{POST} Request]
+	A \texttt{POST} request sends data from the client to the server.
+\end{definition}
+
+\section{HTTP/1.0 vs HTTP/1.1 vs HTTP/2}
+The largest difference between HTTP/1.0 and HTTP/1.1 is the number of transmission control protocols that can occur simultaneously. Take the following HTML, for example:
+\begin{lstlisting}[language=HTML]
+<html>
+  <body>
+    <p>Block M<p>
+    <img src="http://cse.eecs.umich.edu/eecs/images/image1.png">
+    <img src="http://cse.eecs.umich.edu/eecs/images/image2.png">
+  </body>
+</html>	
+\end{lstlisting}
+
+In the case of:
+\begin{itemize}
+	\item HTTP/1.0: we will need to (1) set up a connection to load HTML, (2) set up another connection and load image1.png, and then (3) set up another connection to load image2.png; \emph{this uses 3 connections}
+	\item HTTP/1.1: we can use one connection to load the HTML, then load image1, then load image2 in a sequence; \emph{this uses 1 connection} 
+\end{itemize}
+
+HTTP/2 has the same methods, status codes, etc. as HTTP/1.1. One new feature is the idea of \textbf{server push}, where the server supplies data it knows a web browser will likely need to render a web page \emph{without waiting} for the browser to examine the first response.
