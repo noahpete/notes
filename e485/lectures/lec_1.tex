@@ -1,0 +1,32 @@
+\chapter{Introduction to Web Systems}
+\lecture{1}{}{Introduction}
+\section{The Request Response Cycle}
+The \textbf{request response cycle} is how two computers communicate with each other on the web.
+
+\begin{definition}[Request Response Cycle]
+	The request response cycle is a basic web communication protocol consisting of the following basic steps:
+	\begin{enumerate}
+		\item A client requests some data
+		\item A server responds to the request
+	\end{enumerate}
+\end{definition}
+
+A server may respond with different kinds of files. Common examples include:
+\begin{itemize}
+	\item HTML
+	\item CSS
+	\item JavaScript
+\end{itemize}
+
+\section{Static Pages}
+A \textbf{static page} is only HTML/CSS. There is no programming language on the server, and so you receive the same content upon every load of the webpage. It will send only files that do not change, such as HTML, CSS, or images. \par
+
+When running a static file server, the server does the following:
+\begin{enumerate}
+	\item Waits for connection from client
+	\item Receives a request
+	\item Looks in content directory, computes files name
+	\item Loads file from disk
+	\item Writes response to client: 200 OK, followed by the bytes of the file
+\end{enumerate}
+

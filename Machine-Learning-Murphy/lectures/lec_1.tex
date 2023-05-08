@@ -17,3 +17,49 @@ The \textbf{response variable}, each \(y_i\), can be anything, but is usually a 
 \section{Supervised Learning}
 Here, the goal is to learn a mapping from inputs \(x\) to outputs \(y\), where \(y \in \left\{ 1, \ldots , C \right\} \) with \(C\) being the number of classes. One way to formalize the problem is as a \textbf{function approximation}: we assume \(y=f(x)\) for some unknown function \(f\), and the goal of learning is to estimate the function \(f\) given a labeled training set. Then we can make predictions using \(\hat{y}=\hat{f}(x)\) (where the hat symbol is used to denote an estimate). \par
 
+\begin{definition}[Classification]
+	The process of learning a mapping from inputs \(x\) to outputs \(y\), where \(y \in \left\{ 1, \ldots , C \right\} \), with C being the number of classes.
+\end{definition}
+
+We can formalize the classificaiton problem of as a \emph{function approximation} problem. We assume \(y=f(x)\) for some unknown function \(f\), and the goal of learning is to estimate \(f\) given a training set, and then to make predictions using \(\hat{y}=f(x)\). Given a probabilistic output, we can always compute our \emph{best guess} as to the "true label" using the \textbf{mode}.
+\begin{definition}[Mode]
+	The most probable class label for a set of labels \(\left\{ c_1, c_2, \ldots , c_C \right\} \) is known as the \textbf{mode} of the distribution. It is defined as:
+	\[
+		\hat{y} = \hat{f}(x)=\argmax_{c=1}^C p(y=c | x, \mathcal{D} ) 
+	\] 
+\end{definition}
+
+\section{Unsupervised Learning}
+In unsupervised learning, we are given just output data without any inputs. Here, the goal is simply to discover "interesting structure" in the data. We formalize our task as a problem of \textbf{density estimation}, where we aim to build models of the form
+\[
+	p(x_i | \Theta).
+\]
+The canonical example of unsupervised learning is the problem of \textbf{clustering} data into groups. The first goal is to estimate the distribution over the number of clusters, \(p(\mathcal{K} |\mathcal{D} )\); this tells us if there are subpopulations within the data. Our second goal is to estimate which cluster each point belongs to. Let there be \textbf{latent variables} \(z_i \in \left\{ 1, \ldots , \mathcal{K} \right\} \) that represent the cluster to which data point \(i\) is assigned.
+
+\section{Basic Concepts in Machine Learning}
+We will focus on probabilistic models of the form \(p(y|x)\) or \(p(x)\), depending on whether we are interested in supervised or unsupervised learning, respectively. We first look at the distinction between models with fixed versus a growing number of parameters. 
+
+\begin{definition}[Parametric Model]
+	A \textbf{parametric model} consists of a fixed number of parameters.
+\end{definition}
+\begin{definition}[Non-parametric Model]
+	A \textbf{non-parametric model} consists of a number of parameters that grows with the amount of training data.
+\end{definition}
+
+Parametric models are often faster to use, but make stronger assumptions about the nature of the data distributions. Non-parametric models are more flexible, but computationally intractable for large datasets. We often use parametric models and make assumptions about the data distribution (either \(p(y|x)\) or \(p(x)\)), which are known as \textbf{inductive bias}. \par
+
+One of the most common models for regression is \textbf{linear regression}.
+
+\begin{definition}[Linear regression]
+	Linear regression is defined as a method for regression that asserts that the response is a linear function of the inputs; written as:
+	\[
+		y(x)=w^Tx+\epsilon = \sum_{j=1}^D w_j x_j + \epsilon  
+	\]
+	where \(w^Tx\) represents the inner \textbf{scalar product} between the input vector \(x\) and the model's \textbf{weight vector} \(w\), and \(\epsilon \) is the \textbf{residual error} between our linear predictions and the true response.
+\end{definition}
+
+Further, we assume that \(\epsilon\) has a \textbf{Gaussian} or normal distribution, denoted by \(\epsilon \approx \mathcal{N} (\mu ,\sigma ^2)\), where \(\mu\) is the mean and \(\sigma ^2\) is the variance. We now write
+\[
+	p(y|x,\Theta)=\mathcal{N} (y|\mu (x), \sigma ^2(x)).
+\]
+We assume \(\mu\) is a linear function of \(x\), so \(\mu =w^Tx\); and that the noise is fixed: \(\sigma ^2(x)=\sigma ^2\).
