@@ -59,7 +59,7 @@ Although there are a variety of hill climbing algorithms (stochastic, first-choi
 \section{Linear Programming}
 In the context where we are trying to optimize for some function or when we have real values we are often trying to minimize or maximize a cost function given a variety of constraints. This is where \textbf{linear programming} becomes useful.
 
-\begin{definition}
+\begin{definition}[Linear Programming]
 	Linear programming problems often entail the following:
 	\begin{itemize}
 		\item Minimize a cost function \(c_1 x_1 + c_2 x_2 + \ldots + c_n x_n\)
@@ -67,3 +67,25 @@ In the context where we are trying to optimize for some function or when we have
 		\item With bounds for each variable \(l_i \leq x_i \leq u_i\) 
 	\end{itemize}
 \end{definition}
+
+\begin{problem}
+	Two machines \(X_1\) and \(X_2\) which cost \$50/hr and \$80/hr to run, respectively. We have the following constraints:
+	\begin{itemize}
+		\item \(X_1\) requires 5 units of labor, \(X_2\) requires 2 units of labor per hour; we have total of 20 units of labor to spend
+		\item \(X_1\) produces 10 units of output per hour, \(X_2\) produces 12 units of output per hour; company needs 90 units of output
+	\end{itemize}
+\end{problem}
+\begin{answer}
+	We can create a cost function:
+	\[
+		50x_1 + 80x_2
+	\]
+	and our constraints:
+	\[
+		5x_1 + 2x_2 \leq 20
+	\]
+	\[
+		(-10x_1) + (-12x_2) \leq 90
+	\]
+	and then solve using a standard linear programming technique.
+\end{answer}

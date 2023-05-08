@@ -137,7 +137,6 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -175,7 +174,7 @@
          style="text-align:center;text-anchor:middle;stroke-width:0.448"
          x="107.90676"
          y="228.59715"
-         id="tspan903">{yes, no}</tspan></text>
+         id="tspan903">\{yes, no\}</tspan></text>
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.316389;stroke-dasharray:none"
        id="rect233-0-3"
@@ -198,7 +197,7 @@
          style="text-align:center;text-anchor:middle;stroke-width:0.448"
          x="118.54997"
          y="250.01662"
-         id="tspan1076">{on time, delayed}</tspan></text>
+         id="tspan1076">\{on time, delayed\}</tspan></text>
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.316389;stroke-dasharray:none"
        id="rect233-0-3-4"
@@ -221,7 +220,7 @@
          style="text-align:center;text-anchor:middle;stroke-width:0.448"
          x="118.81606"
          y="268.64221"
-         id="tspan1117">{attend, miss}</tspan></text>
+         id="tspan1117">\{attend, miss\}</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.175px;font-family:serif;-inkscape-font-specification:serif;text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.448;stroke-dasharray:none"
@@ -237,7 +236,7 @@
          style="stroke-width:0.448"
          x="118.9379"
          y="204.91599"
-         id="tspan1035">{none, light, heavy}</tspan></text>
+         id="tspan1035">\{none, light, heavy\}</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.448;stroke-dasharray:none;marker-end:url(#TriangleStart)"
        d="m 111.22158,209.99396 v 7.45025"
