@@ -1,35 +1,221 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
-<svg width="210mm" height="297mm" version="1.1" viewBox="0 0 210 297" xmlns="http://www.w3.org/2000/svg">
- <defs>
-  <marker id="TriangleStart" overflow="visible" markerHeight="6.155385" markerWidth="5.3244081" orient="auto-start-reverse" preserveAspectRatio="xMidYMid" viewBox="0 0 5.3244081 6.1553851">
-   <path transform="scale(.5)" d="m5.77 0-8.65 5v-10z" fill="context-stroke" fill-rule="evenodd" stroke="context-stroke" stroke-width="1pt"/>
-  </marker>
-  <marker id="TriangleStart-2" overflow="visible" markerHeight="6.155385" markerWidth="5.3244081" orient="auto-start-reverse" preserveAspectRatio="xMidYMid" viewBox="0 0 5.3244081 6.1553851">
-   <path transform="scale(.5)" d="m5.77 0-8.65 5v-10z" fill="context-stroke" fill-rule="evenodd" stroke="context-stroke" stroke-width="1pt"/>
-  </marker>
-  <marker id="TriangleStart-20" overflow="visible" markerHeight="6.155385" markerWidth="5.3244081" orient="auto-start-reverse" preserveAspectRatio="xMidYMid" viewBox="0 0 5.3244081 6.1553851">
-   <path transform="scale(.5)" d="m5.77 0-8.65 5v-10z" fill="context-stroke" fill-rule="evenodd" stroke="context-stroke" stroke-width="1pt"/>
-  </marker>
- </defs>
- <text x="63.867584" y="91.868645" fill="#000000" font-family="serif" font-size="3.175px" stroke-width=".471" text-align="center" text-anchor="middle" xml:space="preserve"><tspan x="63.867584" y="91.868645" fill="#000000" stroke-width=".471">Client</tspan></text>
- <text x="102.19137" y="92.003021" fill="#000000" font-family="serif" font-size="3.175px" stroke-width=".471" text-align="center" text-anchor="middle" xml:space="preserve"><tspan x="102.19137" y="92.003021" fill="#000000" stroke-width=".471">Server</tspan></text>
- <g stroke="#000">
-  <path d="m55.216 94.071h55.687" stroke-width=".471"/>
-  <g stroke-width=".41538">
-   <path d="m67.021 99.913 30.834 8.0131" marker-end="url(#TriangleStart)"/>
-   <path d="m68.067 127.79 30.834 8.0131" marker-end="url(#TriangleStart-2)"/>
-   <path d="m99.95 112.43-30.834 8.0131" marker-end="url(#TriangleStart-20)"/>
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (b0a8486, 2022-12-01)"
+   sodipodi:docname="cookiesdiag.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:lockguides="true"
+     showguides="true"
+     inkscape:zoom="1.6819304"
+     inkscape:cx="368.62405"
+     inkscape:cy="456.91546"
+     inkscape:window-width="1315"
+     inkscape:window-height="731"
+     inkscape:window-x="2225"
+     inkscape:window-y="529"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1">
+    <sodipodi:guide
+       position="99.26218,204.97405"
+       orientation="0,-1"
+       id="guide373"
+       inkscape:locked="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="TriangleStart"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="TriangleStart-2"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-9" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="TriangleStart-20"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-7" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:serif;-inkscape-font-specification:serif;text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.471001"
+       x="63.867584"
+       y="91.868645"
+       id="text186"><tspan
+         sodipodi:role="line"
+         id="tspan184"
+         style="fill:#000000;stroke:none;stroke-width:0.471"
+         x="63.867584"
+         y="91.868645">Client</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:serif;-inkscape-font-specification:serif;text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.471001"
+       x="102.19137"
+       y="92.003021"
+       id="text186-5"><tspan
+         sodipodi:role="line"
+         id="tspan184-2"
+         style="fill:#000000;stroke:none;stroke-width:0.471"
+         x="102.19137"
+         y="92.003021">Server</tspan></text>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.471001"
+       d="M 55.215573,94.07097 H 110.90307"
+       id="path531" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.415376;stroke-dasharray:none;marker-end:url(#TriangleStart)"
+       d="m 67.020637,99.913161 30.834068,8.013079"
+       id="path583" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.415376;stroke-dasharray:none;marker-end:url(#TriangleStart-2)"
+       d="m 68.066745,127.79043 30.834068,8.01307"
+       id="path583-8" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.415376;stroke-dasharray:none;marker-end:url(#TriangleStart-20)"
+       d="m 99.94953,112.43181 -30.834068,8.01307"
+       id="path583-4" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:serif;-inkscape-font-specification:serif;text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.370999;stroke-dasharray:none"
+       x="106.40477"
+       y="77.970764"
+       id="text1360"
+       transform="rotate(14.986967)"><tspan
+         sodipodi:role="line"
+         id="tspan1358"
+         style="stroke:none;stroke-width:0.371"
+         x="106.40477"
+         y="77.970764">Put book in cart</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:serif;-inkscape-font-specification:serif;text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.370999;stroke-dasharray:none"
+       x="54.652199"
+       y="130.46973"
+       id="text1364"
+       transform="rotate(-13.555281)"><tspan
+         sodipodi:role="line"
+         id="tspan1362"
+         style="stroke-width:0.371"
+         x="54.652199"
+         y="130.46973">OK (and set cookie)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.06499px;font-family:serif;-inkscape-font-specification:serif;text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.358145;stroke-dasharray:none"
+       x="113.38101"
+       y="101.94702"
+       id="text1368"
+       transform="matrix(0.97127546,0.24354407,-0.24428746,0.96831978,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan1366"
+         style="stroke-width:0.358145"
+         x="113.38101"
+         y="101.94702">Put another book in</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.358145"
+         x="113.38101"
+         y="105.77826"
+         id="tspan1370">(and here's my cookie)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:serif;-inkscape-font-specification:serif;text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.370999;stroke-dasharray:none"
+       x="108.85805"
+       y="110.74576"
+       id="text1522"><tspan
+         sodipodi:role="line"
+         id="tspan1520"
+         style="stroke-width:0.371"
+         x="108.85805"
+         y="110.74576">(modifies db)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:serif;-inkscape-font-specification:serif;text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.370999;stroke-dasharray:none"
+       x="109.8019"
+       y="134.65677"
+       id="text1526"><tspan
+         sodipodi:role="line"
+         id="tspan1524"
+         style="stroke-width:0.371"
+         x="109.8019"
+         y="134.65677">(modifies db)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:serif;-inkscape-font-specification:serif;text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.370999;stroke-dasharray:none"
+       x="117.82468"
+       y="138.58951"
+       id="text1530"><tspan
+         sodipodi:role="line"
+         id="tspan1528"
+         style="stroke-width:0.371"
+         x="117.82468"
+         y="138.58951">(cart looks full bc cookie info)</tspan></text>
   </g>
- </g>
- <g fill="#000000" font-family="serif" text-anchor="middle">
-  <text transform="rotate(14.987)" x="106.40477" y="77.970764" font-size="3.175px" stroke-width=".371" text-align="center" xml:space="preserve"><tspan x="106.40477" y="77.970764" stroke-width=".371">Put book in cart</tspan></text>
-  <text transform="rotate(-13.555)" x="54.652199" y="130.46973" font-size="3.175px" stroke-width=".371" text-align="center" xml:space="preserve"><tspan x="54.652199" y="130.46973" stroke-width=".371">OK (and set cookie)</tspan></text>
-  <text transform="matrix(.97128 .24354 -.24429 .96832 0 0)" x="113.38101" y="101.94702" font-size="3.065px" stroke-width=".35814" text-align="center" xml:space="preserve"><tspan x="113.38101" y="101.94702">Put another book in</tspan><tspan x="113.38101" y="105.77826">(and here's my cookie)</tspan></text>
-  <g font-size="3.175px" stroke-width=".371">
-   <text x="108.85805" y="110.74576" text-align="center" xml:space="preserve"><tspan x="108.85805" y="110.74576" stroke-width=".371">(modifies db)</tspan></text>
-   <text x="109.8019" y="134.65677" text-align="center" xml:space="preserve"><tspan x="109.8019" y="134.65677" stroke-width=".371">(modifies db)</tspan></text>
-   <text x="120.34164" y="138.90413" text-align="center" xml:space="preserve"><tspan x="120.34164" y="138.90413" stroke-width=".371">(cart looks full bc cookie info)</tspan></text>
-  </g>
- </g>
 </svg>

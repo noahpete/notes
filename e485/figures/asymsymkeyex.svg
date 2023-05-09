@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (b0a8486, 2022-12-01)"
+   sodipodi:docname="asymsymkeyex.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:lockguides="true"
+     showguides="true"
+     inkscape:zoom="1.6819304"
+     inkscape:cx="346.62552"
+     inkscape:cy="457.51001"
+     inkscape:window-width="1315"
+     inkscape:window-height="731"
+     inkscape:window-x="2225"
+     inkscape:window-y="501"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1">
+    <sodipodi:guide
+       position="99.26218,204.97405"
+       orientation="0,-1"
+       id="guide373"
+       inkscape:locked="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="marker1812"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path1810" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker1666"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path1664" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker1538"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path1536" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="TriangleStart"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="TriangleStart-2"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-4" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="TriangleStart-3"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-9" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="TriangleStart-5"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-2" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:serif;-inkscape-font-specification:serif;text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.471001"
+       x="58.51907"
+       y="94.38559"
+       id="text186"><tspan
+         sodipodi:role="line"
+         id="tspan184"
+         style="fill:#000000;stroke:none;stroke-width:0.471"
+         x="58.51907"
+         y="94.38559">Client</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:serif;-inkscape-font-specification:serif;text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.471001"
+       x="108.48374"
+       y="94.205353"
+       id="text186-5"><tspan
+         sodipodi:role="line"
+         id="tspan184-2"
+         style="fill:#000000;stroke:none;stroke-width:0.471"
+         x="108.48374"
+         y="94.205353">Server</tspan></text>
+    <path
+       style="fill:#000000;stroke-width:0.370999;stroke:#000000;marker-end:url(#TriangleStart)"
+       d="M 60.092161,102.09375 H 106.65572"
+       id="path455" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.370999;marker-end:url(#TriangleStart-2)"
+       d="M 60.062676,117.7526 H 106.62624"
+       id="path455-8" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.370999;marker-end:;marker-start:url(#marker1812)"
+       d="M 59.905365,109.50128 H 106.46893"
+       id="path455-8-0" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.370999;marker-start:url(#marker1538);marker-end:url(#TriangleStart-3)"
+       d="M 60.219986,127.2484 H 106.78355"
+       id="path455-0" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.370999;marker-start:url(#marker1666);marker-end:url(#TriangleStart-5)"
+       d="M 60.219986,135.42849 H 106.78355"
+       id="path455-2" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:serif;-inkscape-font-specification:serif;text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.370999"
+       x="84.160484"
+       y="100.83527"
+       id="text2120"><tspan
+         sodipodi:role="line"
+         id="tspan2118"
+         style="stroke:none;stroke-width:0.371"
+         x="84.160484"
+         y="100.83527">What's your public key?</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:serif;-inkscape-font-specification:serif;text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.370999"
+       x="83.53125"
+       y="108.54343"
+       id="text2174"><tspan
+         sodipodi:role="line"
+         id="tspan2172"
+         style="stroke-width:0.371"
+         x="83.53125"
+         y="108.54343">&lt;transmits cert&gt;</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:serif;-inkscape-font-specification:serif;text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.370999"
+       x="82.115463"
+       y="116.25159"
+       id="text2178"><tspan
+         sodipodi:role="line"
+         id="tspan2176"
+         style="stroke-width:0.371"
+         x="82.115463"
+         y="116.25159">&lt;Using server's public key,</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:serif;-inkscape-font-specification:serif;text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.370999"
+       x="83.059326"
+       y="120.18433"
+       id="text2182"><tspan
+         sodipodi:role="line"
+         id="tspan2180"
+         style="stroke-width:0.371"
+         x="83.059326"
+         y="120.18433">starts AES key negotiation&gt;</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:serif;-inkscape-font-specification:serif;text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.370999"
+       x="84.352196"
+       y="126.21383"
+       id="text2178-4"><tspan
+         sodipodi:role="line"
+         id="tspan2176-8"
+         style="stroke-width:0.371"
+         x="84.352196"
+         y="126.21383">&lt;Both sides agree on,</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:serif;-inkscape-font-specification:serif;text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.370999"
+       x="85.296059"
+       y="130.14658"
+       id="text2182-5"><tspan
+         sodipodi:role="line"
+         id="tspan2180-5"
+         style="stroke-width:0.371"
+         x="85.296059"
+         y="130.14658">symmetric AES key&gt;</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:serif;-inkscape-font-specification:serif;text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.370999"
+       x="83.251038"
+       y="134.39391"
+       id="text2178-2"><tspan
+         sodipodi:role="line"
+         id="tspan2176-0"
+         style="stroke-width:0.371"
+         x="83.251038"
+         y="134.39391">&lt;Efficient symmetric (AES)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:serif;-inkscape-font-specification:serif;text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.370999"
+       x="84.194901"
+       y="138.32664"
+       id="text2182-4"><tspan
+         sodipodi:role="line"
+         id="tspan2180-4"
+         style="stroke-width:0.371"
+         x="84.194901"
+         y="138.32664">encryption link established&gt;</tspan></text>
+  </g>
+</svg>

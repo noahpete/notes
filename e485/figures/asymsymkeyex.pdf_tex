@@ -1,6 +1,6 @@
 %% Creator: Inkscape 1.2.2 (b0a8486, 2022-12-01), www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file 'cookiesdiag.pdf' (pdf, eps, ps)
+%% Accompanies image file 'asymsymkeyex.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{231.9624114bp}%
+    \setlength{\unitlength}{164.10797059bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,17 +50,19 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.60617977)%
+  \begin{picture}(1,0.81108691)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(0.10573,0.57923996){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Client\end{tabular}}}}%
-    \put(0.57405738,0.57759784){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Server\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{cookiesdiag.pdf}}%
-    \put(0.33491655,0.4452309){\color[rgb]{0,0,0}\rotatebox{-14.986967}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Put book in cart\end{tabular}}}}}%
-    \put(0.34820698,0.30847304){\color[rgb]{0,0,0}\rotatebox{13.555281}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}OK (and set cookie)\end{tabular}}}}}%
-    \put(0.36666026,0.15810532){\color[rgb]{0,0,0}\rotatebox{-14.07649994}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Put another book in\\(and here's my cookie)\end{tabular}}}}}%
-    \put(0.65552607,0.34855634){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}(modifies db)\end{tabular}}}}%
-    \put(0.66706025,0.05635709){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}(modifies db)\end{tabular}}}}%
-    \put(0.76510078,0.00829792){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}(cart looks full bc cookie info)\end{tabular}}}}%
+    \put(0.06504447,0.77083218){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Client\end{tabular}}}}%
+    \put(0.9280869,0.77394542){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Server\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{asymsymkeyex.pdf}}%
+    \put(0.50794998,0.65942645){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}What's your public key?\end{tabular}}}}%
+    \put(0.49708119,0.52628311){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}<transmits cert>\end{tabular}}}}%
+    \put(0.47262623,0.39313965){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}<Using server's public key,\end{tabular}}}}%
+    \put(0.48892961,0.32520911){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}starts AES key negotiation>\end{tabular}}}}%
+    \put(0.51126142,0.22106132){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}<Both sides agree on,\end{tabular}}}}%
+    \put(0.52756481,0.15313077){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}symmetric AES key>\end{tabular}}}}%
+    \put(0.49224105,0.07976642){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}<Efficient symmetric (AES)\end{tabular}}}}%
+    \put(0.50854446,0.01183601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}encryption link established>\end{tabular}}}}%
   \end{picture}%
 \endgroup%

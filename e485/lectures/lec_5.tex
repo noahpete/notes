@@ -1,0 +1,73 @@
+\section{Encryption}
+\lecture{5}{}{Encryption}
+Our model of network security is based upon the following:
+\begin{itemize}
+	\item Two parties are attempting to communicate over a network
+	\item Assume a powerful adversary (they have access to everything)
+\end{itemize}
+
+We define our goals:
+\begin{itemize}
+	\item Confidentiality
+	\item Sender authenticity
+	\item Message integrity
+	\item Freshness
+	\item Anonymity
+\end{itemize}
+
+Further, we must understand various techniques used to break encryption schemes.
+
+\begin{definition}[Frequency Analysis]
+	The process of counting the frequency of each letter in some cipher text to derive the plain text.
+\end{definition}
+
+\subsection{Symmetric Encryption}
+Traditional cryptography utilizes a single key for both "locking" and "unlocking" the message. This is called \textbf{symmetric encryption}, which is utilized by AES.
+
+\begin{definition}[Symmetric Encryption]
+	An encryption scheme in which both sides require the same key to encrypt and decrypt the message.
+\end{definition}
+\begin{remark}
+	Symmetric encryption schemes are always going to be \textbf{reversible}.
+\end{remark}
+
+\begin{definition}[Advanced Encryption Standard]
+	Advanced Encryption Standard (AES) is widely believed to be secure, uses 128-bit block size, and a variable key size (128 or 256 bits). It encompasses ten rounds of substitution/permutation operations, each time with a different subkey of the original key.
+\end{definition}
+
+Symmetric encryption is generally \emph{fast} and it provides \emph{confidentiality}. With the use of message authentication code (MACs), symmetric encryption schemes can also provide \emph{message integrity}.
+
+\subsection{Asymmetric Encryption}
+The issue with symmetric encryption schemes is that \emph{key distribution is the weak link}. Not only is it hard to revoke key access once permitted, but consider applying the schemes to the web. This quickly becomes infeasible. To help, we can utilize \textbf{asymmetric encryption}.
+
+\begin{definition}[Asymmetric Encryption]
+	An encryption scheme in which each party has a \textbf{public} key as well as a \textbf{private} key. Only a party's private key is able to unlock something locked with their corresponding public key.
+\end{definition}
+
+Asymmetric encryption, or public key cryptography, provides \emph{confidentiality} and \emph{sender authenticity}. However, we can use asymmetric encryption to \emph{establish} a \textbf{shared secret key} between two parties. Then we can use \emph{symmetric} encryption with that shared key.
+
+\subsection{Public Key Infrastructure}
+The Public Key Infrastructure (PKI) distributes public keys safely, via certificates. When a client wants to transmit something securely to a server, it may then request the server's public key and use that to encrypt their message. \par
+
+Public keys for big Certificate Authorities (CAs) are built into browsers. Different certification "strengths" exist depending on the level of identity verification.
+
+\begin{figure}[H]
+	\centering
+	\incfig[0.4]{asymsymkeyex}
+	\caption{Client-server interaction during key exchange.}
+	\label{fig:asymsymkeyex}
+\end{figure}
+
+\subsection{TLS/SSL}
+\textbf{Transport Layer Security / Secure Sockets Layer}, commonly exercised via https://, is responsible for the encryption of all content that goes into TCP payload. \textbf{SSL} is usually implemented by the server, and then the server decrypts HTTPS traffic before proxying dynamic page requests to the backend.
+
+\subsection{Hash Functions and Passwords}
+It's a bad idea to store passwords as vanilla text in a database. It's a far better idea if the server hashes password using a one-way hash function. \par
+
+Currently, \textbf{512 bit SHA-2} is the standard hash function used since it is resistant to collision attacks. This way, the server can store hashed passwords and then simply compare a hashed user input to the value stored in the database to see if there is a password match. \par
+
+\textbf{Rainbow tables} speed up \emph{brute force} attacks with pre-computed tables. If you don't use a \textbf{salt}, then you're susceptible to these attacks.
+
+\begin{definition}[Salt]
+	A random number appended to the password plain text.
+\end{definition}
