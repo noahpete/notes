@@ -1,4 +1,4 @@
-\section{Encryption}
+\chapter{Cyber Security}
 \lecture{5}{}{Encryption}
 Our model of network security is based upon the following:
 \begin{itemize}
@@ -21,7 +21,7 @@ Further, we must understand various techniques used to break encryption schemes.
 	The process of counting the frequency of each letter in some cipher text to derive the plain text.
 \end{definition}
 
-\subsection{Symmetric Encryption}
+\section{Symmetric Encryption}
 Traditional cryptography utilizes a single key for both "locking" and "unlocking" the message. This is called \textbf{symmetric encryption}, which is utilized by AES.
 
 \begin{definition}[Symmetric Encryption]
@@ -37,7 +37,7 @@ Traditional cryptography utilizes a single key for both "locking" and "unlocking
 
 Symmetric encryption is generally \emph{fast} and it provides \emph{confidentiality}. With the use of message authentication code (MACs), symmetric encryption schemes can also provide \emph{message integrity}.
 
-\subsection{Asymmetric Encryption}
+\section{Asymmetric Encryption}
 The issue with symmetric encryption schemes is that \emph{key distribution is the weak link}. Not only is it hard to revoke key access once permitted, but consider applying the schemes to the web. This quickly becomes infeasible. To help, we can utilize \textbf{asymmetric encryption}.
 
 \begin{definition}[Asymmetric Encryption]
@@ -46,7 +46,7 @@ The issue with symmetric encryption schemes is that \emph{key distribution is th
 
 Asymmetric encryption, or public key cryptography, provides \emph{confidentiality} and \emph{sender authenticity}. However, we can use asymmetric encryption to \emph{establish} a \textbf{shared secret key} between two parties. Then we can use \emph{symmetric} encryption with that shared key.
 
-\subsection{Public Key Infrastructure}
+\section{Public Key Infrastructure}
 The Public Key Infrastructure (PKI) distributes public keys safely, via certificates. When a client wants to transmit something securely to a server, it may then request the server's public key and use that to encrypt their message. \par
 
 Public keys for big Certificate Authorities (CAs) are built into browsers. Different certification "strengths" exist depending on the level of identity verification.

