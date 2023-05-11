@@ -93,6 +93,12 @@ our goal is to calculate \(P(X|e)\).
 		=\alpha [P(\text{Appointment, light, no, on time}) + P(\text{Appointment, light, no, delayed} )].
 	\]
 \end{answer}
+\begin{remark}
+	The \textbf{marginalization technique} essentially states that
+	\[
+		\alpha P(Q,E)=\alpha \left[ P(Q,E,Y) + P(Q,E,\neg Y) \right] 
+	\] 
+\end{remark}
 
 \section{Inference by Enumeration}
 The above is an example of \textbf{inference by enumeration}. More formally, for the following:
@@ -150,7 +156,7 @@ where \(X_t\) represents the weather today, and \(X_{t+1}\) represents the weath
 	\end{tabular}
 \end{table}
 
-We can refine our definition of the Markov Model further, by introducing \emph{hidden} states.
+The first line, for example, translates to "given today was sunny, tomorrow will be sunny with a probability of 0.8 and rainy with probability 0.2". We can refine our definition of the Markov Model further, by introducing \emph{hidden} states.
 
 \begin{definition}[Hidden Markov Model]
 	A Markov model for a system with hidden states that generate some observed event.
