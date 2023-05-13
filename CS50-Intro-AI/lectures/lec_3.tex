@@ -71,7 +71,7 @@ In the context where we are trying to optimize for some function or when we have
 \begin{problem}
 	Two machines \(X_1\) and \(X_2\) which cost \$50/hr and \$80/hr to run, respectively. We have the following constraints:
 	\begin{itemize}
-		\item \(X_1\) requires 5 units of labor, \(X_2\) requires 2 units of labor per hour; we have total of 20 units of labor to spend
+		\item \(X_1\) requires 5 units of labor, \(X_2\) requires 2 units of labor per hour; we have total of 20 units of labor to spend; goal is to minimize cost
 		\item \(X_1\) produces 10 units of output per hour, \(X_2\) produces 12 units of output per hour; company needs 90 units of output
 	\end{itemize}
 \end{problem}
@@ -85,7 +85,135 @@ In the context where we are trying to optimize for some function or when we have
 		5x_1 + 2x_2 \leq 20
 	\]
 	\[
-		(-10x_1) + (-12x_2) \leq 90
+		10x_1 + 12x_2 \geq 90
 	\]
-	and then solve using a standard linear programming technique.
+	or equivalently:
+	\[
+		-10x_1 + -12x_2 \leq -90
+	\]
+	and then solve using a standard linear programming technique such as Simplex, Interior-Point, etc.
 \end{answer}
+
+\section{Constraint Satisfaction}
+Constraint satisfaction problems often have some number of variables that must be optimized, but they are subject to some constraints.
+
+\begin{definition}[Constraint Satisfaction Problem]
+	A general constraint satisfaction problem consists of the following:
+	\begin{itemize}
+		\item Set of variables \(\left\{ x_1, \ldots , x_n \right\} \) 
+		\item Set of domains for each variable \(\left\{ D_1, \ldots , D_n \right\} \) 
+		\item Set of constraints \(C\) 
+	\end{itemize}
+\end{definition}
+
+\begin{problem}
+	We must schedule exams for classes \({A, B, \ldots , G}\) such that no conflicts arise for the students taking the courses. The four students' schedules are:
+	\begin{itemize}
+		\item \emph{Student 1}: \({A, B, C}\)
+		\item \emph{Student 2}: \({B, D, E}\) 
+		\item \emph{Student 3}: \({C, E, F}\) 
+		\item \emph{Student 4}: \({E, F, G}\) 
+	\end{itemize}
+	We can represent this graphically using an undirected graph, where the nodes represent exams and the edges indicate that the two exams \emph{cannot} be scheduled for the same time.
+	\begin{figure}[H]
+		\centering
+		\incfig[0.3]{csgraph}
+		\label{fig:csgraph}
+	\end{figure}
+	Here we define our variables, domains, and constraints:
+	\begin{itemize}
+		\item Variables: \(\left\{ A,B,C,D,E,F,G \right\} \)
+		\item Domains: \(\left\{ {Monday, Tuesday, Wednesday} \right\} \) 
+		\item Constraints: \(\left\{ A \neq B, A \neq C, B \neq C, \ldots , E \neq G, F \neq G \right\} \)  
+	\end{itemize}
+	Our goal is to find an assignment of a day to each of the classes such that we don't have any conflicts between the classes. In other words, we are aiming for \textbf{node consistency}.
+	\begin{definition}[Node Consistency]
+		When all the values in a variable's domain satisfy the variable's \emph{unary} constraints.
+	\end{definition}
+	Furthermore, we are seeking \textbf{arc consistency}.
+	\begin{definition}
+		When all the values in a variable's domain satisfy the variable's binary constraints. More formally: to make \(X\) arc-consistent with respect to \(Y\), remove elements from \(X\)'s domain until every choice for \(X\) has a possible choice for \(Y\). 
+	\end{definition}
+\end{problem}
+
+\begin{definition}[Unary Contraint]
+	A constraint involving a \emph{single} variable. (e.g.\(\left\{ A \neq Wednesday \right\} \))
+\end{definition}
+
+\begin{definition}[Binary Constraint]
+	A constraint involving \emph{two} variables. (e.g.\(\left\{ A \neq  B \right\} \))
+\end{definition}
+
+Note that constraints can come of different forms. \textbf{Hard} constraints are absolute requirements, whereas \textbf{soft} constraints are preferences.
+
+\section{Arc Consistency}
+We first aim to define a function that, given some consistency problem \(csp\), can make some variable \(X\) \textbf{arc consistent} with respect to another variable, \(Y\).
+
+\begin{algorithm}[H]
+	\DontPrintSemicolon
+	\caption{Revise}
+	\KwData{csp, X, Y}
+	revised = false \\
+	\For{x in X.domain}{
+		\If{no y in Y.domain satisfies constraint for (X, Y)}{
+			delete x from X.domain \\
+			revised = true \\
+		}
+	}
+	\Return{revised}
+\end{algorithm}
+
+We can enforce arc consistency across an entire consistency problem:
+
+\begin{algorithm}[H]
+	\DontPrintSemicolon
+	\caption{AC-3}
+	\KwData{csp}
+	queue = all arcs in csp \\
+	\While{queue not empty}{
+		(X, Y) = \texttt{Dequeue}(queue) \\
+		\If{\texttt{Revise}(csp, X, Y)}{
+			\If{size of X.domain == 0}{
+				\Return{false}
+			}
+			\For{each Z in X.neighbors - \{Y\}}{
+				\texttt{Enqueue}(queue, (Z, X))
+			}
+		}
+	}
+	\Return{true}
+\end{algorithm}
+
+\subsection{CSPs as Search Problems}
+We can reframe CSPs as \emph{search problems}. We do so by defining a CSP as follows:
+\begin{itemize}
+	\item initial state: empty assignment (no variables)
+	\item actions: add a \(\left\{ variable = value \right\} \) to assignment
+	\item transition model: shows how adding an assignment changes the assignment
+	\item goal test: check if all variables assigned and constraints all satisfied
+	\item path cost function: all paths have same cost
+\end{itemize}
+
+\section{Backtracking}
+We can find a solution to a CSP by simply applying arbitrary assignments to variables one by one until a constraint is broken. Then, we can just backtrack and try another assignment. We eventually find a solution or check every possible assignment.
+
+\begin{algorithm}[H]
+	\DontPrintSemicolon
+	\caption{Backtrack}
+	\KwData{assignment, csp}
+	\If{assignmennt complete}{
+		\Return{assignment}
+	}
+	var = \texttt{SelectUnassignedVar}(assignment, csp) \\
+	\For{value in \texttt{DomainValues}(var, assignment, csp)}{
+		\If{value consistent with assignment}{
+			add var = value to assignment \\
+			result = \texttt{Backtrack}(assignment, csp) \\
+			\If{result \(\neq \) failure}{
+				\Return{result}
+			}
+		}
+		remove var = value from assignment
+	}
+	\Return{failure}
+\end{algorithm}
