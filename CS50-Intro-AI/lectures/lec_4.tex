@@ -1,0 +1,233 @@
+\chapter{Learning}
+Thus far we have seen AI used to solve a variety of problems. Now, we focus on learning: where we don't explicitly provide instructions to the computer on how to perform a task, but instead provide information for it to analyze and then learn how to perform a task on its own.
+\section{Supervised Learning}
+\begin{definition}[Supervised Learning]
+	Given a data set of input-output pairs, learn a function to map inputs to outputs.
+\end{definition}
+
+There are a variety of tasks in machine learning. We first focus on \textbf{classification}.
+
+\begin{definition}[Classification]
+	Supervised learning task of learning a function mapping an input point to a discrete category.
+\end{definition}
+
+For example, we may want to classify a day's weather as either \emph{rainy} or \emph{not rainy}. Previously, we input all the probabilities to calculate the outcome, but we don't exactly know these probabilities. Rather, we can provide the computer historical information and ask it to look for patterns in the data. \par
+
+Given the humidity and pressure for a particular day and the outcome of whether it rained that day, we can define a function as follows:
+\[
+	f(\text{humidity, pressure}).
+\]
+We are given the data in the form:
+\[
+	f(93, 999.7) = \text{Rain}
+\]
+\[
+	f(49, 1015.5) = \text{No rain} 
+\]
+
+We can plot the data as a 2D graph. In the following, filled in circles indicate non-rainy days, whereas hollow circles indicate rainy days.
+\begin{figure}[H]
+	\centering
+	\incfig[0.5]{phgraph}
+	\label{fig:phgraph}
+\end{figure}
+
+\section{Nearest Neighbor Classification}
+
+For any \emph{unassigned} datum, we can attempt to assign it to either rainy or not rainy by simply choosing its nearest neighbor's assignment.
+
+\begin{definition}[Nearest Neighbor]
+	Algorithm that, given an input, chooses the class of the nearest data point to that input.
+\end{definition}
+
+This method suffers, however, when considering anomalies in data. We can consider multiple neighbors to get better results.
+
+\begin{definition}[k-Nearest Neighbor]
+	Algorithm that, given an input, chooses the most common class out of the \(k\) nearest data points to that input.
+\end{definition}
+
+Where this method falls flat is when considering algorithmic efficiency, as well as accuracy. We can seek a different approach.
+
+\section{Perceptron Learning}
+We can redefine our goal as defining some line that separates the two classes of data in the above graph. Formally, given some \(x_1 = \text{humidity}\), \(x_2=\text{pressure} \), we can define a \textbf{hypothesis function}, \(h(x_1, x_2)\), that calculates the boundary between our classes:
+\[
+	h(x_1,x_2)=\begin{dcases}
+		1, &\text{ if } w_0 + w_1 x_1 + w_2 x_2 \geq 0;\\
+		0, &\text{ otherwise} .
+	\end{dcases}
+\]
+where 1 indicates rain, 0 indicates no rain, and \(w_0, w_1, w_2\) indicate the \emph{weights} of each parameter in our calculation. More generally, we can redefine the parameters of our hypothesis function. We have a \textbf{weight vector} and an \textbf{input vector}:
+\[
+	\mathbf{w} : \left( w_0, w_1, w_2 \right) 
+\]
+\[
+	\mathbf{x} : \left( 1, x_1, x_2 \right) 
+\]
+Thus our hypothesis function becomes
+\[
+	h_w(x) = \begin{dcases}
+		1, &\text{ if } w \cdot x \geq 0;\\
+		0, &\text{ otherwise} .
+	\end{dcases}
+\]
+
+\begin{definition}[Perceptron Learning Rule]
+	Given a some data point consisting of an input and corresponding output, \((x,y)\), update each weight according to:
+	\[
+		w_i = w_i + \alpha (y-h_w(x)) \cross x_i.
+	\]
+	Alternatively...
+	\[
+		w_i = w_i + \alpha (\text{actual value} - \text{estimate})\cross x_i
+	\]
+	where \(\alpha \) is known as the \textbf{learning rate}.
+\end{definition}
+
+Graphically, the output of our hypothesis function looks like:
+\begin{figure}[H]
+	\centering
+	\incfig[0.3]{hypfuncout}
+	\caption{Output of \(h_w(x)\) with some arbitrary threshold.}
+	\label{fig:hypfuncout}
+\end{figure}
+
+The above is known as a \textbf{hard threshold}. There are other functions that create different threshold types, each yielding different various mathematical properties.
+
+\begin{figure}[H]
+	\centering
+	\incfig[0.3]{soft}
+	\caption{A soft threshold activation curve.}
+	\label{fig:soft}
+\end{figure}
+
+\section{Support Vector Machines}
+Another popular approach to learning is the \textbf{support vector machine}. The idea behind it is that there are numerous different lines that can often be drawn to separate two groups. Take our rainy versus non-rainy day example from above. There are plenty of lines that can split the two groups, but there is one line that likely \emph{best} fits the data. This line can be found using a \textbf{maximum margin separator}.
+\begin{definition}[Maximum Margin Seperator]
+	Boundary that maximizes the distance between any of the data points.
+\end{definition}
+
+\begin{figure}[H]
+	\centering
+	\incfig[0.4]{svm0}
+	\caption{The ideal boundary line maximizes the distance between itself and both classes.}
+	\label{fig:svm0}
+\end{figure}
+
+The "best" SVM depends on the scenario. Plenty of research is currently going into when various heuristics are most effective versus others.
+
+\section{Loss Functions}
+We now attempt to qualify the results of any SVM construction or data regression. Each function yields some hypothesis function, \(h_w(x)\), and we must evaluate the accuracy by minimizing a \textbf{loss function}.
+\begin{definition}[Loss Function]
+	A function that expresses how poorly our hypothesis performs.
+\end{definition}
+
+One approach for binary scenarios (i.e. rainy or not rainy) is the \textbf{0-1 loss function}.
+
+\begin{definition}[0-1 Loss Function]
+	\[
+		L(\text{actual, predicted}) = \begin{dcases}
+			0, &\text{ if } \text{actual}=\text{predicted} ;\\
+			1, &\text{ otherwise (i.e. misprediction)} .
+		\end{dcases}
+	\]
+\end{definition}
+
+This loss function accounts for correctness, however it does not account for the \emph{closeness} of the prediction to the actual value.
+
+\begin{definition}[\(L_1\) Loss Function]
+	\[
+		L(\text{actual, predicted})= \vert \text{actual} -\text{predicted}  \vert 
+	\]
+\end{definition}
+
+This function allows for us to consider incorrect values when adjusting our hypothesis function. Further, we can square the difference between actual and prediction, effectively penalizing more harshly anything that is a poor prediction.
+
+\begin{definition}[\(L_2\) Loss Function]
+	\[
+		L(\text{actual, predicted})= (\text{actual} - \text{predicted})^2 
+	\]
+\end{definition}
+
+\section{Overfitting}
+Another common problem faced in machine learning is the problem of \textbf{overfitting}.
+
+\begin{definition}[Overfitting]
+	A model that fits too closely to a particular data set and therefore may fail to generalize to future data.
+\end{definition}
+
+We utilize various strategies to mitigate this effect. Rather than minimizing just \emph{loss}, we can expand our attention to other aspects of our hypothesis function, specifically its \textbf{complexity}. Thus, we now aim to minimize a \emph{cost} function:
+\[
+	\text{cost} (h)=\text{loss} (h)+\lambda \text{complexity} (h).
+\]
+As our hypothesis function yields more and more complex results, it gets more and more specific. This consideration is known as \textbf{regularization}.
+
+\section{Regularization}
+\begin{definition}[Regularization]
+	Penalizing hypotheses that are more complex in favor of simpler, more general hypotheses.
+\end{definition}
+
+We can perform this by using cross-validation \emph{within} our set of data.
+
+\begin{definition}[Holdout Cross-Validation]
+	Splitting data into a training set and a test set, such that learning happens on the training set and is evaluated on the test set.
+\end{definition}
+
+The issue with this is that we may not be getting as great of a model as we could get since we are withholding information from the model.
+
+\begin{definition}[\(k\)-fold Cross-Validation]
+	Splitting data into \(k\)-sets, and experimenting \(k\)-times, using each set as a test set once, and using remaining data as training set.
+\end{definition}
+
+\section{Reinforcement Learning}
+Rather than being given a set of inputs and corresponding outputs for training, a model learns from experience.
+\begin{definition}[Reinforcement Learning]
+	Given a set of rewards or punishments, learn what actions to take in the future.
+\end{definition}
+
+To formalize this process of an \textbf{agent} interacting with their environment, we introduce the \textbf{Markov Decision Process}.
+
+\begin{definition}[Markov Decision Process]
+	A model for decision-making, representing states, actions, and their rewards, consisting of:
+	\begin{itemize}
+		\item Set of states, \(S\) 
+		\item Set of actions, \(\texttt{Actions}(s)\) 
+		\item Transition model \(P(s' | s, a)\) 
+		\item Reward function \(R(s, a, s')\) 
+	\end{itemize}
+\end{definition}
+
+\section{Q-Learning}
+\begin{definition}[Q-Learning]
+	Method of learning a function, \(Q(s,a)\), that estimates the value (i.e. punishment or reward) of performing action \(a\) in state \(s\).
+\end{definition}
+
+The general approach of \textbf{Q-learning} is as follows:
+\begin{enumerate}
+	\item Start with \(Q(s,a)=0\) for all \(s,a\)
+	\item When we take an action and receive a reward:
+		\begin{enumerate}
+			\item Estimate the value of \(Q(s,a)\) based on current reward and expected future rewards
+			\item Update \(Q(s,a)\) to take into account old estimate as well as our new estimate
+		\end{enumerate}
+\end{enumerate}
+
+Every time we take an action, \(a\) in state \(s\) and observe a reward \(r\), we update \(Q(s,a)\):
+\[
+	Q(s,a) \gets Q(s,a) + \alpha (\text{new value estimate} - \text{old value estimate})
+\]
+\begin{remark}
+	Note that as \(\alpha \to 1\), we are considering the new value estimate more and more strongly. If \(\alpha =1\), we are just considering the new value estimate. 
+\end{remark}
+
+We note that our old value estimate is simply \(Q(s,a)\) and the new value estimate is the reward received right now, as well as the best possible reward in the future. Now we have:
+\[
+	Q(s,a) \gets Q(s,a)+\alpha ((r+\max_{a'}Q(s',a'))-Q(s,a))
+\]
+which tells us what the reward/punishment will be for any state and corresponding action. We can use a \textbf{greedy} decision-making method to let \(Q(s,a)\) guide our actions: when in state \(s\), choose action \(a\) with highest \(Q(s,a)\). This implementation, however, has its drawbacks such as not finding the optimal solution in favor of the greedy solution. \par
+
+We can utilize \textbf{\(\varepsilon\)-greedy}  to combat this. This is done by doing the following:
+\begin{itemize}
+	\item Set \(\varepsilon\) equal to how often we want to move randomly
+	\item With probability \(1-\varepsilon \), choose estimated best move
+	\item With probability \(\varepsilon \)  choose a random move
+\end{itemize}
