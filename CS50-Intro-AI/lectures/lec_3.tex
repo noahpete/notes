@@ -195,7 +195,9 @@ We can reframe CSPs as \emph{search problems}. We do so by defining a CSP as fol
 \end{itemize}
 
 \section{Backtracking}
-We can find a solution to a CSP by simply applying arbitrary assignments to variables one by one until a constraint is broken. Then, we can just backtrack and try another assignment. We eventually find a solution or check every possible assignment.
+We can find a solution to a CSP by simply applying arbitrary assignments to variables one by one until a constraint is broken. Then, we can just backtrack and try another assignment. We eventually find a solution or check every possible assignment. \par
+
+However, we can be more clever in our approach and apply the idea of \textbf{inference} to our approach. We can operate just as before, but when we find ourselves about to backtrack we can instead observe the graph and look for \emph{arc inconsistencies}. Using the information from neighboring nodes, we can deduce what a particular node's possible assignments may be. Thus, we can backtrack less than we originally did. \par
 
 \begin{algorithm}[H]
 	\DontPrintSemicolon
@@ -207,13 +209,28 @@ We can find a solution to a CSP by simply applying arbitrary assignments to vari
 	var = \texttt{SelectUnassignedVar}(assignment, csp) \\
 	\For{value in \texttt{DomainValues}(var, assignment, csp)}{
 		\If{value consistent with assignment}{
-			add var = value to assignment \\
+			add \{var = value\} to assignment \\
+			inferences = \texttt{Inference}(assignment, csp) \Comment{get inferences}
+			\If{inferences \(\neq \) failure}{
+				add inferences to assignment \Comment{add inferenced nodes}
+			}
 			result = \texttt{Backtrack}(assignment, csp) \\
 			\If{result \(\neq \) failure}{
 				\Return{result}
 			}
 		}
-		remove var = value from assignment
+		remove \{var = value\} and inferences from assignment
 	}
 	\Return{failure}
 \end{algorithm}
+
+We note that we can make the search process more efficient by being smarter about which variable we select in our \texttt{SelectUnassignedVar} function. We use various heuristics:
+\begin{itemize}
+	\item Minimum Remaining Values (MRV) heuristic: select the variable that has the smallest domain
+	\item Degree heuristic: select the variable that has the highest degree; works because the highest degree variable has the most constraints, removing it is most helpful
+\end{itemize}
+
+Additionally, we can refine our \texttt{DomainValues} function further. We utilize another set of heuristics:
+\begin{itemize}
+	\item Least-constraining values heuristic: return variables in order by number of choices that are ruled out for neighboring variables; try least-constraining values first
+\end{itemize}
